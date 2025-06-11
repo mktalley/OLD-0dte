@@ -295,8 +295,8 @@ SHORT_PUT_DELTA_RANGE = (-0.7, -0.5)  # deeper OTM for short leg
 LONG_PUT_DELTA_RANGE = (-0.5, -0.3)   # deeper OTM for long leg
 STRIKE_RANGE = settings.strike_range  # ±30% from spot for strike scan
 
-# Scan every 2 minutes (120s) instead of default to catch more delta swings
-SCAN_INTERVAL = 120
+# Scan every 1 minute (60s) instead of default to catch more delta swings
+SCAN_INTERVAL = 60
 risk_free_rate = 0.01
 
 
