@@ -754,8 +754,8 @@ def main_loop():
             log(f"⏱ Waiting {SCAN_INTERVAL // 60} minutes for next scan...")
             time_module.sleep(SCAN_INTERVAL)
         else:
-            log("🔴 Market closed. Sleeping 15 minutes...")
-            time_module.sleep(900)
+            log("🔴 Market closed. Sleeping 5 minutes...")
+            time_module.sleep(300)
 
 if __name__ == "__main__":
     import argparse
@@ -788,5 +788,5 @@ if __name__ == "__main__":
         sys.exit(0)
     else:
         # Live put credit spread bot
-        log("✅ Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed.")
+        log("✅ Starting live 0DTE put credit spread bot now; it will sleep every 5 minutes until market open at 09:30 ET if closed.")
         main_loop()
