@@ -1,0 +1,14 @@
+[2025-05-21 21:41:46 PDT] [INFO] 🚀 Human-readable log handler initialized (PST)
+[2025-05-21 21:41:46 PDT] [INFO] ⚙️ Using relaxed mid-week parameters
+[2025-05-21 22:54:59 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-21 22:56:08 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-21 22:59:04 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-21 22:59:04 PDT] [INFO] ✅ Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed.
+[2025-05-21 22:59:04 PDT] [INFO] 🟢 Bot started
+[2025-05-21 22:59:04 PDT] [INFO] ⚠️ No ticker file for today. Using fallback list.
+[2025-05-21 22:59:04 PDT] [INFO] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-21 23:02:19 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-21 23:07:12 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-22 12:47:26 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-22 12:59:57 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-22 13:00:18 PDT] [INFO] 🚀 Log handlers initialized: JSON and human-readable (PST)

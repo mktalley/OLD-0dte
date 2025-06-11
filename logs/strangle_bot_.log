@@ -1,0 +1,4 @@
+nohup: ignoring input
+ERROR: Invalid requirement: '<<<<<<< HEAD': Expected package name at the start of dependency specifier
+    <<<<<<< HEAD
+    ^ (from line 1 of requirements.txt)

@@ -1,0 +1,8 @@
+YF.download() has changed argument auto_adjust default to True
+===== Static Daily Strangle Backtest =====
+Period: 2024-05-28 to 2025-05-28
+Params: Short Put Delta -0.45, Long Put Delta -0.1, Short Call Delta +0.35, Long Call Delta +0.15
+Trades: 251, Win Rate: 70.1%, Total P&L: $18351.01
+Contracts per day: 7
+Scaled Total P&L: $128457.05
+Summary written to backtests/SPY_2024-05-28_strangle/strangle_summary.txt

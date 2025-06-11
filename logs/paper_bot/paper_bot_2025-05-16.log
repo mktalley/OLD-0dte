@@ -1,0 +1,240 @@
+[2025-05-16 18:38:31] 🚀 Starting bot
+[2025-05-16 14:38:32] ⚙️ Using Friday expiration parameters
+[2025-05-16 14:38:32] 🟢 Bot started
+[2025-05-16 14:38:32] ⚠️ No ticker file for today. Using fallback list.
+[2025-05-16 14:38:40] [SPY] No valid spread found.
+[2025-05-16 14:38:48] [QQQ] No valid spread found.
+[2025-05-16 14:38:51] ✅ TSLA Spread placed: Credit $0.86, Width $2.50
+[2025-05-16 14:38:57] [AAPL] No valid spread found.
+[2025-05-16 14:39:14] [MSFT] No valid spread found.
+[2025-05-16 14:39:31] [NVDA] No valid spread found.
+[2025-05-16 14:39:48] ✅ META Spread placed: Credit $0.76, Width $2.50
+[2025-05-16 14:40:01] [AMZN] No valid spread found.
+[2025-05-16 14:40:17] [AMD] No valid spread found.
+[2025-05-16 14:40:26] [GOOG] No valid spread found.
+[2025-05-16 14:40:34] [BA] No valid spread found.
+[2025-05-16 14:40:42] [XLF] No valid spread found.
+[2025-05-16 14:40:51] [XLK] No valid spread found.
+[2025-05-16 14:41:23] [DIA] No valid spread found.
+[2025-05-16 14:42:02] [IWM] No valid spread found.
+[2025-05-16 14:42:20] [XLE] No valid spread found.
+[2025-05-16 14:42:28] [XBI] No valid spread found.
+[2025-05-16 14:42:37] [TSM] No valid spread found.
+[2025-05-16 14:42:45] [GDX] No valid spread found.
+[2025-05-16 14:42:54] [ARKK] No valid spread found.
+[2025-05-16 14:42:54] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 14:48:02] [SPY] No valid spread found.
+[2025-05-16 14:48:10] [QQQ] No valid spread found.
+[2025-05-16 14:48:14] [TSLA] No valid spread found.
+[2025-05-16 14:48:23] [AAPL] No valid spread found.
+[2025-05-16 14:48:40] [MSFT] No valid spread found.
+[2025-05-16 14:48:56] [NVDA] No valid spread found.
+[2025-05-16 14:49:17] ✅ META Spread placed: Credit $1.13, Width $2.50
+[2025-05-16 14:49:26] [AMZN] No valid spread found.
+[2025-05-16 14:49:43] [AMD] No valid spread found.
+[2025-05-16 14:49:51] [GOOG] No valid spread found.
+[2025-05-16 14:50:00] [BA] No valid spread found.
+[2025-05-16 14:50:08] [XLF] No valid spread found.
+[2025-05-16 14:50:16] [XLK] No valid spread found.
+[2025-05-16 14:50:33] [DIA] No valid spread found.
+[2025-05-16 14:50:54] [IWM] No valid spread found.
+[2025-05-16 14:51:03] [XLE] No valid spread found.
+[2025-05-16 14:51:10] [XBI] No valid spread found.
+[2025-05-16 14:51:19] [TSM] No valid spread found.
+[2025-05-16 14:51:27] [GDX] No valid spread found.
+[2025-05-16 14:51:36] [ARKK] No valid spread found.
+[2025-05-16 14:51:36] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 14:56:51] [SPY] No valid spread found.
+[2025-05-16 14:57:20] [QQQ] No valid spread found.
+[2025-05-16 14:57:37] [TSLA] No valid spread found.
+[2025-05-16 14:57:45] [AAPL] No valid spread found.
+[2025-05-16 14:58:02] [MSFT] No valid spread found.
+[2025-05-16 14:58:19] [NVDA] No valid spread found.
+[2025-05-16 14:58:40] ✅ META Spread placed: Credit $1.05, Width $2.50
+[2025-05-16 14:58:52] [AMZN] No valid spread found.
+[2025-05-16 14:59:05] [AMD] No valid spread found.
+[2025-05-16 14:59:17] [GOOG] No valid spread found.
+[2025-05-16 14:59:25] [BA] No valid spread found.
+[2025-05-16 14:59:30] [XLF] No valid spread found.
+[2025-05-16 14:59:39] [XLK] No valid spread found.
+[2025-05-16 14:59:56] [DIA] No valid spread found.
+[2025-05-16 15:00:15] [IWM] No valid spread found.
+[2025-05-16 15:00:27] [XLE] No valid spread found.
+[2025-05-16 15:00:32] [XBI] No valid spread found.
+[2025-05-16 15:00:44] [TSM] No valid spread found.
+[2025-05-16 15:00:49] [GDX] No valid spread found.
+[2025-05-16 15:01:01] [ARKK] No valid spread found.
+[2025-05-16 15:01:01] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:06:09] [SPY] No valid spread found.
+[2025-05-16 15:06:16] [QQQ] No valid spread found.
+[2025-05-16 15:06:24] [TSLA] No valid spread found.
+[2025-05-16 15:06:42] [AAPL] No valid spread found.
+[2025-05-16 15:07:17] [MSFT] No valid spread found.
+[2025-05-16 15:07:49] [NVDA] No valid spread found.
+[2025-05-16 15:08:28] ✅ META Spread placed: Credit $0.79, Width $2.50
+[2025-05-16 15:08:49] [AMZN] No valid spread found.
+[2025-05-16 15:09:18] [AMD] No valid spread found.
+[2025-05-16 15:09:39] [GOOG] No valid spread found.
+[2025-05-16 15:09:50] [BA] No valid spread found.
+[2025-05-16 15:09:58] [XLF] No valid spread found.
+[2025-05-16 15:10:03] [XLK] No valid spread found.
+[2025-05-16 15:10:20] [DIA] No valid spread found.
+[2025-05-16 15:10:44] [IWM] No valid spread found.
+[2025-05-16 15:10:53] [XLE] No valid spread found.
+[2025-05-16 15:11:00] [XBI] No valid spread found.
+[2025-05-16 15:11:09] [TSM] No valid spread found.
+[2025-05-16 15:11:17] [GDX] No valid spread found.
+[2025-05-16 15:11:26] [ARKK] No valid spread found.
+[2025-05-16 15:11:26] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:16:34] [SPY] No valid spread found.
+[2025-05-16 15:16:42] [QQQ] No valid spread found.
+[2025-05-16 15:16:46] [TSLA] No valid spread found.
+[2025-05-16 15:16:54] [AAPL] No valid spread found.
+[2025-05-16 15:17:11] [MSFT] No valid spread found.
+[2025-05-16 15:17:28] [NVDA] No valid spread found.
+[2025-05-16 15:17:48] ❌ Order failed: {"code":42210000,"message":"contract \"META250516P00640000\" expires soon, unable to open new positions"}
+[2025-05-16 15:18:00] [AMZN] No valid spread found.
+[2025-05-16 15:18:14] [AMD] No valid spread found.
+[2025-05-16 15:18:26] [GOOG] No valid spread found.
+[2025-05-16 15:18:34] [BA] No valid spread found.
+[2025-05-16 15:18:39] [XLF] No valid spread found.
+[2025-05-16 15:18:47] [XLK] No valid spread found.
+[2025-05-16 15:19:03] [DIA] No valid spread found.
+[2025-05-16 15:19:24] [IWM] No valid spread found.
+[2025-05-16 15:19:36] [XLE] No valid spread found.
+[2025-05-16 15:19:41] [XBI] No valid spread found.
+[2025-05-16 15:19:59] [TSM] No valid spread found.
+[2025-05-16 15:20:10] [GDX] No valid spread found.
+[2025-05-16 15:20:31] [ARKK] No valid spread found.
+[2025-05-16 15:20:31] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:25:39] [SPY] No valid spread found.
+[2025-05-16 15:25:50] [QQQ] No valid spread found.
+[2025-05-16 15:26:06] [TSLA] No valid spread found.
+[2025-05-16 15:26:15] [AAPL] No valid spread found.
+[2025-05-16 15:26:32] [MSFT] No valid spread found.
+[2025-05-16 15:26:48] [NVDA] No valid spread found.
+[2025-05-16 15:27:09] ❌ Order failed: {"code":42210000,"message":"contract \"META250516P00640000\" expires soon, unable to open new positions"}
+[2025-05-16 15:27:21] [AMZN] No valid spread found.
+[2025-05-16 15:27:34] [AMD] No valid spread found.
+[2025-05-16 15:27:46] [GOOG] No valid spread found.
+[2025-05-16 15:27:54] [BA] No valid spread found.
+[2025-05-16 15:28:02] [XLF] No valid spread found.
+[2025-05-16 15:28:07] [XLK] No valid spread found.
+[2025-05-16 15:28:24] [DIA] No valid spread found.
+[2025-05-16 15:28:45] [IWM] No valid spread found.
+[2025-05-16 15:28:57] [XLE] No valid spread found.
+[2025-05-16 15:29:05] [XBI] No valid spread found.
+[2025-05-16 15:29:13] [TSM] No valid spread found.
+[2025-05-16 15:29:18] [GDX] No valid spread found.
+[2025-05-16 15:29:30] [ARKK] No valid spread found.
+[2025-05-16 15:29:30] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:34:38] [SPY] No valid spread found.
+[2025-05-16 15:34:46] [QQQ] No valid spread found.
+[2025-05-16 15:34:51] [TSLA] No valid spread found.
+[2025-05-16 15:35:00] [AAPL] No valid spread found.
+[2025-05-16 15:35:16] [MSFT] No valid spread found.
+[2025-05-16 15:35:42] [NVDA] No valid spread found.
+[2025-05-16 15:36:21] ❌ Order failed: {"code":42210000,"message":"contract \"META250516P00640000\" expires soon, unable to open new positions"}
+[2025-05-16 15:36:46] [AMZN] No valid spread found.
+[2025-05-16 15:37:02] [AMD] No valid spread found.
+[2025-05-16 15:37:14] [GOOG] No valid spread found.
+[2025-05-16 15:37:22] [BA] No valid spread found.
+[2025-05-16 15:37:27] [XLF] No valid spread found.
+[2025-05-16 15:37:35] [XLK] No valid spread found.
+[2025-05-16 15:37:52] [DIA] No valid spread found.
+[2025-05-16 15:38:13] [IWM] No valid spread found.
+[2025-05-16 15:38:25] [XLE] No valid spread found.
+[2025-05-16 15:38:30] [XBI] No valid spread found.
+[2025-05-16 15:38:38] [TSM] No valid spread found.
+[2025-05-16 15:38:46] [GDX] No valid spread found.
+[2025-05-16 15:38:55] [ARKK] No valid spread found.
+[2025-05-16 15:38:55] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:44:04] [SPY] No valid spread found.
+[2025-05-16 15:44:17] [QQQ] No valid spread found.
+[2025-05-16 15:44:37] [TSLA] No valid spread found.
+[2025-05-16 15:44:46] [AAPL] No valid spread found.
+[2025-05-16 15:45:03] [MSFT] No valid spread found.
+[2025-05-16 15:45:19] [NVDA] No valid spread found.
+[2025-05-16 15:45:44] [META] No valid spread found.
+[2025-05-16 15:45:56] [AMZN] No valid spread found.
+[2025-05-16 15:46:09] [AMD] No valid spread found.
+[2025-05-16 15:46:21] [GOOG] No valid spread found.
+[2025-05-16 15:46:29] [BA] No valid spread found.
+[2025-05-16 15:46:34] [XLF] No valid spread found.
+[2025-05-16 15:46:42] [XLK] No valid spread found.
+[2025-05-16 15:47:08] [DIA] No valid spread found.
+[2025-05-16 15:47:50] [IWM] No valid spread found.
+[2025-05-16 15:48:12] [XLE] No valid spread found.
+[2025-05-16 15:48:23] [XBI] No valid spread found.
+[2025-05-16 15:48:31] [TSM] No valid spread found.
+[2025-05-16 15:48:36] [GDX] No valid spread found.
+[2025-05-16 15:48:48] [ARKK] No valid spread found.
+[2025-05-16 15:48:48] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 15:54:36] [SPY] No valid spread found.
+[2025-05-16 15:55:06] [QQQ] No valid spread found.
+[2025-05-16 15:55:22] [TSLA] No valid spread found.
+[2025-05-16 15:55:31] [AAPL] No valid spread found.
+[2025-05-16 15:55:48] [MSFT] No valid spread found.
+[2025-05-16 15:56:04] [NVDA] No valid spread found.
+[2025-05-16 15:56:29] [META] No valid spread found.
+[2025-05-16 15:56:42] [AMZN] No valid spread found.
+[2025-05-16 15:56:58] [AMD] No valid spread found.
+[2025-05-16 15:57:06] [GOOG] No valid spread found.
+[2025-05-16 15:57:15] [BA] No valid spread found.
+[2025-05-16 15:57:23] [XLF] No valid spread found.
+[2025-05-16 15:57:28] [XLK] No valid spread found.
+[2025-05-16 15:57:44] [DIA] No valid spread found.
+[2025-05-16 15:58:05] [IWM] No valid spread found.
+[2025-05-16 15:58:20] [XLE] No valid spread found.
+[2025-05-16 15:58:34] [XBI] No valid spread found.
+[2025-05-16 15:58:52] [TSM] No valid spread found.
+[2025-05-16 15:59:09] [GDX] No valid spread found.
+[2025-05-16 15:59:31] [ARKK] No valid spread found.
+[2025-05-16 15:59:31] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 16:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 16:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 16:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 16:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 17:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 17:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 17:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 17:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 18:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 18:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 18:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 18:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 19:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 19:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 19:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 19:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 20:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 20:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 20:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 20:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 21:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 21:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 21:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 21:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 22:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 22:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 22:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 22:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 23:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 23:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 23:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 23:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 00:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 00:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 00:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 00:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 01:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 01:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 01:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 01:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 02:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 02:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 02:34:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 02:49:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 03:04:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 03:19:31] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-17 03:34:31] 🔴 Market closed. Sleeping 15 minutes...

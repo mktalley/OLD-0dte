@@ -1,0 +1,6 @@
+nohup: ignoring input
+[2025-05-22 05:59:04] 🚀 Log handlers initialized: JSON and human-readable (PST)
+[2025-05-22 05:59:04] ✅ Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed.
+[2025-05-22 05:59:04] 🟢 Bot started
+[2025-05-22 05:59:04] ⚠️ No ticker file for today. Using fallback list.
+[2025-05-22 05:59:04] 🔴 Market closed. Sleeping 15 minutes...

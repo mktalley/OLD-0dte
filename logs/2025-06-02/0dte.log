@@ -1,0 +1,1510 @@
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\ud83d\udcc8 Triggering EOD report"}
+{"level": "INFO", "message": "Error running EOD report: Command '['python3', 'scripts/send_eod_report.py']' returned non-zero exit status 1."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "API Error in get_all_underlying_prices: <html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "Failed to send email: [Errno 111] Connection refused"}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -212.85 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -218.39 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] Skipped: trade delta exposure -202.48 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -265.01 exceeds max 200.0"}
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -273.78 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -271.49 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\ud83d\ude80 Log handlers initialized: JSON and human-readable (PST)"}
+{"level": "INFO", "message": "\u2705 Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed."}
+{"level": "INFO", "message": "\ud83d\udfe2 Bot started"}
+{"level": "INFO", "message": "\u26a0\ufe0f No ticker file for today. Using fallback list."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -253.26 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -249.53 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -229.66 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -215.59 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -213.39 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -204.23 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -213.54 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -206.45 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -235.48 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -223.52 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -247.77 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -227.84 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -262.80 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -242.03 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] Skipped: trade delta exposure -237.64 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -250.65 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -233.30 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -245.01 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -220.65 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -261.09 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -249.51 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -292.76 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -283.13 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -283.51 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -270.44 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -244.94 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -234.37 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -225.35 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -222.67 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -245.04 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -240.46 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -258.33 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -249.09 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -208.36 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -207.46 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\u2705 SPY Spread placed: Credit $0.28, Width $1.00"}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -284.33 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -280.69 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\u2705 SPY Spread placed: Credit $0.30, Width $1.00"}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\u2705 SPY Spread placed: Credit $0.28, Width $1.00"}
+{"level": "INFO", "message": "\u2705 QQQ Spread placed: Credit $0.22, Width $1.00"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] No valid spread found."}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -277.73 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -277.35 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -252.16 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -243.86 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -224.46 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -237.80 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -255.70 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -261.44 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -228.46 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -237.72 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -222.60 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -251.53 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] No valid spread found."}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] No valid spread found."}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -204.02 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -228.56 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -264.53 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -228.32 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] Skipped: trade delta exposure -224.01 exceeds max 200.0"}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] No valid spread found."}
+{"level": "INFO", "message": "[QQQ] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "[SPY] No valid spread found."}
+{"level": "INFO", "message": "[QQQ] Skipped: trade delta exposure -242.80 exceeds max 200.0"}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSLA, retrying..."}
+{"level": "INFO", "message": "[TSLA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AAPL, retrying..."}
+{"level": "INFO", "message": "[AAPL] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for MSFT, retrying..."}
+{"level": "INFO", "message": "[MSFT] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for NVDA, retrying..."}
+{"level": "INFO", "message": "[NVDA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for META, retrying..."}
+{"level": "INFO", "message": "[META] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMZN, retrying..."}
+{"level": "INFO", "message": "[AMZN] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for AMD, retrying..."}
+{"level": "INFO", "message": "[AMD] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GOOG, retrying..."}
+{"level": "INFO", "message": "[GOOG] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for BA, retrying..."}
+{"level": "INFO", "message": "[BA] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLF, retrying..."}
+{"level": "INFO", "message": "[XLF] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLK, retrying..."}
+{"level": "INFO", "message": "[XLK] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for DIA, retrying..."}
+{"level": "INFO", "message": "[DIA] No valid spread found."}
+{"level": "INFO", "message": "[IWM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XLE, retrying..."}
+{"level": "INFO", "message": "[XLE] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for XBI, retrying..."}
+{"level": "INFO", "message": "[XBI] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for TSM, retrying..."}
+{"level": "INFO", "message": "[TSM] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for GDX, retrying..."}
+{"level": "INFO", "message": "[GDX] No valid spread found."}
+{"level": "INFO", "message": "\u26a0\ufe0f Low contract count for ARKK, retrying..."}
+{"level": "INFO", "message": "[ARKK] No valid spread found."}
+{"level": "INFO", "message": "\u23f1 Waiting 5 minutes for next scan..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}
+{"level": "INFO", "message": "\ud83d\udd34 Market closed. Sleeping 15 minutes..."}

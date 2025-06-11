@@ -1,0 +1,1056 @@
+2025-06-03 00:00:06 INFO Starting trading bot
+2025-06-03 00:00:06 INFO Scheduled heartbeat every hour until market open at 09:35 ET
+2025-06-03 01:00:06 INFO Heartbeat: trading bot is alive @ 2025-06-03 04:00:06.122013-04:00
+2025-06-03 01:38:40 INFO Starting trading bot
+2025-06-03 01:38:40 INFO Scheduled heartbeat every hour until market open at 09:35 ET
+2025-06-03 01:39:56 INFO Starting trading bot
+2025-06-03 01:39:56 INFO Scheduled heartbeat every hour until market open at 09:35 ET
+2025-06-03 01:46:34 INFO Starting trading bot
+2025-06-03 01:46:34 INFO Scheduled heartbeat every hour until market open at 09:35 ET
+2025-06-03 02:46:34 INFO Heartbeat: trading bot is alive @ 2025-06-03 05:46:34.898987-04:00
+2025-06-03 03:46:34 INFO Heartbeat: trading bot is alive @ 2025-06-03 06:46:34.899936-04:00
+2025-06-03 04:46:34 INFO Heartbeat: trading bot is alive @ 2025-06-03 07:46:34.895597-04:00
+2025-06-03 05:46:34 INFO Heartbeat: trading bot is alive @ 2025-06-03 08:46:34.900299-04:00
+2025-06-03 06:35:00 INFO === ENTRY JOB @ 2025-06-03 09:35:00.002234-04:00 ===
+2025-06-03 06:35:01 INFO SPY: sizing 1 contracts (env max=1, budget max=7) based on $3000.00 per symbol budget and $404.25 per contract
+2025-06-03 06:35:02 ERROR SPY: entry error on attempt 1: {"code":40010001,"message":"symbol is not allowed for mleg order"} {"code":40010001,"message":"symbol is not allowed for mleg order"}
+2025-06-03 06:35:02 ERROR SPY: order submit failed permanently after 1 attempts
+2025-06-03 06:35:02 INFO QQQ: sizing 1 contracts (env max=1, budget max=8) based on $3000.00 per symbol budget and $360.12 per contract
+2025-06-03 06:35:02 ERROR QQQ: entry error on attempt 1: {"code":40010001,"message":"symbol is not allowed for mleg order"} {"code":40010001,"message":"symbol is not allowed for mleg order"}
+2025-06-03 06:35:02 ERROR QQQ: order submit failed permanently after 1 attempts
+2025-06-03 06:35:03 INFO IWM: sizing 1 contracts (env max=1, budget max=21) based on $3000.00 per symbol budget and $141.22 per contract
+2025-06-03 06:35:03 ERROR IWM: entry error on attempt 1: {"code":40010001,"message":"symbol is not allowed for mleg order"} {"code":40010001,"message":"symbol is not allowed for mleg order"}
+2025-06-03 06:35:03 ERROR IWM: order submit failed permanently after 1 attempts
+2025-06-03 06:46:34 INFO Heartbeat: trading bot is alive @ 2025-06-03 09:46:34.902701-04:00
+2025-06-03 07:32:00 INFO === MONITOR JOB @ 2025-06-03 10:32:00.003579-04:00 ===
+2025-06-03 07:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:33:00 INFO === MONITOR JOB @ 2025-06-03 10:33:00.003653-04:00 ===
+2025-06-03 07:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:34:00 INFO === MONITOR JOB @ 2025-06-03 10:34:00.009855-04:00 ===
+2025-06-03 07:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:35:00 INFO === MONITOR JOB @ 2025-06-03 10:35:00.000332-04:00 ===
+2025-06-03 07:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:36:00 INFO === MONITOR JOB @ 2025-06-03 10:36:00.002693-04:00 ===
+2025-06-03 07:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:37:00 INFO === MONITOR JOB @ 2025-06-03 10:37:00.003940-04:00 ===
+2025-06-03 07:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:38:00 INFO === MONITOR JOB @ 2025-06-03 10:38:00.004397-04:00 ===
+2025-06-03 07:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:39:00 INFO === MONITOR JOB @ 2025-06-03 10:39:00.001575-04:00 ===
+2025-06-03 07:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:40:00 INFO === MONITOR JOB @ 2025-06-03 10:40:00.007490-04:00 ===
+2025-06-03 07:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:41:00 INFO === MONITOR JOB @ 2025-06-03 10:41:00.004793-04:00 ===
+2025-06-03 07:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:42:00 INFO === MONITOR JOB @ 2025-06-03 10:42:00.002656-04:00 ===
+2025-06-03 07:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:43:00 INFO === MONITOR JOB @ 2025-06-03 10:43:00.003010-04:00 ===
+2025-06-03 07:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:44:00 INFO === MONITOR JOB @ 2025-06-03 10:44:00.002222-04:00 ===
+2025-06-03 07:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:45:00 INFO === MONITOR JOB @ 2025-06-03 10:45:00.000991-04:00 ===
+2025-06-03 07:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:46:00 INFO === MONITOR JOB @ 2025-06-03 10:46:00.000495-04:00 ===
+2025-06-03 07:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:47:00 INFO === MONITOR JOB @ 2025-06-03 10:47:00.000708-04:00 ===
+2025-06-03 07:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:48:00 INFO === MONITOR JOB @ 2025-06-03 10:48:00.000676-04:00 ===
+2025-06-03 07:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:49:00 INFO === MONITOR JOB @ 2025-06-03 10:49:00.007511-04:00 ===
+2025-06-03 07:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:50:00 INFO === MONITOR JOB @ 2025-06-03 10:50:00.000844-04:00 ===
+2025-06-03 07:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:51:00 INFO === MONITOR JOB @ 2025-06-03 10:51:00.001023-04:00 ===
+2025-06-03 07:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:52:00 INFO === MONITOR JOB @ 2025-06-03 10:52:00.010283-04:00 ===
+2025-06-03 07:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:53:00 INFO === MONITOR JOB @ 2025-06-03 10:53:00.004477-04:00 ===
+2025-06-03 07:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:54:00 INFO === MONITOR JOB @ 2025-06-03 10:54:00.005818-04:00 ===
+2025-06-03 07:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:55:00 INFO === MONITOR JOB @ 2025-06-03 10:55:00.001535-04:00 ===
+2025-06-03 07:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:56:00 INFO === MONITOR JOB @ 2025-06-03 10:56:00.005650-04:00 ===
+2025-06-03 07:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:57:00 INFO === MONITOR JOB @ 2025-06-03 10:57:00.006139-04:00 ===
+2025-06-03 07:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:58:00 INFO === MONITOR JOB @ 2025-06-03 10:58:00.001804-04:00 ===
+2025-06-03 07:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 07:59:00 INFO === MONITOR JOB @ 2025-06-03 10:59:00.008481-04:00 ===
+2025-06-03 07:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 07:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:00:00 INFO === MONITOR JOB @ 2025-06-03 11:00:00.005406-04:00 ===
+2025-06-03 08:00:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:00:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:01:00 INFO === MONITOR JOB @ 2025-06-03 11:01:00.011270-04:00 ===
+2025-06-03 08:01:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:01:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:02:00 INFO === MONITOR JOB @ 2025-06-03 11:02:00.002989-04:00 ===
+2025-06-03 08:02:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:02:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:03:00 INFO === MONITOR JOB @ 2025-06-03 11:03:00.002953-04:00 ===
+2025-06-03 08:03:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:03:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:04:00 INFO === MONITOR JOB @ 2025-06-03 11:04:00.011278-04:00 ===
+2025-06-03 08:04:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:04:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:05:00 INFO === MONITOR JOB @ 2025-06-03 11:05:00.002345-04:00 ===
+2025-06-03 08:05:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:05:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:06:00 INFO === MONITOR JOB @ 2025-06-03 11:06:00.002376-04:00 ===
+2025-06-03 08:06:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:06:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:07:00 INFO === MONITOR JOB @ 2025-06-03 11:07:00.003348-04:00 ===
+2025-06-03 08:07:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:07:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:08:00 INFO === MONITOR JOB @ 2025-06-03 11:08:00.003091-04:00 ===
+2025-06-03 08:08:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:08:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:09:00 INFO === MONITOR JOB @ 2025-06-03 11:09:00.005929-04:00 ===
+2025-06-03 08:09:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:09:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:10:00 INFO === MONITOR JOB @ 2025-06-03 11:10:00.006938-04:00 ===
+2025-06-03 08:10:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:10:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:11:00 INFO === MONITOR JOB @ 2025-06-03 11:11:00.002133-04:00 ===
+2025-06-03 08:11:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:11:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:12:00 INFO === MONITOR JOB @ 2025-06-03 11:12:00.005619-04:00 ===
+2025-06-03 08:12:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:12:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:13:00 INFO === MONITOR JOB @ 2025-06-03 11:13:00.009405-04:00 ===
+2025-06-03 08:13:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:13:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:14:00 INFO === MONITOR JOB @ 2025-06-03 11:14:00.000726-04:00 ===
+2025-06-03 08:14:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:14:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:15:00 INFO === MONITOR JOB @ 2025-06-03 11:15:00.002694-04:00 ===
+2025-06-03 08:15:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:15:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:16:00 INFO === MONITOR JOB @ 2025-06-03 11:16:00.004091-04:00 ===
+2025-06-03 08:16:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:16:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:17:00 INFO === MONITOR JOB @ 2025-06-03 11:17:00.002443-04:00 ===
+2025-06-03 08:17:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:17:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:18:00 INFO === MONITOR JOB @ 2025-06-03 11:18:00.004057-04:00 ===
+2025-06-03 08:18:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:18:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:19:00 INFO === MONITOR JOB @ 2025-06-03 11:19:00.003597-04:00 ===
+2025-06-03 08:19:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:19:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:20:00 INFO === MONITOR JOB @ 2025-06-03 11:20:00.006427-04:00 ===
+2025-06-03 08:20:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:20:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:21:00 INFO === MONITOR JOB @ 2025-06-03 11:21:00.003185-04:00 ===
+2025-06-03 08:21:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:21:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:22:00 INFO === MONITOR JOB @ 2025-06-03 11:22:00.003091-04:00 ===
+2025-06-03 08:22:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:22:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:23:00 INFO === MONITOR JOB @ 2025-06-03 11:23:00.001906-04:00 ===
+2025-06-03 08:23:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:23:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:24:00 INFO === MONITOR JOB @ 2025-06-03 11:24:00.004568-04:00 ===
+2025-06-03 08:24:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:24:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:25:00 INFO === MONITOR JOB @ 2025-06-03 11:25:00.002084-04:00 ===
+2025-06-03 08:25:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:25:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:26:00 INFO === MONITOR JOB @ 2025-06-03 11:26:00.001762-04:00 ===
+2025-06-03 08:26:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:26:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:27:00 INFO === MONITOR JOB @ 2025-06-03 11:27:00.007547-04:00 ===
+2025-06-03 08:27:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:27:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:28:00 INFO === MONITOR JOB @ 2025-06-03 11:28:00.002127-04:00 ===
+2025-06-03 08:28:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:28:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:29:00 INFO === MONITOR JOB @ 2025-06-03 11:29:00.001387-04:00 ===
+2025-06-03 08:29:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:29:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:30:00 INFO === MONITOR JOB @ 2025-06-03 11:30:00.001601-04:00 ===
+2025-06-03 08:30:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:30:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:31:00 INFO === MONITOR JOB @ 2025-06-03 11:31:00.000707-04:00 ===
+2025-06-03 08:31:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:31:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:32:00 INFO === MONITOR JOB @ 2025-06-03 11:32:00.001053-04:00 ===
+2025-06-03 08:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:33:00 INFO === MONITOR JOB @ 2025-06-03 11:33:00.002739-04:00 ===
+2025-06-03 08:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:34:00 INFO === MONITOR JOB @ 2025-06-03 11:34:00.000840-04:00 ===
+2025-06-03 08:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:35:00 INFO === MONITOR JOB @ 2025-06-03 11:35:00.001161-04:00 ===
+2025-06-03 08:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:36:00 INFO === MONITOR JOB @ 2025-06-03 11:36:00.000729-04:00 ===
+2025-06-03 08:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:37:00 INFO === MONITOR JOB @ 2025-06-03 11:37:00.001200-04:00 ===
+2025-06-03 08:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:38:00 INFO === MONITOR JOB @ 2025-06-03 11:38:00.002958-04:00 ===
+2025-06-03 08:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:39:00 INFO === MONITOR JOB @ 2025-06-03 11:39:00.004015-04:00 ===
+2025-06-03 08:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:40:00 INFO === MONITOR JOB @ 2025-06-03 11:40:00.004890-04:00 ===
+2025-06-03 08:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:41:00 INFO === MONITOR JOB @ 2025-06-03 11:41:00.004233-04:00 ===
+2025-06-03 08:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:42:00 INFO === MONITOR JOB @ 2025-06-03 11:42:00.002416-04:00 ===
+2025-06-03 08:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:43:00 INFO === MONITOR JOB @ 2025-06-03 11:43:00.005407-04:00 ===
+2025-06-03 08:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:44:00 INFO === MONITOR JOB @ 2025-06-03 11:44:00.006503-04:00 ===
+2025-06-03 08:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:45:00 INFO === MONITOR JOB @ 2025-06-03 11:45:00.005105-04:00 ===
+2025-06-03 08:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:46:00 INFO === MONITOR JOB @ 2025-06-03 11:46:00.000976-04:00 ===
+2025-06-03 08:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:47:00 INFO === MONITOR JOB @ 2025-06-03 11:47:00.004361-04:00 ===
+2025-06-03 08:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:48:00 INFO === MONITOR JOB @ 2025-06-03 11:48:00.002510-04:00 ===
+2025-06-03 08:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:49:00 INFO === MONITOR JOB @ 2025-06-03 11:49:00.001593-04:00 ===
+2025-06-03 08:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:50:00 INFO === MONITOR JOB @ 2025-06-03 11:50:00.002536-04:00 ===
+2025-06-03 08:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:51:00 INFO === MONITOR JOB @ 2025-06-03 11:51:00.004453-04:00 ===
+2025-06-03 08:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:52:00 INFO === MONITOR JOB @ 2025-06-03 11:52:00.004037-04:00 ===
+2025-06-03 08:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:53:00 INFO === MONITOR JOB @ 2025-06-03 11:53:00.006564-04:00 ===
+2025-06-03 08:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:54:00 INFO === MONITOR JOB @ 2025-06-03 11:54:00.005480-04:00 ===
+2025-06-03 08:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:55:00 INFO === MONITOR JOB @ 2025-06-03 11:55:00.004167-04:00 ===
+2025-06-03 08:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:56:00 INFO === MONITOR JOB @ 2025-06-03 11:56:00.006500-04:00 ===
+2025-06-03 08:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:57:00 INFO === MONITOR JOB @ 2025-06-03 11:57:00.004256-04:00 ===
+2025-06-03 08:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:58:00 INFO === MONITOR JOB @ 2025-06-03 11:58:00.005642-04:00 ===
+2025-06-03 08:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 08:59:00 INFO === MONITOR JOB @ 2025-06-03 11:59:00.001240-04:00 ===
+2025-06-03 08:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 08:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:00:00 INFO === MONITOR JOB @ 2025-06-03 12:00:00.002618-04:00 ===
+2025-06-03 09:00:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:00:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:01:00 INFO === MONITOR JOB @ 2025-06-03 12:01:00.010594-04:00 ===
+2025-06-03 09:01:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:01:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:02:00 INFO === MONITOR JOB @ 2025-06-03 12:02:00.003714-04:00 ===
+2025-06-03 09:02:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:02:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:03:00 INFO === MONITOR JOB @ 2025-06-03 12:03:00.007135-04:00 ===
+2025-06-03 09:03:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:03:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:04:00 INFO === MONITOR JOB @ 2025-06-03 12:04:00.004152-04:00 ===
+2025-06-03 09:04:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:04:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:05:00 INFO === MONITOR JOB @ 2025-06-03 12:05:00.003610-04:00 ===
+2025-06-03 09:05:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:05:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:06:00 INFO === MONITOR JOB @ 2025-06-03 12:06:00.010726-04:00 ===
+2025-06-03 09:06:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:06:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:07:00 INFO === MONITOR JOB @ 2025-06-03 12:07:00.000997-04:00 ===
+2025-06-03 09:07:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:07:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:08:00 INFO === MONITOR JOB @ 2025-06-03 12:08:00.008596-04:00 ===
+2025-06-03 09:08:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:08:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:09:00 INFO === MONITOR JOB @ 2025-06-03 12:09:00.004728-04:00 ===
+2025-06-03 09:09:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:09:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:10:00 INFO === MONITOR JOB @ 2025-06-03 12:10:00.003061-04:00 ===
+2025-06-03 09:10:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:10:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:11:00 INFO === MONITOR JOB @ 2025-06-03 12:11:00.004908-04:00 ===
+2025-06-03 09:11:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:11:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:12:00 INFO === MONITOR JOB @ 2025-06-03 12:12:00.008703-04:00 ===
+2025-06-03 09:12:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:12:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:13:00 INFO === MONITOR JOB @ 2025-06-03 12:13:00.004612-04:00 ===
+2025-06-03 09:13:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:13:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:14:00 INFO === MONITOR JOB @ 2025-06-03 12:14:00.002981-04:00 ===
+2025-06-03 09:14:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:14:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:15:00 INFO === MONITOR JOB @ 2025-06-03 12:15:00.002150-04:00 ===
+2025-06-03 09:15:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:15:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:16:00 INFO === MONITOR JOB @ 2025-06-03 12:16:00.001392-04:00 ===
+2025-06-03 09:16:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:16:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:17:00 INFO === MONITOR JOB @ 2025-06-03 12:17:00.002316-04:00 ===
+2025-06-03 09:17:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:17:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:18:00 INFO === MONITOR JOB @ 2025-06-03 12:18:00.002253-04:00 ===
+2025-06-03 09:18:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:18:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:19:00 INFO === MONITOR JOB @ 2025-06-03 12:19:00.001611-04:00 ===
+2025-06-03 09:19:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:19:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:20:00 INFO === MONITOR JOB @ 2025-06-03 12:20:00.001685-04:00 ===
+2025-06-03 09:20:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:20:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:21:00 INFO === MONITOR JOB @ 2025-06-03 12:21:00.002130-04:00 ===
+2025-06-03 09:21:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:21:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:22:00 INFO === MONITOR JOB @ 2025-06-03 12:22:00.002416-04:00 ===
+2025-06-03 09:22:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:22:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:23:00 INFO === MONITOR JOB @ 2025-06-03 12:23:00.002046-04:00 ===
+2025-06-03 09:23:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:23:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:24:00 INFO === MONITOR JOB @ 2025-06-03 12:24:00.004767-04:00 ===
+2025-06-03 09:24:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:24:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:25:00 INFO === MONITOR JOB @ 2025-06-03 12:25:00.002214-04:00 ===
+2025-06-03 09:25:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:25:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:26:00 INFO === MONITOR JOB @ 2025-06-03 12:26:00.002613-04:00 ===
+2025-06-03 09:26:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:26:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:27:00 INFO === MONITOR JOB @ 2025-06-03 12:27:00.003598-04:00 ===
+2025-06-03 09:27:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:27:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:28:00 INFO === MONITOR JOB @ 2025-06-03 12:28:00.002862-04:00 ===
+2025-06-03 09:28:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:28:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:29:00 INFO === MONITOR JOB @ 2025-06-03 12:29:00.002773-04:00 ===
+2025-06-03 09:29:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:29:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:30:00 INFO === MONITOR JOB @ 2025-06-03 12:30:00.002767-04:00 ===
+2025-06-03 09:30:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:30:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:31:00 INFO === MONITOR JOB @ 2025-06-03 12:31:00.003604-04:00 ===
+2025-06-03 09:31:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:31:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:32:00 INFO === MONITOR JOB @ 2025-06-03 12:32:00.004053-04:00 ===
+2025-06-03 09:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:33:00 INFO === MONITOR JOB @ 2025-06-03 12:33:00.000660-04:00 ===
+2025-06-03 09:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:34:00 INFO === MONITOR JOB @ 2025-06-03 12:34:00.001855-04:00 ===
+2025-06-03 09:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:35:00 INFO === MONITOR JOB @ 2025-06-03 12:35:00.002859-04:00 ===
+2025-06-03 09:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:36:00 INFO === MONITOR JOB @ 2025-06-03 12:36:00.001482-04:00 ===
+2025-06-03 09:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:37:00 INFO === MONITOR JOB @ 2025-06-03 12:37:00.001935-04:00 ===
+2025-06-03 09:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:38:00 INFO === MONITOR JOB @ 2025-06-03 12:38:00.001955-04:00 ===
+2025-06-03 09:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:39:00 INFO === MONITOR JOB @ 2025-06-03 12:39:00.001274-04:00 ===
+2025-06-03 09:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:40:00 INFO === MONITOR JOB @ 2025-06-03 12:40:00.001933-04:00 ===
+2025-06-03 09:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:41:00 INFO === MONITOR JOB @ 2025-06-03 12:41:00.000770-04:00 ===
+2025-06-03 09:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:42:00 INFO === MONITOR JOB @ 2025-06-03 12:42:00.001403-04:00 ===
+2025-06-03 09:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:43:00 INFO === MONITOR JOB @ 2025-06-03 12:43:00.000936-04:00 ===
+2025-06-03 09:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:44:00 INFO === MONITOR JOB @ 2025-06-03 12:44:00.004024-04:00 ===
+2025-06-03 09:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:44:02 INFO SPY: sizing 1 contracts (env max=1, budget max=7) based on $3000.00 per symbol budget and $396.51 per contract
+2025-06-03 09:44:02 ERROR SPY: entry error on attempt 1: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:02 INFO SPY: retrying order submit (attempt 2/3) after 1s
+2025-06-03 09:44:04 ERROR SPY: entry error on attempt 2: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:04 INFO SPY: retrying order submit (attempt 3/3) after 1s
+2025-06-03 09:44:05 ERROR SPY: entry error on attempt 3: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:05 ERROR SPY: order submit failed permanently after 3 attempts
+2025-06-03 09:44:05 INFO SPY: sizing 1 contracts (env max=1, budget max=7) based on $3000.00 per symbol budget and $396.51 per contract
+2025-06-03 09:44:06 ERROR SPY: entry error on attempt 1: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:06 INFO SPY: retrying order submit (attempt 2/3) after 1s
+2025-06-03 09:44:07 ERROR SPY: entry error on attempt 2: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:07 INFO SPY: retrying order submit (attempt 3/3) after 1s
+2025-06-03 09:44:08 ERROR SPY: entry error on attempt 3: {"code":50010000,"message":"internal server error occurred"} {"code":50010000,"message":"internal server error occurred"}
+2025-06-03 09:44:08 ERROR SPY: order submit failed permanently after 3 attempts
+2025-06-03 09:45:00 INFO === MONITOR JOB @ 2025-06-03 12:45:00.001406-04:00 ===
+2025-06-03 09:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:46:00 INFO === MONITOR JOB @ 2025-06-03 12:46:00.003375-04:00 ===
+2025-06-03 09:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:47:00 INFO === MONITOR JOB @ 2025-06-03 12:47:00.003857-04:00 ===
+2025-06-03 09:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:48:00 INFO === MONITOR JOB @ 2025-06-03 12:48:00.001827-04:00 ===
+2025-06-03 09:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:49:00 INFO === MONITOR JOB @ 2025-06-03 12:49:00.001189-04:00 ===
+2025-06-03 09:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:50:00 INFO === MONITOR JOB @ 2025-06-03 12:50:00.003157-04:00 ===
+2025-06-03 09:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:51:00 INFO === MONITOR JOB @ 2025-06-03 12:51:00.002865-04:00 ===
+2025-06-03 09:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:52:00 INFO === MONITOR JOB @ 2025-06-03 12:52:00.002227-04:00 ===
+2025-06-03 09:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:53:00 INFO === MONITOR JOB @ 2025-06-03 12:53:00.001524-04:00 ===
+2025-06-03 09:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:53:46 INFO SPY: sizing 1 contracts (env max=1, budget max=7) based on $3000.00 per symbol budget and $394.73 per contract
+2025-06-03 09:53:46 INFO SPY: entry order 0bf489e0-b6bc-4780-8681-78be7f697649
+2025-06-03 09:54:00 INFO === MONITOR JOB @ 2025-06-03 12:54:00.003467-04:00 ===
+2025-06-03 09:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:55:00 INFO === MONITOR JOB @ 2025-06-03 12:55:00.001219-04:00 ===
+2025-06-03 09:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:56:00 INFO === MONITOR JOB @ 2025-06-03 12:56:00.003819-04:00 ===
+2025-06-03 09:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:57:00 INFO === MONITOR JOB @ 2025-06-03 12:57:00.003056-04:00 ===
+2025-06-03 09:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:58:00 INFO === MONITOR JOB @ 2025-06-03 12:58:00.001119-04:00 ===
+2025-06-03 09:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 09:59:00 INFO === MONITOR JOB @ 2025-06-03 12:59:00.002838-04:00 ===
+2025-06-03 09:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 09:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:00:00 INFO === MONITOR JOB @ 2025-06-03 13:00:00.002689-04:00 ===
+2025-06-03 10:00:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:00:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:01:00 INFO === MONITOR JOB @ 2025-06-03 13:01:00.001838-04:00 ===
+2025-06-03 10:01:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:01:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:02:00 INFO === MONITOR JOB @ 2025-06-03 13:02:00.004394-04:00 ===
+2025-06-03 10:02:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:02:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:03:00 INFO === MONITOR JOB @ 2025-06-03 13:03:00.002570-04:00 ===
+2025-06-03 10:03:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:03:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:04:00 INFO === MONITOR JOB @ 2025-06-03 13:04:00.002663-04:00 ===
+2025-06-03 10:04:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:04:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:05:00 INFO === MONITOR JOB @ 2025-06-03 13:05:00.002290-04:00 ===
+2025-06-03 10:05:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:05:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:06:00 INFO === MONITOR JOB @ 2025-06-03 13:06:00.001108-04:00 ===
+2025-06-03 10:06:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:06:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:07:00 INFO === MONITOR JOB @ 2025-06-03 13:07:00.002306-04:00 ===
+2025-06-03 10:07:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:07:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:08:00 INFO === MONITOR JOB @ 2025-06-03 13:08:00.001888-04:00 ===
+2025-06-03 10:08:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:08:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:09:00 INFO === MONITOR JOB @ 2025-06-03 13:09:00.001358-04:00 ===
+2025-06-03 10:09:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:09:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:10:00 INFO === MONITOR JOB @ 2025-06-03 13:10:00.004962-04:00 ===
+2025-06-03 10:10:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:10:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:11:00 INFO === MONITOR JOB @ 2025-06-03 13:11:00.006391-04:00 ===
+2025-06-03 10:11:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:11:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:12:00 INFO === MONITOR JOB @ 2025-06-03 13:12:00.002306-04:00 ===
+2025-06-03 10:12:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:12:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:13:00 INFO === MONITOR JOB @ 2025-06-03 13:13:00.001943-04:00 ===
+2025-06-03 10:13:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:13:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:14:00 INFO === MONITOR JOB @ 2025-06-03 13:14:00.000718-04:00 ===
+2025-06-03 10:14:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:14:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:15:00 INFO === MONITOR JOB @ 2025-06-03 13:15:00.001203-04:00 ===
+2025-06-03 10:15:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:15:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:16:00 INFO === MONITOR JOB @ 2025-06-03 13:16:00.007419-04:00 ===
+2025-06-03 10:16:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:16:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:17:00 INFO === MONITOR JOB @ 2025-06-03 13:17:00.002464-04:00 ===
+2025-06-03 10:17:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:17:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:18:00 INFO === MONITOR JOB @ 2025-06-03 13:18:00.004878-04:00 ===
+2025-06-03 10:18:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:18:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:19:00 INFO === MONITOR JOB @ 2025-06-03 13:19:00.001567-04:00 ===
+2025-06-03 10:19:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:19:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:20:00 INFO === MONITOR JOB @ 2025-06-03 13:20:00.000650-04:00 ===
+2025-06-03 10:20:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:20:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:21:00 INFO === MONITOR JOB @ 2025-06-03 13:21:00.001379-04:00 ===
+2025-06-03 10:21:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:21:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:22:00 INFO === MONITOR JOB @ 2025-06-03 13:22:00.003046-04:00 ===
+2025-06-03 10:22:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:22:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:23:00 INFO === MONITOR JOB @ 2025-06-03 13:23:00.002163-04:00 ===
+2025-06-03 10:23:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:23:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:24:00 INFO === MONITOR JOB @ 2025-06-03 13:24:00.002285-04:00 ===
+2025-06-03 10:24:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:24:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:25:00 INFO === MONITOR JOB @ 2025-06-03 13:25:00.002288-04:00 ===
+2025-06-03 10:25:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:25:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:26:00 INFO === MONITOR JOB @ 2025-06-03 13:26:00.003174-04:00 ===
+2025-06-03 10:26:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:26:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:27:00 INFO === MONITOR JOB @ 2025-06-03 13:27:00.005400-04:00 ===
+2025-06-03 10:27:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:27:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:28:00 INFO === MONITOR JOB @ 2025-06-03 13:28:00.004112-04:00 ===
+2025-06-03 10:28:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:28:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:29:00 INFO === MONITOR JOB @ 2025-06-03 13:29:00.001344-04:00 ===
+2025-06-03 10:29:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:29:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:30:00 INFO === MONITOR JOB @ 2025-06-03 13:30:00.003426-04:00 ===
+2025-06-03 10:30:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:30:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:31:00 INFO === MONITOR JOB @ 2025-06-03 13:31:00.002106-04:00 ===
+2025-06-03 10:31:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:31:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:32:00 INFO === MONITOR JOB @ 2025-06-03 13:32:00.006941-04:00 ===
+2025-06-03 10:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:33:00 INFO === MONITOR JOB @ 2025-06-03 13:33:00.005535-04:00 ===
+2025-06-03 10:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:34:00 INFO === MONITOR JOB @ 2025-06-03 13:34:00.002482-04:00 ===
+2025-06-03 10:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:35:00 INFO === MONITOR JOB @ 2025-06-03 13:35:00.001099-04:00 ===
+2025-06-03 10:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:36:00 INFO === MONITOR JOB @ 2025-06-03 13:36:00.002007-04:00 ===
+2025-06-03 10:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:37:00 INFO === MONITOR JOB @ 2025-06-03 13:37:00.008251-04:00 ===
+2025-06-03 10:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:38:00 INFO === MONITOR JOB @ 2025-06-03 13:38:00.003424-04:00 ===
+2025-06-03 10:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:39:00 INFO === MONITOR JOB @ 2025-06-03 13:39:00.003719-04:00 ===
+2025-06-03 10:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:40:00 INFO === MONITOR JOB @ 2025-06-03 13:40:00.006120-04:00 ===
+2025-06-03 10:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:41:00 INFO === MONITOR JOB @ 2025-06-03 13:41:00.002148-04:00 ===
+2025-06-03 10:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:42:00 INFO === MONITOR JOB @ 2025-06-03 13:42:00.000965-04:00 ===
+2025-06-03 10:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:43:00 INFO === MONITOR JOB @ 2025-06-03 13:43:00.002432-04:00 ===
+2025-06-03 10:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:44:00 INFO === MONITOR JOB @ 2025-06-03 13:44:00.000295-04:00 ===
+2025-06-03 10:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:45:00 INFO === MONITOR JOB @ 2025-06-03 13:45:00.004470-04:00 ===
+2025-06-03 10:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:46:00 INFO === MONITOR JOB @ 2025-06-03 13:46:00.004108-04:00 ===
+2025-06-03 10:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:47:00 INFO === MONITOR JOB @ 2025-06-03 13:47:00.001818-04:00 ===
+2025-06-03 10:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:48:00 INFO === MONITOR JOB @ 2025-06-03 13:48:00.001673-04:00 ===
+2025-06-03 10:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:49:00 INFO === MONITOR JOB @ 2025-06-03 13:49:00.004264-04:00 ===
+2025-06-03 10:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:50:00 INFO === MONITOR JOB @ 2025-06-03 13:50:00.002285-04:00 ===
+2025-06-03 10:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:51:00 INFO === MONITOR JOB @ 2025-06-03 13:51:00.009125-04:00 ===
+2025-06-03 10:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:52:00 INFO === MONITOR JOB @ 2025-06-03 13:52:00.006850-04:00 ===
+2025-06-03 10:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:53:00 INFO === MONITOR JOB @ 2025-06-03 13:53:00.011641-04:00 ===
+2025-06-03 10:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:54:00 INFO === MONITOR JOB @ 2025-06-03 13:54:00.000870-04:00 ===
+2025-06-03 10:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:55:00 INFO === MONITOR JOB @ 2025-06-03 13:55:00.004246-04:00 ===
+2025-06-03 10:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:56:00 INFO === MONITOR JOB @ 2025-06-03 13:56:00.002600-04:00 ===
+2025-06-03 10:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:57:00 INFO === MONITOR JOB @ 2025-06-03 13:57:00.000946-04:00 ===
+2025-06-03 10:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:58:00 INFO === MONITOR JOB @ 2025-06-03 13:58:00.004069-04:00 ===
+2025-06-03 10:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 10:59:00 INFO === MONITOR JOB @ 2025-06-03 13:59:00.004087-04:00 ===
+2025-06-03 10:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 10:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:00:00 INFO === MONITOR JOB @ 2025-06-03 14:00:00.002512-04:00 ===
+2025-06-03 11:00:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:00:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:01:00 INFO === MONITOR JOB @ 2025-06-03 14:01:00.005568-04:00 ===
+2025-06-03 11:01:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:01:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:02:00 INFO === MONITOR JOB @ 2025-06-03 14:02:00.002025-04:00 ===
+2025-06-03 11:02:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:02:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:03:00 INFO === MONITOR JOB @ 2025-06-03 14:03:00.008297-04:00 ===
+2025-06-03 11:03:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:03:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:04:00 INFO === MONITOR JOB @ 2025-06-03 14:04:00.001783-04:00 ===
+2025-06-03 11:04:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:04:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:05:00 INFO === MONITOR JOB @ 2025-06-03 14:05:00.000429-04:00 ===
+2025-06-03 11:05:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:05:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:06:00 INFO === MONITOR JOB @ 2025-06-03 14:06:00.001446-04:00 ===
+2025-06-03 11:06:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:06:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:07:00 INFO === MONITOR JOB @ 2025-06-03 14:07:00.005109-04:00 ===
+2025-06-03 11:07:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:07:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:08:00 INFO === MONITOR JOB @ 2025-06-03 14:08:00.005821-04:00 ===
+2025-06-03 11:08:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:08:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:09:00 INFO === MONITOR JOB @ 2025-06-03 14:09:00.002732-04:00 ===
+2025-06-03 11:09:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:09:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:10:00 INFO === MONITOR JOB @ 2025-06-03 14:10:00.001875-04:00 ===
+2025-06-03 11:10:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:10:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:11:00 INFO === MONITOR JOB @ 2025-06-03 14:11:00.004167-04:00 ===
+2025-06-03 11:11:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:11:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:12:00 INFO === MONITOR JOB @ 2025-06-03 14:12:00.010538-04:00 ===
+2025-06-03 11:12:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:12:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:13:00 INFO === MONITOR JOB @ 2025-06-03 14:13:00.005275-04:00 ===
+2025-06-03 11:13:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:13:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:14:00 INFO === MONITOR JOB @ 2025-06-03 14:14:00.001276-04:00 ===
+2025-06-03 11:14:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:14:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:15:00 INFO === MONITOR JOB @ 2025-06-03 14:15:00.002665-04:00 ===
+2025-06-03 11:15:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:15:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:16:00 INFO === MONITOR JOB @ 2025-06-03 14:16:00.005085-04:00 ===
+2025-06-03 11:16:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:16:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:17:00 INFO === MONITOR JOB @ 2025-06-03 14:17:00.000769-04:00 ===
+2025-06-03 11:17:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:17:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:18:00 INFO === MONITOR JOB @ 2025-06-03 14:18:00.001627-04:00 ===
+2025-06-03 11:18:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:18:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:19:00 INFO === MONITOR JOB @ 2025-06-03 14:19:00.001771-04:00 ===
+2025-06-03 11:19:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:19:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:20:00 INFO === MONITOR JOB @ 2025-06-03 14:20:00.002220-04:00 ===
+2025-06-03 11:20:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:20:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:21:00 INFO === MONITOR JOB @ 2025-06-03 14:21:00.001442-04:00 ===
+2025-06-03 11:21:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:21:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:22:00 INFO === MONITOR JOB @ 2025-06-03 14:22:00.008552-04:00 ===
+2025-06-03 11:22:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:22:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:23:00 INFO === MONITOR JOB @ 2025-06-03 14:23:00.000948-04:00 ===
+2025-06-03 11:23:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:23:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:24:00 INFO === MONITOR JOB @ 2025-06-03 14:24:00.001905-04:00 ===
+2025-06-03 11:24:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:24:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:25:00 INFO === MONITOR JOB @ 2025-06-03 14:25:00.003984-04:00 ===
+2025-06-03 11:25:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:25:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:26:00 INFO === MONITOR JOB @ 2025-06-03 14:26:00.009813-04:00 ===
+2025-06-03 11:26:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:26:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:27:00 INFO === MONITOR JOB @ 2025-06-03 14:27:00.001609-04:00 ===
+2025-06-03 11:27:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:27:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:28:00 INFO === MONITOR JOB @ 2025-06-03 14:28:00.000409-04:00 ===
+2025-06-03 11:28:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:28:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:29:00 INFO === MONITOR JOB @ 2025-06-03 14:29:00.005162-04:00 ===
+2025-06-03 11:29:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:29:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:30:00 INFO === MONITOR JOB @ 2025-06-03 14:30:00.001250-04:00 ===
+2025-06-03 11:30:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:30:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:31:00 INFO === MONITOR JOB @ 2025-06-03 14:31:00.001699-04:00 ===
+2025-06-03 11:31:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:31:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:32:00 INFO === MONITOR JOB @ 2025-06-03 14:32:00.000997-04:00 ===
+2025-06-03 11:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:33:00 INFO === MONITOR JOB @ 2025-06-03 14:33:00.000839-04:00 ===
+2025-06-03 11:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:34:00 INFO === MONITOR JOB @ 2025-06-03 14:34:00.002744-04:00 ===
+2025-06-03 11:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:35:00 INFO === MONITOR JOB @ 2025-06-03 14:35:00.002469-04:00 ===
+2025-06-03 11:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:36:00 INFO === MONITOR JOB @ 2025-06-03 14:36:00.003051-04:00 ===
+2025-06-03 11:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:37:00 INFO === MONITOR JOB @ 2025-06-03 14:37:00.002366-04:00 ===
+2025-06-03 11:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:38:00 INFO === MONITOR JOB @ 2025-06-03 14:38:00.002695-04:00 ===
+2025-06-03 11:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:39:00 INFO === MONITOR JOB @ 2025-06-03 14:39:00.003065-04:00 ===
+2025-06-03 11:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:40:00 INFO === MONITOR JOB @ 2025-06-03 14:40:00.002712-04:00 ===
+2025-06-03 11:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:41:00 INFO === MONITOR JOB @ 2025-06-03 14:41:00.001077-04:00 ===
+2025-06-03 11:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:42:00 INFO === MONITOR JOB @ 2025-06-03 14:42:00.001667-04:00 ===
+2025-06-03 11:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:43:00 INFO === MONITOR JOB @ 2025-06-03 14:43:00.007267-04:00 ===
+2025-06-03 11:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:44:00 INFO === MONITOR JOB @ 2025-06-03 14:44:00.000836-04:00 ===
+2025-06-03 11:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:45:00 INFO === MONITOR JOB @ 2025-06-03 14:45:00.000822-04:00 ===
+2025-06-03 11:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:46:00 INFO === MONITOR JOB @ 2025-06-03 14:46:00.000806-04:00 ===
+2025-06-03 11:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:47:00 INFO === MONITOR JOB @ 2025-06-03 14:47:00.001190-04:00 ===
+2025-06-03 11:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:48:00 INFO === MONITOR JOB @ 2025-06-03 14:48:00.001301-04:00 ===
+2025-06-03 11:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:49:00 INFO === MONITOR JOB @ 2025-06-03 14:49:00.000736-04:00 ===
+2025-06-03 11:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:50:00 INFO === MONITOR JOB @ 2025-06-03 14:50:00.002179-04:00 ===
+2025-06-03 11:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:51:00 INFO === MONITOR JOB @ 2025-06-03 14:51:00.000435-04:00 ===
+2025-06-03 11:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:52:00 INFO === MONITOR JOB @ 2025-06-03 14:52:00.002552-04:00 ===
+2025-06-03 11:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:53:00 INFO === MONITOR JOB @ 2025-06-03 14:53:00.001809-04:00 ===
+2025-06-03 11:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:54:00 INFO === MONITOR JOB @ 2025-06-03 14:54:00.000837-04:00 ===
+2025-06-03 11:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:55:00 INFO === MONITOR JOB @ 2025-06-03 14:55:00.004482-04:00 ===
+2025-06-03 11:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:56:00 INFO === MONITOR JOB @ 2025-06-03 14:56:00.005713-04:00 ===
+2025-06-03 11:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:57:00 INFO === MONITOR JOB @ 2025-06-03 14:57:00.004441-04:00 ===
+2025-06-03 11:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:58:00 INFO === MONITOR JOB @ 2025-06-03 14:58:00.002417-04:00 ===
+2025-06-03 11:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 11:59:00 INFO === MONITOR JOB @ 2025-06-03 14:59:00.001510-04:00 ===
+2025-06-03 11:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 11:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:00:00 INFO === MONITOR JOB @ 2025-06-03 15:00:00.002348-04:00 ===
+2025-06-03 12:00:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:00:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:01:00 INFO === MONITOR JOB @ 2025-06-03 15:01:00.002376-04:00 ===
+2025-06-03 12:01:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:01:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:02:00 INFO === MONITOR JOB @ 2025-06-03 15:02:00.006157-04:00 ===
+2025-06-03 12:02:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:02:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:03:00 INFO === MONITOR JOB @ 2025-06-03 15:03:00.001262-04:00 ===
+2025-06-03 12:03:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:03:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:04:00 INFO === MONITOR JOB @ 2025-06-03 15:04:00.009209-04:00 ===
+2025-06-03 12:04:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:04:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:05:00 INFO === MONITOR JOB @ 2025-06-03 15:05:00.005928-04:00 ===
+2025-06-03 12:05:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:05:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:06:00 INFO === MONITOR JOB @ 2025-06-03 15:06:00.005727-04:00 ===
+2025-06-03 12:06:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:06:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:07:00 INFO === MONITOR JOB @ 2025-06-03 15:07:00.005238-04:00 ===
+2025-06-03 12:07:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:07:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:08:00 INFO === MONITOR JOB @ 2025-06-03 15:08:00.002557-04:00 ===
+2025-06-03 12:08:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:08:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:09:00 INFO === MONITOR JOB @ 2025-06-03 15:09:00.005579-04:00 ===
+2025-06-03 12:09:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:09:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:10:00 INFO === MONITOR JOB @ 2025-06-03 15:10:00.001265-04:00 ===
+2025-06-03 12:10:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:10:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:11:00 INFO === MONITOR JOB @ 2025-06-03 15:11:00.001710-04:00 ===
+2025-06-03 12:11:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:11:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:12:00 INFO === MONITOR JOB @ 2025-06-03 15:12:00.001287-04:00 ===
+2025-06-03 12:12:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:12:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:13:00 INFO === MONITOR JOB @ 2025-06-03 15:13:00.001865-04:00 ===
+2025-06-03 12:13:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:13:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:14:00 INFO === MONITOR JOB @ 2025-06-03 15:14:00.004114-04:00 ===
+2025-06-03 12:14:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:14:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:15:00 INFO === MONITOR JOB @ 2025-06-03 15:15:00.006209-04:00 ===
+2025-06-03 12:15:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:15:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:16:00 INFO === MONITOR JOB @ 2025-06-03 15:16:00.001422-04:00 ===
+2025-06-03 12:16:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:16:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:17:00 INFO === MONITOR JOB @ 2025-06-03 15:17:00.001423-04:00 ===
+2025-06-03 12:17:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:17:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:18:00 INFO === MONITOR JOB @ 2025-06-03 15:18:00.006077-04:00 ===
+2025-06-03 12:18:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:18:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:19:00 INFO === MONITOR JOB @ 2025-06-03 15:19:00.005454-04:00 ===
+2025-06-03 12:19:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:19:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:20:00 INFO === MONITOR JOB @ 2025-06-03 15:20:00.005759-04:00 ===
+2025-06-03 12:20:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:20:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:21:00 INFO === MONITOR JOB @ 2025-06-03 15:21:00.001745-04:00 ===
+2025-06-03 12:21:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:21:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:22:00 INFO === MONITOR JOB @ 2025-06-03 15:22:00.001108-04:00 ===
+2025-06-03 12:22:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:22:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:23:00 INFO === MONITOR JOB @ 2025-06-03 15:23:00.001770-04:00 ===
+2025-06-03 12:23:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:23:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:24:00 INFO === MONITOR JOB @ 2025-06-03 15:24:00.001425-04:00 ===
+2025-06-03 12:24:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:24:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:25:00 INFO === MONITOR JOB @ 2025-06-03 15:25:00.000679-04:00 ===
+2025-06-03 12:25:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:25:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:26:00 INFO === MONITOR JOB @ 2025-06-03 15:26:00.000535-04:00 ===
+2025-06-03 12:26:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:26:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:27:00 INFO === MONITOR JOB @ 2025-06-03 15:27:00.003984-04:00 ===
+2025-06-03 12:27:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:27:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:28:00 INFO === MONITOR JOB @ 2025-06-03 15:28:00.001768-04:00 ===
+2025-06-03 12:28:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:28:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:29:00 INFO === MONITOR JOB @ 2025-06-03 15:29:00.002974-04:00 ===
+2025-06-03 12:29:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:29:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:30:00 INFO === MONITOR JOB @ 2025-06-03 15:30:00.004049-04:00 ===
+2025-06-03 12:30:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:30:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:31:00 INFO === MONITOR JOB @ 2025-06-03 15:31:00.005915-04:00 ===
+2025-06-03 12:31:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:31:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:32:00 INFO === MONITOR JOB @ 2025-06-03 15:32:00.000725-04:00 ===
+2025-06-03 12:32:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:32:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:33:00 INFO === MONITOR JOB @ 2025-06-03 15:33:00.003112-04:00 ===
+2025-06-03 12:33:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:33:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:34:00 INFO === MONITOR JOB @ 2025-06-03 15:34:00.001911-04:00 ===
+2025-06-03 12:34:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:34:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:35:00 INFO === MONITOR JOB @ 2025-06-03 15:35:00.001172-04:00 ===
+2025-06-03 12:35:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:35:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:36:00 INFO === MONITOR JOB @ 2025-06-03 15:36:00.002580-04:00 ===
+2025-06-03 12:36:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:36:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:37:00 INFO === MONITOR JOB @ 2025-06-03 15:37:00.003371-04:00 ===
+2025-06-03 12:37:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:37:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:38:00 INFO === MONITOR JOB @ 2025-06-03 15:38:00.003665-04:00 ===
+2025-06-03 12:38:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:38:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:39:00 INFO === MONITOR JOB @ 2025-06-03 15:39:00.001295-04:00 ===
+2025-06-03 12:39:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:39:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:40:00 INFO === MONITOR JOB @ 2025-06-03 15:40:00.001530-04:00 ===
+2025-06-03 12:40:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:40:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:41:00 INFO === MONITOR JOB @ 2025-06-03 15:41:00.001086-04:00 ===
+2025-06-03 12:41:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:41:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:42:00 INFO === MONITOR JOB @ 2025-06-03 15:42:00.004066-04:00 ===
+2025-06-03 12:42:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:42:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:43:00 INFO === MONITOR JOB @ 2025-06-03 15:43:00.001417-04:00 ===
+2025-06-03 12:43:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:43:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:44:00 INFO === MONITOR JOB @ 2025-06-03 15:44:00.005462-04:00 ===
+2025-06-03 12:44:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:44:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:45:00 INFO === EXIT JOB @ 2025-06-03 15:45:00.006404-04:00 ===
+2025-06-03 12:45:00 INFO === MONITOR JOB @ 2025-06-03 15:45:00.006554-04:00 ===
+2025-06-03 12:45:00 INFO All positions closed.
+2025-06-03 12:45:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:45:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:45:05 INFO Starting trading bot
+2025-06-03 12:46:00 INFO === MONITOR JOB @ 2025-06-03 15:46:00.001813-04:00 ===
+2025-06-03 12:46:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:46:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:47:00 INFO === MONITOR JOB @ 2025-06-03 15:47:00.001930-04:00 ===
+2025-06-03 12:47:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:47:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:48:00 INFO === MONITOR JOB @ 2025-06-03 15:48:00.002724-04:00 ===
+2025-06-03 12:48:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:48:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:49:00 INFO === MONITOR JOB @ 2025-06-03 15:49:00.003967-04:00 ===
+2025-06-03 12:49:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:49:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:50:00 INFO === MONITOR JOB @ 2025-06-03 15:50:00.000735-04:00 ===
+2025-06-03 12:50:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:50:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:51:00 INFO === MONITOR JOB @ 2025-06-03 15:51:00.001196-04:00 ===
+2025-06-03 12:51:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:51:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:52:00 INFO === MONITOR JOB @ 2025-06-03 15:52:00.000540-04:00 ===
+2025-06-03 12:52:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:52:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:53:00 INFO === MONITOR JOB @ 2025-06-03 15:53:00.000449-04:00 ===
+2025-06-03 12:53:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:53:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:54:00 INFO === MONITOR JOB @ 2025-06-03 15:54:00.001025-04:00 ===
+2025-06-03 12:54:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:54:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:55:00 INFO === MONITOR JOB @ 2025-06-03 15:55:00.000882-04:00 ===
+2025-06-03 12:55:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:55:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:56:00 INFO === MONITOR JOB @ 2025-06-03 15:56:00.000959-04:00 ===
+2025-06-03 12:56:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:56:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:57:00 INFO === MONITOR JOB @ 2025-06-03 15:57:00.000524-04:00 ===
+2025-06-03 12:57:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:57:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:58:00 INFO === MONITOR JOB @ 2025-06-03 15:58:00.000777-04:00 ===
+2025-06-03 12:58:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:58:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 12:59:00 INFO === MONITOR JOB @ 2025-06-03 15:59:00.002191-04:00 ===
+2025-06-03 12:59:00 INFO DEBUG MONITOR: got 0 positions: []
+2025-06-03 12:59:00 INFO Total P/L across positions: 0.00 (to PT=95.00, to SL=95.00)
+2025-06-03 13:00:00 INFO === MONITOR JOB @ 2025-06-03 16:00:00.002376-04:00 ===
+2025-06-03 13:00:00 INFO Market is closed at 2025-06-03 16:00:00.103086-04:00, sleeping for 2 minutes.
+2025-06-03 13:03:00 INFO === MONITOR JOB @ 2025-06-03 16:03:00.003234-04:00 ===
+2025-06-03 13:03:00 INFO Market is closed at 2025-06-03 16:03:00.231381-04:00, sleeping for 2 minutes.
+2025-06-03 13:06:00 INFO === MONITOR JOB @ 2025-06-03 16:06:00.001289-04:00 ===
+2025-06-03 13:06:00 INFO Market is closed at 2025-06-03 16:06:00.267393-04:00, sleeping for 2 minutes.
+2025-06-03 13:09:00 INFO === MONITOR JOB @ 2025-06-03 16:09:00.001206-04:00 ===
+2025-06-03 13:09:00 INFO Market is closed at 2025-06-03 16:09:00.237271-04:00, sleeping for 2 minutes.
+2025-06-03 13:12:00 INFO === MONITOR JOB @ 2025-06-03 16:12:00.001914-04:00 ===
+2025-06-03 13:12:00 INFO Market is closed at 2025-06-03 16:12:00.264396-04:00, sleeping for 2 minutes.
+2025-06-03 13:15:00 INFO === MONITOR JOB @ 2025-06-03 16:15:00.003573-04:00 ===
+2025-06-03 13:15:00 INFO Market is closed at 2025-06-03 16:15:00.245373-04:00, sleeping for 2 minutes.
+2025-06-03 13:18:00 INFO === MONITOR JOB @ 2025-06-03 16:18:00.002632-04:00 ===
+2025-06-03 13:18:00 INFO Market is closed at 2025-06-03 16:18:00.449823-04:00, sleeping for 2 minutes.
+2025-06-03 13:21:00 INFO === MONITOR JOB @ 2025-06-03 16:21:00.005626-04:00 ===
+2025-06-03 13:21:00 INFO Market is closed at 2025-06-03 16:21:00.233698-04:00, sleeping for 2 minutes.
+2025-06-03 13:24:00 INFO === MONITOR JOB @ 2025-06-03 16:24:00.002731-04:00 ===
+2025-06-03 13:24:00 INFO Market is closed at 2025-06-03 16:24:00.261180-04:00, sleeping for 2 minutes.
+2025-06-03 13:27:00 INFO === MONITOR JOB @ 2025-06-03 16:27:00.004203-04:00 ===
+2025-06-03 13:27:00 INFO Market is closed at 2025-06-03 16:27:00.263182-04:00, sleeping for 2 minutes.
+2025-06-03 13:30:00 INFO === MONITOR JOB @ 2025-06-03 16:30:00.005482-04:00 ===
+2025-06-03 13:30:00 INFO Market is closed at 2025-06-03 16:30:00.459309-04:00, sleeping for 2 minutes.
+2025-06-03 13:33:00 INFO === MONITOR JOB @ 2025-06-03 16:33:00.001294-04:00 ===
+2025-06-03 13:33:00 INFO Market is closed at 2025-06-03 16:33:00.253140-04:00, sleeping for 2 minutes.
+2025-06-03 13:36:00 INFO === MONITOR JOB @ 2025-06-03 16:36:00.010666-04:00 ===
+2025-06-03 13:36:00 INFO Market is closed at 2025-06-03 16:36:00.279064-04:00, sleeping for 2 minutes.
+2025-06-03 13:39:00 INFO === MONITOR JOB @ 2025-06-03 16:39:00.011057-04:00 ===
+2025-06-03 13:39:00 INFO Market is closed at 2025-06-03 16:39:00.246777-04:00, sleeping for 2 minutes.
+2025-06-03 16:00:00 INFO Reminder: revisit margin-based sizing logic.

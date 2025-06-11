@@ -1,0 +1,624 @@
+nohup: ignoring input
+[2025-05-16 05:11:19] ⚙️ Using Friday expiration parameters
+[2025-05-16 05:11:19] 🟢 Bot started
+[2025-05-16 05:11:19] ⚠️ No ticker file for today. Using fallback list.
+[2025-05-16 05:11:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 05:26:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 05:41:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 05:56:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 06:11:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 06:26:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 06:41:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 06:56:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 07:11:19] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 07:26:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 07:41:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 07:56:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 08:11:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 08:26:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 08:41:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 08:56:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 09:11:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 09:26:20] 🔴 Market closed. Sleeping 15 minutes...
+[2025-05-16 09:41:28] [SPY] No valid spread found.
+[2025-05-16 09:41:36] [QQQ] No valid spread found.
+[2025-05-16 09:41:40] ✅ TSLA Spread placed: Credit $1.25, Width $2.50
+[2025-05-16 09:41:46] [AAPL] No valid spread found.
+[2025-05-16 09:42:02] ✅ MSFT Spread placed: Credit $0.64, Width $2.50
+[2025-05-16 09:42:12] ✅ NVDA Spread placed: Credit $0.36, Width $1.00
+[2025-05-16 09:42:33] ✅ META Spread placed: Credit $1.09, Width $2.50
+[2025-05-16 09:42:42] ✅ AMZN Spread placed: Credit $0.88, Width $2.50
+[2025-05-16 09:42:54] ✅ AMD Spread placed: Credit $0.54, Width $1.00
+[2025-05-16 09:43:03] [GOOG] No valid spread found.
+[2025-05-16 09:43:11] [BA] No valid spread found.
+[2025-05-16 09:43:20] [XLF] No valid spread found.
+[2025-05-16 09:43:25] [XLK] No valid spread found.
+[2025-05-16 09:43:42] ✅ DIA Spread placed: Credit $0.43, Width $1.00
+[2025-05-16 09:44:00] ✅ IWM Spread placed: Credit $0.38, Width $1.00
+[2025-05-16 09:44:08] ✅ XLE Spread placed: Credit $0.19, Width $0.50
+[2025-05-16 09:44:13] ✅ XBI Spread placed: Credit $0.43, Width $1.00
+[2025-05-16 09:44:25] [TSM] No valid spread found.
+[2025-05-16 09:44:29] ✅ GDX Spread placed: Credit $0.08, Width $0.50
+[2025-05-16 09:44:38] ✅ ARKK Spread placed: Credit $0.13, Width $0.50
+[2025-05-16 09:44:38] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 09:49:46] [SPY] No valid spread found.
+[2025-05-16 09:49:54] [QQQ] No valid spread found.
+[2025-05-16 09:49:58] ✅ TSLA Spread placed: Credit $1.06, Width $2.50
+[2025-05-16 09:50:04] [AAPL] No valid spread found.
+[2025-05-16 09:50:17] ✅ MSFT Spread placed: Credit $0.77, Width $2.50
+[2025-05-16 09:50:33] ✅ NVDA Spread placed: Credit $0.46, Width $1.00
+[2025-05-16 09:50:51] ✅ META Spread placed: Credit $1.06, Width $2.50
+[2025-05-16 09:50:59] ✅ AMZN Spread placed: Credit $0.90, Width $2.50
+[2025-05-16 09:51:12] ✅ AMD Spread placed: Credit $0.40, Width $1.00
+[2025-05-16 09:51:21] [GOOG] No valid spread found.
+[2025-05-16 09:51:29] [BA] No valid spread found.
+[2025-05-16 09:51:37] [XLF] No valid spread found.
+[2025-05-16 09:51:46] [XLK] No valid spread found.
+[2025-05-16 09:51:59] ✅ DIA Spread placed: Credit $0.39, Width $1.00
+[2025-05-16 09:52:20] [IWM] No valid spread found.
+[2025-05-16 09:52:28] ✅ XLE Spread placed: Credit $0.13, Width $0.50
+[2025-05-16 09:52:36] [XBI] No valid spread found.
+[2025-05-16 09:52:45] ✅ TSM Spread placed: Credit $0.97, Width $2.50
+[2025-05-16 09:52:53] [GDX] No valid spread found.
+[2025-05-16 09:53:02] [ARKK] No valid spread found.
+[2025-05-16 09:53:02] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 09:58:17] [SPY] No valid spread found.
+[2025-05-16 09:58:46] [QQQ] No valid spread found.
+[2025-05-16 09:58:59] ✅ TSLA Spread placed: Credit $0.89, Width $2.50
+[2025-05-16 09:59:07] [AAPL] No valid spread found.
+[2025-05-16 09:59:24] ✅ MSFT Spread placed: Credit $0.88, Width $2.50
+[2025-05-16 09:59:37] ✅ NVDA Spread placed: Credit $0.29, Width $1.00
+[2025-05-16 09:59:57] ✅ META Spread placed: Credit $1.01, Width $2.50
+[2025-05-16 10:00:07] [AMZN] No valid spread found.
+[2025-05-16 10:00:19] ✅ AMD Spread placed: Credit $0.53, Width $1.00
+[2025-05-16 10:00:28] [GOOG] No valid spread found.
+[2025-05-16 10:00:36] [BA] No valid spread found.
+[2025-05-16 10:00:44] [XLF] No valid spread found.
+[2025-05-16 10:00:52] [XLK] No valid spread found.
+[2025-05-16 10:01:09] ✅ DIA Spread placed: Credit $0.30, Width $1.00
+[2025-05-16 10:01:26] ✅ IWM Spread placed: Credit $0.45, Width $1.00
+[2025-05-16 10:01:35] ✅ XLE Spread placed: Credit $0.09, Width $0.50
+[2025-05-16 10:01:39] ✅ XBI Spread placed: Credit $0.85, Width $1.00
+[2025-05-16 10:01:48] ✅ TSM Spread placed: Credit $1.00, Width $2.50
+[2025-05-16 10:01:56] [GDX] No valid spread found.
+[2025-05-16 10:02:05] ✅ ARKK Spread placed: Credit $1.07, Width $0.50
+[2025-05-16 10:02:05] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:07:13] [SPY] No valid spread found.
+[2025-05-16 10:08:08] [QQQ] No valid spread found.
+[2025-05-16 10:08:45] ✅ TSLA Spread placed: Credit $1.04, Width $2.50
+[2025-05-16 10:09:16] [AAPL] No valid spread found.
+[2025-05-16 10:10:00] ✅ MSFT Spread placed: Credit $0.68, Width $2.50
+[2025-05-16 10:10:19] ✅ NVDA Spread placed: Credit $0.31, Width $1.00
+[2025-05-16 10:10:37] ✅ META Spread placed: Credit $1.00, Width $2.50
+[2025-05-16 10:10:49] [AMZN] No valid spread found.
+[2025-05-16 10:11:01] ✅ AMD Spread placed: Credit $0.32, Width $1.00
+[2025-05-16 10:11:10] [GOOG] No valid spread found.
+[2025-05-16 10:11:19] [BA] No valid spread found.
+[2025-05-16 10:11:27] [XLF] No valid spread found.
+[2025-05-16 10:11:32] [XLK] No valid spread found.
+[2025-05-16 10:11:49] ✅ DIA Spread placed: Credit $0.34, Width $1.00
+[2025-05-16 10:12:09] ✅ IWM Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 10:12:18] [XLE] No valid spread found.
+[2025-05-16 10:12:26] [XBI] No valid spread found.
+[2025-05-16 10:12:35] ✅ TSM Spread placed: Credit $1.01, Width $2.50
+[2025-05-16 10:12:40] [GDX] No valid spread found.
+[2025-05-16 10:12:52] ✅ ARKK Spread placed: Credit $0.18, Width $0.50
+[2025-05-16 10:12:52] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:18:01] [SPY] No valid spread found.
+[2025-05-16 10:18:08] [QQQ] No valid spread found.
+[2025-05-16 10:18:12] ✅ TSLA Spread placed: Credit $1.24, Width $2.50
+[2025-05-16 10:18:18] [AAPL] No valid spread found.
+[2025-05-16 10:18:35] [MSFT] No valid spread found.
+[2025-05-16 10:18:51] [NVDA] No valid spread found.
+[2025-05-16 10:19:11] ✅ META Spread placed: Credit $1.10, Width $2.50
+[2025-05-16 10:19:21] [AMZN] No valid spread found.
+[2025-05-16 10:19:33] ✅ AMD Spread placed: Credit $0.39, Width $1.00
+[2025-05-16 10:19:42] [GOOG] No valid spread found.
+[2025-05-16 10:19:50] [BA] No valid spread found.
+[2025-05-16 10:20:01] [XLF] No valid spread found.
+[2025-05-16 10:20:16] [XLK] No valid spread found.
+[2025-05-16 10:21:03] ✅ DIA Spread placed: Credit $0.27, Width $1.00
+[2025-05-16 10:21:58] [IWM] No valid spread found.
+[2025-05-16 10:22:15] ✅ XLE Spread placed: Credit $0.21, Width $0.50
+[2025-05-16 10:22:29] [XBI] No valid spread found.
+[2025-05-16 10:22:47] ✅ TSM Spread placed: Credit $1.09, Width $2.50
+[2025-05-16 10:23:02] [GDX] No valid spread found.
+[2025-05-16 10:23:20] [ARKK] No valid spread found.
+[2025-05-16 10:23:20] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:28:29] [SPY] No valid spread found.
+[2025-05-16 10:28:37] [QQQ] No valid spread found.
+[2025-05-16 10:28:41] ✅ TSLA Spread placed: Credit $0.90, Width $2.50
+[2025-05-16 10:28:44] [AAPL] No valid spread found.
+[2025-05-16 10:29:01] ✅ MSFT Spread placed: Credit $0.91, Width $2.50
+[2025-05-16 10:29:14] ✅ NVDA Spread placed: Credit $0.52, Width $1.00
+[2025-05-16 10:29:34] ✅ META Spread placed: Credit $0.96, Width $2.50
+[2025-05-16 10:29:44] [AMZN] No valid spread found.
+[2025-05-16 10:29:56] ✅ AMD Spread placed: Credit $0.57, Width $1.00
+[2025-05-16 10:30:05] [GOOG] No valid spread found.
+[2025-05-16 10:30:14] [BA] No valid spread found.
+[2025-05-16 10:30:22] [XLF] No valid spread found.
+[2025-05-16 10:30:27] [XLK] No valid spread found.
+[2025-05-16 10:30:44] ✅ DIA Spread placed: Credit $0.50, Width $1.00
+[2025-05-16 10:31:05] ✅ IWM Spread placed: Credit $0.59, Width $1.00
+[2025-05-16 10:31:14] ✅ XLE Spread placed: Credit $0.24, Width $0.50
+[2025-05-16 10:31:19] [XBI] No valid spread found.
+[2025-05-16 10:31:28] ✅ TSM Spread placed: Credit $1.24, Width $2.50
+[2025-05-16 10:31:36] [GDX] No valid spread found.
+[2025-05-16 10:31:45] ✅ ARKK Spread placed: Credit $0.28, Width $0.50
+[2025-05-16 10:31:45] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:36:54] [SPY] No valid spread found.
+[2025-05-16 10:37:02] [QQQ] No valid spread found.
+[2025-05-16 10:37:05] ✅ TSLA Spread placed: Credit $0.93, Width $2.50
+[2025-05-16 10:37:08] [AAPL] No valid spread found.
+[2025-05-16 10:37:25] ✅ MSFT Spread placed: Credit $0.82, Width $2.50
+[2025-05-16 10:37:38] ✅ NVDA Spread placed: Credit $0.42, Width $1.00
+[2025-05-16 10:37:56] ✅ META Spread placed: Credit $1.07, Width $2.50
+[2025-05-16 10:38:08] [AMZN] No valid spread found.
+[2025-05-16 10:38:21] ✅ AMD Spread placed: Credit $0.52, Width $1.00
+[2025-05-16 10:38:30] [GOOG] No valid spread found.
+[2025-05-16 10:38:38] [BA] No valid spread found.
+[2025-05-16 10:38:46] [XLF] No valid spread found.
+[2025-05-16 10:38:55] [XLK] No valid spread found.
+[2025-05-16 10:39:08] ✅ DIA Spread placed: Credit $0.26, Width $1.00
+[2025-05-16 10:39:30] [IWM] No valid spread found.
+[2025-05-16 10:39:42] [XLE] No valid spread found.
+[2025-05-16 10:39:47] [XBI] No valid spread found.
+[2025-05-16 10:39:55] [TSM] No valid spread found.
+[2025-05-16 10:40:04] [GDX] No valid spread found.
+[2025-05-16 10:40:13] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:45:43] [SPY] No valid spread found.
+[2025-05-16 10:46:12] [QQQ] No valid spread found.
+[2025-05-16 10:46:25] ✅ TSLA Spread placed: Credit $0.94, Width $2.50
+[2025-05-16 10:46:37] [AAPL] No valid spread found.
+[2025-05-16 10:46:54] [MSFT] No valid spread found.
+[2025-05-16 10:47:07] ✅ NVDA Spread placed: Credit $0.36, Width $1.00
+[2025-05-16 10:47:24] ✅ META Spread placed: Credit $0.66, Width $2.50
+[2025-05-16 10:47:37] [AMZN] No valid spread found.
+[2025-05-16 10:47:49] ✅ AMD Spread placed: Credit $0.30, Width $1.00
+[2025-05-16 10:47:58] [GOOG] No valid spread found.
+[2025-05-16 10:48:06] [BA] No valid spread found.
+[2025-05-16 10:48:15] [XLF] No valid spread found.
+[2025-05-16 10:48:20] [XLK] No valid spread found.
+[2025-05-16 10:48:36] ✅ DIA Spread placed: Credit $0.32, Width $1.00
+[2025-05-16 10:48:57] ✅ IWM Spread placed: Credit $0.28, Width $1.00
+[2025-05-16 10:49:05] ✅ XLE Spread placed: Credit $0.18, Width $0.50
+[2025-05-16 10:49:10] [XBI] No valid spread found.
+[2025-05-16 10:49:22] [TSM] No valid spread found.
+[2025-05-16 10:49:27] [GDX] No valid spread found.
+[2025-05-16 10:49:39] [ARKK] No valid spread found.
+[2025-05-16 10:49:39] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 10:54:47] [SPY] No valid spread found.
+[2025-05-16 10:54:57] [QQQ] No valid spread found.
+[2025-05-16 10:55:01] ✅ TSLA Spread placed: Credit $1.10, Width $2.50
+[2025-05-16 10:55:05] [AAPL] No valid spread found.
+[2025-05-16 10:55:26] [MSFT] No valid spread found.
+[2025-05-16 10:55:58] [NVDA] No valid spread found.
+[2025-05-16 10:56:37] ✅ META Spread placed: Credit $0.79, Width $2.50
+[2025-05-16 10:56:58] [AMZN] No valid spread found.
+[2025-05-16 10:57:20] ✅ AMD Spread placed: Credit $0.43, Width $1.00
+[2025-05-16 10:57:41] [GOOG] No valid spread found.
+[2025-05-16 10:57:58] [BA] No valid spread found.
+[2025-05-16 10:58:13] [XLF] No valid spread found.
+[2025-05-16 10:58:27] [XLK] No valid spread found.
+[2025-05-16 10:58:47] ✅ DIA Spread placed: Credit $0.28, Width $1.00
+[2025-05-16 10:59:08] [IWM] No valid spread found.
+[2025-05-16 10:59:20] [XLE] No valid spread found.
+[2025-05-16 10:59:24] [XBI] No valid spread found.
+[2025-05-16 10:59:36] [TSM] No valid spread found.
+[2025-05-16 10:59:41] [GDX] No valid spread found.
+[2025-05-16 10:59:53] [ARKK] No valid spread found.
+[2025-05-16 10:59:53] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:05:02] [SPY] No valid spread found.
+[2025-05-16 11:05:09] [QQQ] No valid spread found.
+[2025-05-16 11:05:13] ✅ TSLA Spread placed: Credit $0.96, Width $2.50
+[2025-05-16 11:05:18] [AAPL] No valid spread found.
+[2025-05-16 11:05:35] ✅ MSFT Spread placed: Credit $1.04, Width $2.50
+[2025-05-16 11:05:52] [NVDA] No valid spread found.
+[2025-05-16 11:06:09] ✅ META Spread placed: Credit $1.00, Width $2.50
+[2025-05-16 11:06:21] [AMZN] No valid spread found.
+[2025-05-16 11:06:34] ✅ AMD Spread placed: Credit $0.40, Width $1.00
+[2025-05-16 11:06:43] [GOOG] No valid spread found.
+[2025-05-16 11:06:51] [BA] No valid spread found.
+[2025-05-16 11:06:56] [XLF] No valid spread found.
+[2025-05-16 11:07:04] [XLK] No valid spread found.
+[2025-05-16 11:07:21] ✅ DIA Spread placed: Credit $0.43, Width $1.00
+[2025-05-16 11:07:42] [IWM] No valid spread found.
+[2025-05-16 11:07:50] ✅ XLE Spread placed: Credit $0.21, Width $0.50
+[2025-05-16 11:07:58] [XBI] No valid spread found.
+[2025-05-16 11:08:07] [TSM] No valid spread found.
+[2025-05-16 11:08:12] [GDX] No valid spread found.
+[2025-05-16 11:08:24] [ARKK] No valid spread found.
+[2025-05-16 11:08:24] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:13:33] [SPY] No valid spread found.
+[2025-05-16 11:13:41] [QQQ] No valid spread found.
+[2025-05-16 11:13:45] ✅ TSLA Spread placed: Credit $1.14, Width $2.50
+[2025-05-16 11:13:51] [AAPL] No valid spread found.
+[2025-05-16 11:14:11] [MSFT] No valid spread found.
+[2025-05-16 11:14:36] ✅ NVDA Spread placed: Credit $0.38, Width $1.00
+[2025-05-16 11:15:15] ✅ META Spread placed: Credit $0.86, Width $2.50
+[2025-05-16 11:15:33] [AMZN] No valid spread found.
+[2025-05-16 11:15:42] ✅ AMD Spread placed: Credit $0.21, Width $1.00
+[2025-05-16 11:15:54] [GOOG] No valid spread found.
+[2025-05-16 11:16:02] [BA] No valid spread found.
+[2025-05-16 11:16:07] [XLF] No valid spread found.
+[2025-05-16 11:16:16] [XLK] No valid spread found.
+[2025-05-16 11:16:33] ✅ DIA Spread placed: Credit $0.50, Width $1.00
+[2025-05-16 11:16:54] [IWM] No valid spread found.
+[2025-05-16 11:17:02] ✅ XLE Spread placed: Credit $0.16, Width $0.50
+[2025-05-16 11:17:07] [XBI] No valid spread found.
+[2025-05-16 11:17:16] [TSM] No valid spread found.
+[2025-05-16 11:17:24] [GDX] No valid spread found.
+[2025-05-16 11:17:36] [ARKK] No valid spread found.
+[2025-05-16 11:17:36] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:22:45] [SPY] No valid spread found.
+[2025-05-16 11:22:53] [QQQ] No valid spread found.
+[2025-05-16 11:22:57] ✅ TSLA Spread placed: Credit $1.28, Width $2.50
+[2025-05-16 11:23:02] [AAPL] No valid spread found.
+[2025-05-16 11:23:19] ✅ MSFT Spread placed: Credit $0.98, Width $2.50
+[2025-05-16 11:23:44] ✅ NVDA Spread placed: Credit $0.42, Width $1.00
+[2025-05-16 11:23:49] ✅ META Spread placed: Credit $0.84, Width $2.50
+[2025-05-16 11:24:02] [AMZN] No valid spread found.
+[2025-05-16 11:24:11] ✅ AMD Spread placed: Credit $0.29, Width $1.00
+[2025-05-16 11:24:23] [GOOG] No valid spread found.
+[2025-05-16 11:24:31] [BA] No valid spread found.
+[2025-05-16 11:24:36] [XLF] No valid spread found.
+[2025-05-16 11:24:44] [XLK] No valid spread found.
+[2025-05-16 11:25:01] ✅ DIA Spread placed: Credit $0.52, Width $1.00
+[2025-05-16 11:25:22] [IWM] No valid spread found.
+[2025-05-16 11:25:40] [XLE] No valid spread found.
+[2025-05-16 11:25:51] [XBI] No valid spread found.
+[2025-05-16 11:26:13] [TSM] No valid spread found.
+[2025-05-16 11:26:27] [GDX] No valid spread found.
+[2025-05-16 11:26:48] [ARKK] No valid spread found.
+[2025-05-16 11:26:48] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:32:06] [SPY] No valid spread found.
+[2025-05-16 11:32:36] [QQQ] No valid spread found.
+[2025-05-16 11:32:49] ✅ TSLA Spread placed: Credit $1.00, Width $2.50
+[2025-05-16 11:32:57] [AAPL] No valid spread found.
+[2025-05-16 11:33:18] [MSFT] No valid spread found.
+[2025-05-16 11:33:27] ✅ NVDA Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 11:33:48] ✅ META Spread placed: Credit $0.86, Width $2.50
+[2025-05-16 11:34:01] [AMZN] No valid spread found.
+[2025-05-16 11:34:10] ✅ AMD Spread placed: Credit $0.29, Width $1.00
+[2025-05-16 11:34:22] [GOOG] No valid spread found.
+[2025-05-16 11:34:27] [BA] No valid spread found.
+[2025-05-16 11:34:35] [XLF] No valid spread found.
+[2025-05-16 11:34:44] [XLK] No valid spread found.
+[2025-05-16 11:35:00] ✅ DIA Spread placed: Credit $0.40, Width $1.00
+[2025-05-16 11:35:22] [IWM] No valid spread found.
+[2025-05-16 11:35:31] [XLE] No valid spread found.
+[2025-05-16 11:35:39] [XBI] No valid spread found.
+[2025-05-16 11:35:48] [TSM] No valid spread found.
+[2025-05-16 11:35:56] [GDX] No valid spread found.
+[2025-05-16 11:36:05] [ARKK] No valid spread found.
+[2025-05-16 11:36:05] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:41:26] ❌ Failed to get prices: HTTPSConnectionPool(host='data.alpaca.markets', port=443): Max retries exceeded with url: /v2/stocks/trades/latest?symbols=SPY%2CQQQ%2CTSLA%2CAAPL%2CMSFT%2CNVDA%2CMETA%2CAMZN%2CAMD%2CGOOG%2CBA%2CXLF%2CXLK%2CDIA%2CIWM%2CXLE%2CXBI%2CTSM%2CGDX%2CARKK (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2025-05-16 11:41:26] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:46:35] [SPY] No valid spread found.
+[2025-05-16 11:46:42] [QQQ] No valid spread found.
+[2025-05-16 11:46:46] ✅ TSLA Spread placed: Credit $1.29, Width $2.50
+[2025-05-16 11:46:52] [AAPL] No valid spread found.
+[2025-05-16 11:47:12] ✅ MSFT Spread placed: Credit $0.90, Width $2.50
+[2025-05-16 11:47:37] ✅ NVDA Spread placed: Credit $0.31, Width $1.00
+[2025-05-16 11:48:16] ✅ META Spread placed: Credit $1.10, Width $2.50
+[2025-05-16 11:48:34] [AMZN] No valid spread found.
+[2025-05-16 11:48:51] [AMD] No valid spread found.
+[2025-05-16 11:48:59] [GOOG] No valid spread found.
+[2025-05-16 11:49:08] [BA] No valid spread found.
+[2025-05-16 11:49:16] [XLF] No valid spread found.
+[2025-05-16 11:49:21] [XLK] No valid spread found.
+[2025-05-16 11:49:38] ✅ DIA Spread placed: Credit $0.49, Width $1.00
+[2025-05-16 11:49:59] [IWM] No valid spread found.
+[2025-05-16 11:50:11] [XLE] No valid spread found.
+[2025-05-16 11:50:16] [XBI] No valid spread found.
+[2025-05-16 11:50:28] [TSM] No valid spread found.
+[2025-05-16 11:50:33] [GDX] No valid spread found.
+[2025-05-16 11:50:45] [ARKK] No valid spread found.
+[2025-05-16 11:50:45] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 11:55:53] [SPY] No valid spread found.
+[2025-05-16 11:56:01] [QQQ] No valid spread found.
+[2025-05-16 11:56:05] ✅ TSLA Spread placed: Credit $1.06, Width $2.50
+[2025-05-16 11:56:10] [AAPL] No valid spread found.
+[2025-05-16 11:56:27] ✅ MSFT Spread placed: Credit $0.90, Width $2.50
+[2025-05-16 11:56:40] ✅ NVDA Spread placed: Credit $0.44, Width $1.00
+[2025-05-16 11:56:58] ✅ META Spread placed: Credit $1.21, Width $2.50
+[2025-05-16 11:57:10] [AMZN] No valid spread found.
+[2025-05-16 11:57:23] [AMD] No valid spread found.
+[2025-05-16 11:57:35] [GOOG] No valid spread found.
+[2025-05-16 11:57:44] [BA] No valid spread found.
+[2025-05-16 11:57:49] [XLF] No valid spread found.
+[2025-05-16 11:57:57] [XLK] No valid spread found.
+[2025-05-16 11:58:14] ✅ DIA Spread placed: Credit $0.49, Width $1.00
+[2025-05-16 11:58:41] [IWM] No valid spread found.
+[2025-05-16 11:59:02] [XLE] No valid spread found.
+[2025-05-16 11:59:10] [XBI] No valid spread found.
+[2025-05-16 11:59:28] [TSM] No valid spread found.
+[2025-05-16 11:59:43] [GDX] No valid spread found.
+[2025-05-16 12:00:04] [ARKK] No valid spread found.
+[2025-05-16 12:00:04] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:05:13] [SPY] No valid spread found.
+[2025-05-16 12:05:20] [QQQ] No valid spread found.
+[2025-05-16 12:05:24] ✅ TSLA Spread placed: Credit $0.98, Width $2.50
+[2025-05-16 12:05:30] [AAPL] No valid spread found.
+[2025-05-16 12:05:47] [MSFT] No valid spread found.
+[2025-05-16 12:05:59] ✅ NVDA Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 12:06:17] ✅ META Spread placed: Credit $1.21, Width $2.50
+[2025-05-16 12:06:30] [AMZN] No valid spread found.
+[2025-05-16 12:06:46] [AMD] No valid spread found.
+[2025-05-16 12:06:55] [GOOG] No valid spread found.
+[2025-05-16 12:07:03] [BA] No valid spread found.
+[2025-05-16 12:07:12] [XLF] No valid spread found.
+[2025-05-16 12:07:17] [XLK] No valid spread found.
+[2025-05-16 12:07:33] ✅ DIA Spread placed: Credit $0.37, Width $1.00
+[2025-05-16 12:07:54] [IWM] No valid spread found.
+[2025-05-16 12:08:06] [XLE] No valid spread found.
+[2025-05-16 12:08:11] [XBI] No valid spread found.
+[2025-05-16 12:08:23] [TSM] No valid spread found.
+[2025-05-16 12:08:28] [GDX] No valid spread found.
+[2025-05-16 12:08:40] ✅ ARKK Spread placed: Credit $0.17, Width $0.50
+[2025-05-16 12:08:40] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:13:49] [SPY] No valid spread found.
+[2025-05-16 12:14:06] [QQQ] No valid spread found.
+[2025-05-16 12:14:31] ✅ TSLA Spread placed: Credit $0.92, Width $2.50
+[2025-05-16 12:14:52] [AAPL] No valid spread found.
+[2025-05-16 12:15:27] [MSFT] No valid spread found.
+[2025-05-16 12:15:52] ✅ NVDA Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 12:16:28] ✅ META Spread placed: Credit $0.92, Width $2.50
+[2025-05-16 12:16:50] [AMZN] No valid spread found.
+[2025-05-16 12:17:03] [AMD] No valid spread found.
+[2025-05-16 12:17:15] [GOOG] No valid spread found.
+[2025-05-16 12:17:20] [BA] No valid spread found.
+[2025-05-16 12:17:29] [XLF] No valid spread found.
+[2025-05-16 12:17:37] [XLK] No valid spread found.
+[2025-05-16 12:17:54] [DIA] No valid spread found.
+[2025-05-16 12:18:15] [IWM] No valid spread found.
+[2025-05-16 12:18:23] [XLE] No valid spread found.
+[2025-05-16 12:18:31] [XBI] No valid spread found.
+[2025-05-16 12:18:40] [TSM] No valid spread found.
+[2025-05-16 12:18:48] [GDX] No valid spread found.
+[2025-05-16 12:18:57] ✅ ARKK Spread placed: Credit $0.21, Width $0.50
+[2025-05-16 12:18:57] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:24:06] [SPY] No valid spread found.
+[2025-05-16 12:24:14] [QQQ] No valid spread found.
+[2025-05-16 12:24:17] ✅ TSLA Spread placed: Credit $0.87, Width $2.50
+[2025-05-16 12:24:23] [AAPL] No valid spread found.
+[2025-05-16 12:24:40] [MSFT] No valid spread found.
+[2025-05-16 12:24:52] ✅ NVDA Spread placed: Credit $0.41, Width $1.00
+[2025-05-16 12:25:13] ✅ META Spread placed: Credit $1.13, Width $2.50
+[2025-05-16 12:25:22] [AMZN] No valid spread found.
+[2025-05-16 12:25:34] ✅ AMD Spread placed: Credit $0.46, Width $1.00
+[2025-05-16 12:25:43] [GOOG] No valid spread found.
+[2025-05-16 12:25:51] [BA] No valid spread found.
+[2025-05-16 12:25:59] [XLF] No valid spread found.
+[2025-05-16 12:26:08] [XLK] No valid spread found.
+[2025-05-16 12:26:24] [DIA] No valid spread found.
+[2025-05-16 12:26:45] [IWM] No valid spread found.
+[2025-05-16 12:27:03] [XLE] No valid spread found.
+[2025-05-16 12:27:20] [XBI] No valid spread found.
+[2025-05-16 12:27:42] [TSM] No valid spread found.
+[2025-05-16 12:27:56] [GDX] No valid spread found.
+[2025-05-16 12:28:17] ✅ ARKK Spread placed: Credit $0.18, Width $0.50
+[2025-05-16 12:28:17] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:33:26] [SPY] No valid spread found.
+[2025-05-16 12:33:33] [QQQ] No valid spread found.
+[2025-05-16 12:33:37] ✅ TSLA Spread placed: Credit $0.95, Width $2.50
+[2025-05-16 12:33:43] [AAPL] No valid spread found.
+[2025-05-16 12:34:00] [MSFT] No valid spread found.
+[2025-05-16 12:34:12] ✅ NVDA Spread placed: Credit $0.41, Width $1.00
+[2025-05-16 12:34:30] ✅ META Spread placed: Credit $1.01, Width $2.50
+[2025-05-16 12:34:43] [AMZN] No valid spread found.
+[2025-05-16 12:34:55] ✅ AMD Spread placed: Credit $0.32, Width $1.00
+[2025-05-16 12:35:04] [GOOG] No valid spread found.
+[2025-05-16 12:35:12] [BA] No valid spread found.
+[2025-05-16 12:35:20] [XLF] No valid spread found.
+[2025-05-16 12:35:29] [XLK] No valid spread found.
+[2025-05-16 12:35:42] ✅ DIA Spread placed: Credit $0.45, Width $1.00
+[2025-05-16 12:36:03] [IWM] No valid spread found.
+[2025-05-16 12:36:15] [XLE] No valid spread found.
+[2025-05-16 12:36:20] [XBI] No valid spread found.
+[2025-05-16 12:36:32] [TSM] No valid spread found.
+[2025-05-16 12:36:37] [GDX] No valid spread found.
+[2025-05-16 12:36:49] ✅ ARKK Spread placed: Credit $0.18, Width $0.50
+[2025-05-16 12:36:49] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:41:58] [SPY] No valid spread found.
+[2025-05-16 12:42:06] [QQQ] No valid spread found.
+[2025-05-16 12:42:09] ✅ TSLA Spread placed: Credit $0.88, Width $2.50
+[2025-05-16 12:42:15] [AAPL] No valid spread found.
+[2025-05-16 12:42:32] [MSFT] No valid spread found.
+[2025-05-16 12:42:44] ✅ NVDA Spread placed: Credit $0.42, Width $1.00
+[2025-05-16 12:43:05] ✅ META Spread placed: Credit $1.13, Width $2.50
+[2025-05-16 12:43:14] [AMZN] No valid spread found.
+[2025-05-16 12:43:27] ✅ AMD Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 12:43:36] [GOOG] No valid spread found.
+[2025-05-16 12:43:44] [BA] No valid spread found.
+[2025-05-16 12:43:52] [XLF] No valid spread found.
+[2025-05-16 12:44:00] [XLK] No valid spread found.
+[2025-05-16 12:44:17] ✅ DIA Spread placed: Credit $0.35, Width $1.00
+[2025-05-16 12:44:38] [IWM] No valid spread found.
+[2025-05-16 12:44:47] [XLE] No valid spread found.
+[2025-05-16 12:44:55] [XBI] No valid spread found.
+[2025-05-16 12:45:04] [TSM] No valid spread found.
+[2025-05-16 12:45:09] [GDX] No valid spread found.
+[2025-05-16 12:45:21] ✅ ARKK Spread placed: Credit $0.17, Width $0.50
+[2025-05-16 12:45:21] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 12:51:09] [SPY] No valid spread found.
+[2025-05-16 12:51:39] [QQQ] No valid spread found.
+[2025-05-16 12:51:52] ✅ TSLA Spread placed: Credit $0.95, Width $2.50
+[2025-05-16 12:52:01] [AAPL] No valid spread found.
+[2025-05-16 12:52:18] [MSFT] No valid spread found.
+[2025-05-16 12:52:30] ✅ NVDA Spread placed: Credit $0.38, Width $1.00
+[2025-05-16 12:52:51] ✅ META Spread placed: Credit $1.10, Width $2.50
+[2025-05-16 12:53:04] [AMZN] No valid spread found.
+[2025-05-16 12:53:13] ✅ AMD Spread placed: Credit $0.27, Width $1.00
+[2025-05-16 12:53:25] [GOOG] No valid spread found.
+[2025-05-16 12:53:33] [BA] No valid spread found.
+[2025-05-16 12:53:38] [XLF] No valid spread found.
+[2025-05-16 12:53:47] [XLK] No valid spread found.
+[2025-05-16 12:54:04] ✅ DIA Spread placed: Credit $0.30, Width $1.00
+[2025-05-16 12:54:25] [IWM] No valid spread found.
+[2025-05-16 12:54:33] [XLE] No valid spread found.
+[2025-05-16 12:54:41] [XBI] No valid spread found.
+[2025-05-16 12:54:50] [TSM] No valid spread found.
+[2025-05-16 12:54:58] [GDX] No valid spread found.
+[2025-05-16 12:55:07] ✅ ARKK Spread placed: Credit $0.18, Width $0.50
+[2025-05-16 12:55:07] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:00:16] [SPY] No valid spread found.
+[2025-05-16 13:00:24] [QQQ] No valid spread found.
+[2025-05-16 13:00:28] ✅ TSLA Spread placed: Credit $0.99, Width $2.50
+[2025-05-16 13:00:33] [AAPL] No valid spread found.
+[2025-05-16 13:00:50] [MSFT] No valid spread found.
+[2025-05-16 13:01:16] [NVDA] No valid spread found.
+[2025-05-16 13:01:52] ✅ META Spread placed: Credit $1.03, Width $2.50
+[2025-05-16 13:02:17] [AMZN] No valid spread found.
+[2025-05-16 13:02:38] ✅ AMD Spread placed: Credit $0.42, Width $1.00
+[2025-05-16 13:02:56] [GOOG] No valid spread found.
+[2025-05-16 13:03:14] [BA] No valid spread found.
+[2025-05-16 13:03:28] [XLF] No valid spread found.
+[2025-05-16 13:03:42] [XLK] No valid spread found.
+[2025-05-16 13:04:14] [DIA] No valid spread found.
+[2025-05-16 13:04:41] [IWM] No valid spread found.
+[2025-05-16 13:04:50] [XLE] No valid spread found.
+[2025-05-16 13:04:58] [XBI] No valid spread found.
+[2025-05-16 13:05:07] [TSM] No valid spread found.
+[2025-05-16 13:05:15] [GDX] No valid spread found.
+[2025-05-16 13:05:24] ✅ ARKK Spread placed: Credit $0.17, Width $0.50
+[2025-05-16 13:05:24] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:10:32] [SPY] No valid spread found.
+[2025-05-16 13:10:40] [QQQ] No valid spread found.
+[2025-05-16 13:10:44] ✅ TSLA Spread placed: Credit $1.10, Width $2.50
+[2025-05-16 13:10:49] [AAPL] No valid spread found.
+[2025-05-16 13:11:06] [MSFT] No valid spread found.
+[2025-05-16 13:11:23] [NVDA] No valid spread found.
+[2025-05-16 13:11:40] ✅ META Spread placed: Credit $1.07, Width $2.50
+[2025-05-16 13:11:53] [AMZN] No valid spread found.
+[2025-05-16 13:12:09] [AMD] No valid spread found.
+[2025-05-16 13:12:18] [GOOG] No valid spread found.
+[2025-05-16 13:12:26] [BA] No valid spread found.
+[2025-05-16 13:12:35] [XLF] No valid spread found.
+[2025-05-16 13:12:43] [XLK] No valid spread found.
+[2025-05-16 13:12:56] [DIA] No valid spread found.
+[2025-05-16 13:13:20] [IWM] No valid spread found.
+[2025-05-16 13:13:29] [XLE] No valid spread found.
+[2025-05-16 13:13:34] [XBI] No valid spread found.
+[2025-05-16 13:13:46] [TSM] No valid spread found.
+[2025-05-16 13:13:51] [GDX] No valid spread found.
+[2025-05-16 13:14:03] [ARKK] No valid spread found.
+[2025-05-16 13:14:03] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:19:12] [SPY] No valid spread found.
+[2025-05-16 13:19:20] [QQQ] No valid spread found.
+[2025-05-16 13:19:23] ✅ TSLA Spread placed: Credit $0.96, Width $2.50
+[2025-05-16 13:19:29] [AAPL] No valid spread found.
+[2025-05-16 13:19:46] [MSFT] No valid spread found.
+[2025-05-16 13:20:03] [NVDA] No valid spread found.
+[2025-05-16 13:20:20] ✅ META Spread placed: Credit $1.00, Width $2.50
+[2025-05-16 13:20:33] [AMZN] No valid spread found.
+[2025-05-16 13:20:49] [AMD] No valid spread found.
+[2025-05-16 13:20:58] [GOOG] No valid spread found.
+[2025-05-16 13:21:06] [BA] No valid spread found.
+[2025-05-16 13:21:14] [XLF] No valid spread found.
+[2025-05-16 13:21:22] [XLK] No valid spread found.
+[2025-05-16 13:21:36] [DIA] No valid spread found.
+[2025-05-16 13:22:00] [IWM] No valid spread found.
+[2025-05-16 13:22:09] [XLE] No valid spread found.
+[2025-05-16 13:22:17] [XBI] No valid spread found.
+[2025-05-16 13:22:25] [TSM] No valid spread found.
+[2025-05-16 13:22:30] [GDX] No valid spread found.
+[2025-05-16 13:22:42] [ARKK] No valid spread found.
+[2025-05-16 13:22:42] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:27:51] [SPY] No valid spread found.
+[2025-05-16 13:27:59] [QQQ] No valid spread found.
+[2025-05-16 13:28:02] ✅ TSLA Spread placed: Credit $0.79, Width $2.50
+[2025-05-16 13:28:08] [AAPL] No valid spread found.
+[2025-05-16 13:28:25] [MSFT] No valid spread found.
+[2025-05-16 13:28:38] ✅ NVDA Spread placed: Credit $0.43, Width $1.00
+[2025-05-16 13:28:58] ✅ META Spread placed: Credit $1.01, Width $2.50
+[2025-05-16 13:29:08] [AMZN] No valid spread found.
+[2025-05-16 13:29:24] [AMD] No valid spread found.
+[2025-05-16 13:29:33] [GOOG] No valid spread found.
+[2025-05-16 13:29:41] [BA] No valid spread found.
+[2025-05-16 13:29:49] [XLF] No valid spread found.
+[2025-05-16 13:29:57] [XLK] No valid spread found.
+[2025-05-16 13:30:14] [DIA] No valid spread found.
+[2025-05-16 13:30:35] [IWM] No valid spread found.
+[2025-05-16 13:30:44] [XLE] No valid spread found.
+[2025-05-16 13:30:52] [XBI] No valid spread found.
+[2025-05-16 13:31:01] [TSM] No valid spread found.
+[2025-05-16 13:31:09] [GDX] No valid spread found.
+[2025-05-16 13:31:18] [ARKK] No valid spread found.
+[2025-05-16 13:31:18] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:36:26] [SPY] No valid spread found.
+[2025-05-16 13:36:34] [QQQ] No valid spread found.
+[2025-05-16 13:36:59] ✅ TSLA Spread placed: Credit $0.87, Width $2.50
+[2025-05-16 13:37:17] [AAPL] No valid spread found.
+[2025-05-16 13:37:52] [MSFT] No valid spread found.
+[2025-05-16 13:38:17] ✅ NVDA Spread placed: Credit $0.41, Width $1.00
+[2025-05-16 13:38:56] ✅ META Spread placed: Credit $0.91, Width $2.50
+[2025-05-16 13:39:21] [AMZN] No valid spread found.
+[2025-05-16 13:39:41] [AMD] No valid spread found.
+[2025-05-16 13:39:50] [GOOG] No valid spread found.
+[2025-05-16 13:39:58] [BA] No valid spread found.
+[2025-05-16 13:40:06] [XLF] No valid spread found.
+[2025-05-16 13:40:14] [XLK] No valid spread found.
+[2025-05-16 13:40:31] [DIA] No valid spread found.
+[2025-05-16 13:40:52] [IWM] No valid spread found.
+[2025-05-16 13:41:01] [XLE] No valid spread found.
+[2025-05-16 13:41:09] [XBI] No valid spread found.
+[2025-05-16 13:41:18] [TSM] No valid spread found.
+[2025-05-16 13:41:26] [GDX] No valid spread found.
+[2025-05-16 13:41:35] [ARKK] No valid spread found.
+[2025-05-16 13:41:35] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:46:44] [SPY] No valid spread found.
+[2025-05-16 13:46:52] [QQQ] No valid spread found.
+[2025-05-16 13:46:55] ✅ TSLA Spread placed: Credit $0.90, Width $2.50
+[2025-05-16 13:47:01] [AAPL] No valid spread found.
+[2025-05-16 13:47:18] [MSFT] No valid spread found.
+[2025-05-16 13:47:31] ✅ NVDA Spread placed: Credit $0.50, Width $1.00
+[2025-05-16 13:47:49] ✅ META Spread placed: Credit $1.29, Width $2.50
+[2025-05-16 13:48:01] [AMZN] No valid spread found.
+[2025-05-16 13:48:17] [AMD] No valid spread found.
+[2025-05-16 13:48:26] [GOOG] No valid spread found.
+[2025-05-16 13:48:34] [BA] No valid spread found.
+[2025-05-16 13:48:43] [XLF] No valid spread found.
+[2025-05-16 13:48:51] [XLK] No valid spread found.
+[2025-05-16 13:49:08] [DIA] No valid spread found.
+[2025-05-16 13:49:29] [IWM] No valid spread found.
+[2025-05-16 13:49:41] [XLE] No valid spread found.
+[2025-05-16 13:49:55] [XBI] No valid spread found.
+[2025-05-16 13:50:16] [TSM] No valid spread found.
+[2025-05-16 13:50:30] [GDX] No valid spread found.
+[2025-05-16 13:50:48] [ARKK] No valid spread found.
+[2025-05-16 13:50:48] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 13:55:56] [SPY] No valid spread found.
+[2025-05-16 13:56:05] [QQQ] No valid spread found.
+[2025-05-16 13:56:08] ✅ TSLA Spread placed: Credit $0.87, Width $2.50
+[2025-05-16 13:56:14] [AAPL] No valid spread found.
+[2025-05-16 13:56:31] [MSFT] No valid spread found.
+[2025-05-16 13:56:45] [NVDA] No valid spread found.
+[2025-05-16 13:57:06] ✅ META Spread placed: Credit $0.64, Width $2.50
+[2025-05-16 13:57:18] [AMZN] No valid spread found.
+[2025-05-16 13:57:31] [AMD] No valid spread found.
+[2025-05-16 13:57:43] [GOOG] No valid spread found.
+[2025-05-16 13:57:52] [BA] No valid spread found.
+[2025-05-16 13:57:57] [XLF] No valid spread found.
+[2025-05-16 13:58:05] [XLK] No valid spread found.
+[2025-05-16 13:58:22] [DIA] No valid spread found.
+[2025-05-16 13:58:43] [IWM] No valid spread found.
+[2025-05-16 13:58:52] [XLE] No valid spread found.
+[2025-05-16 13:59:00] [XBI] No valid spread found.
+[2025-05-16 13:59:09] [TSM] No valid spread found.
+[2025-05-16 13:59:17] [GDX] No valid spread found.
+[2025-05-16 13:59:26] [ARKK] No valid spread found.
+[2025-05-16 13:59:26] ⏱ Waiting 5 minutes for next scan...
+[2025-05-16 14:04:34] [SPY] No valid spread found.
+[2025-05-16 14:04:42] [QQQ] No valid spread found.
+[2025-05-16 14:04:46] ✅ TSLA Spread placed: Credit $0.85, Width $2.50
+[2025-05-16 14:04:51] [AAPL] No valid spread found.
+[2025-05-16 14:05:08] [MSFT] No valid spread found.
+[2025-05-16 14:05:25] [NVDA] No valid spread found.
+[2025-05-16 14:05:50] [META] No valid spread found.
+[2025-05-16 14:05:59] [AMZN] No valid spread found.
+[2025-05-16 14:06:16] [AMD] No valid spread found.
+[2025-05-16 14:06:24] [GOOG] No valid spread found.
+[2025-05-16 14:06:33] [BA] No valid spread found.
+[2025-05-16 14:06:41] [XLF] No valid spread found.
+[2025-05-16 14:06:49] [XLK] No valid spread found.

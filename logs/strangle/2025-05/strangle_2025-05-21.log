@@ -1,0 +1,37 @@
+2025-05-22 03:01:17 INFO Starting trading bot
+2025-05-22 03:01:17 INFO Scheduled heartbeat every hour until market open at 09:35 ET
+2025-05-22 04:01:17 INFO Heartbeat: trading bot is alive @ 2025-05-22 07:01:17.160894-04:00
+2025-05-22 05:01:17 INFO Heartbeat: trading bot is alive @ 2025-05-22 08:01:17.151311-04:00
+2025-05-22 06:01:17 INFO Heartbeat: trading bot is alive @ 2025-05-22 09:01:17.158483-04:00
+2025-05-22 06:35:00 INFO === ENTRY JOB @ 2025-05-22 09:35:00.003320-04:00 ===
+2025-05-22 06:35:01 ERROR SPY: entry error: 'OptionsSnapshot' object has no attribute 'strike_price'
+2025-05-22 06:35:01 WARNING SPX: no market data on 2025-05-22
+2025-05-22 06:35:01 WARNING XSP: no market data on 2025-05-22
+2025-05-22 12:27:14 ERROR SPY: entry error: type object 'PositionIntent' has no attribute 'OPEN'
+2025-05-22 12:59:57 INFO Starting trading bot
+2025-05-22 13:00:00 INFO === MONITOR JOB @ 2025-05-22 16:00:00.002075-04:00 ===
+2025-05-22 13:00:00 INFO Market is closed at 2025-05-22 16:00:00.357213-04:00, sleeping for 2 minutes.
+2025-05-22 13:00:18 INFO Starting trading bot
+2025-05-22 13:01:00 INFO === MONITOR JOB @ 2025-05-22 16:01:00.001790-04:00 ===
+2025-05-22 13:01:00 INFO Market is closed at 2025-05-22 16:01:00.262562-04:00, sleeping for 2 minutes.
+2025-05-22 13:04:00 INFO === MONITOR JOB @ 2025-05-22 16:04:00.001793-04:00 ===
+2025-05-22 13:04:00 INFO Market is closed at 2025-05-22 16:04:00.324589-04:00, sleeping for 2 minutes.
+2025-05-22 13:07:00 INFO === MONITOR JOB @ 2025-05-22 16:07:00.001746-04:00 ===
+2025-05-22 13:07:00 INFO Market is closed at 2025-05-22 16:07:00.347350-04:00, sleeping for 2 minutes.
+2025-05-22 13:10:00 INFO === MONITOR JOB @ 2025-05-22 16:10:00.003549-04:00 ===
+2025-05-22 13:10:00 INFO Market is closed at 2025-05-22 16:10:00.318953-04:00, sleeping for 2 minutes.
+2025-05-22 13:13:00 INFO === MONITOR JOB @ 2025-05-22 16:13:00.001457-04:00 ===
+2025-05-22 13:13:00 INFO Market is closed at 2025-05-22 16:13:00.260604-04:00, sleeping for 2 minutes.
+2025-05-22 13:16:00 INFO === MONITOR JOB @ 2025-05-22 16:16:00.002000-04:00 ===
+2025-05-22 13:16:00 INFO Market is closed at 2025-05-22 16:16:00.287163-04:00, sleeping for 2 minutes.
+2025-05-22 13:19:00 INFO === MONITOR JOB @ 2025-05-22 16:19:00.006506-04:00 ===
+2025-05-22 13:19:00 INFO Market is closed at 2025-05-22 16:19:00.272330-04:00, sleeping for 2 minutes.
+2025-05-22 13:22:00 INFO === MONITOR JOB @ 2025-05-22 16:22:00.001975-04:00 ===
+2025-05-22 13:22:00 INFO Market is closed at 2025-05-22 16:22:00.288688-04:00, sleeping for 2 minutes.
+2025-05-22 13:25:00 INFO === MONITOR JOB @ 2025-05-22 16:25:00.003568-04:00 ===
+2025-05-22 13:25:00 INFO Market is closed at 2025-05-22 16:25:00.287987-04:00, sleeping for 2 minutes.
+2025-05-22 13:28:00 INFO === MONITOR JOB @ 2025-05-22 16:28:00.000993-04:00 ===
+2025-05-22 13:28:00 INFO Market is closed at 2025-05-22 16:28:00.257840-04:00, sleeping for 2 minutes.
+2025-05-22 13:31:00 INFO === MONITOR JOB @ 2025-05-22 16:31:00.004474-04:00 ===
+2025-05-22 13:31:00 INFO Market is closed at 2025-05-22 16:31:00.304002-04:00, sleeping for 2 minutes.
+2025-05-22 16:00:00 INFO Reminder: revisit margin-based sizing logic.

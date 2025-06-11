@@ -1,0 +1,24 @@
+nohup: ignoring input
+  File "/workspace/0dte/src/main.py", line 182
+    time_module.sleep(2)
+IndentationError: unexpected indent
+2025-05-22 00:13:11 INFO Starting trading bot
+2025-05-22 00:13:11 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 04:41:46 INFO Starting trading bot
+2025-05-22 04:41:46 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 05:01:06 INFO Starting trading bot
+2025-05-22 05:01:06 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:02:19 INFO Starting trading bot
+2025-05-22 06:02:19 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:02:47 INFO Starting trading bot
+2025-05-22 06:02:47 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:03:42 INFO Starting trading bot
+2025-05-22 06:03:42 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:04:30 INFO Starting trading bot
+2025-05-22 06:04:30 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:07:12 INFO Starting trading bot
+2025-05-22 06:07:12 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:07:31 INFO Starting trading bot
+2025-05-22 06:07:31 INFO 4 PM Pacific time already passed; skipping today's reminder
+2025-05-22 06:14:21 INFO Starting trading bot
+2025-05-22 06:14:21 INFO 4 PM Pacific time already passed; skipping today's reminder

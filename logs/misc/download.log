@@ -1,0 +1,21 @@
+nohup: ignoring input
+Downloading SPY & VIX daily data...
+YF.download() has changed argument auto_adjust default to True
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+Traceback (most recent call last):
+  File "/workspace/0dte/download_backtest_data.py", line 136, in <module>
+    main()
+  File "/workspace/0dte/download_backtest_data.py", line 60, in main
+    vix_close = vix['Close'].rename('VIX')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 5767, in rename
+    return super()._rename(
+           ^^^^^^^^^^^^^^^^
+  File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 1132, in _rename
+    new_index = ax._transform_index(f, level=level)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6537, in _transform_index
+    items = [func(x) for x in self]
+             ^^^^^^^
+TypeError: 'str' object is not callable

@@ -1,0 +1,6 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/workspace/0dte/scripts/trading_bot.py", line 96, in <module>
+    handler = MonthlyRotatingFileHandler(orig_filename='strangle.log', timezone=ET_ZONE)
+                                                                                ^^^^^^^
+NameError: name 'ET_ZONE' is not defined
