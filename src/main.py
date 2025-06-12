@@ -107,12 +107,20 @@ def add_to_daily_pnl(amount: float):
 
 def check_and_halt_on_drawdown() -> bool:
     """
-    Close all positions and halt new trades if cumulative P&L breaches -DAILY_MAX_LOSS.
+    Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
     Returns True if in halted state.
     """
     global halted
-    if not halted and daily_pnl_accumulated <= -DAILY_MAX_LOSS:
-        log(f"⛔ Daily drawdown cap hit (${daily_pnl_accumulated:.2f}) — closing all positions")
+    # Calculate unrealized P&L
+    unrealized_pnl = 0.0
+    try:
+        positions = trade_client.get_all_positions()
+        unrealized_pnl = sum(p.usd.unrealized_pl or 0.0 for p in positions if p.usd and p.usd.unrealized_pl is not None)
+    except Exception as e:
+        log(f"[drawdown] Error fetching unrealized PnL: {e}")
+    total_pnl = daily_pnl_accumulated + unrealized_pnl
+    if not halted and total_pnl <= -DAILY_MAX_LOSS:
+        log(f"⛔ Daily drawdown cap hit (realized ${daily_pnl_accumulated:.2f} + unrealized ${unrealized_pnl:.2f} = ${total_pnl:.2f}) — closing all positions")
         try:
             trade_client.close_all_positions()
             log("⚠️ Executed close_all_positions() due to drawdown cap")
@@ -120,9 +128,15 @@ def check_and_halt_on_drawdown() -> bool:
             log(f"[drawdown] Error closing all positions: {e}")
         send_email(
             "Daily Drawdown Halt",
-            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. P&L: ${daily_pnl_accumulated:.2f}. All positions closed."
+            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. Realized: ${daily_pnl_accumulated:.2f}, Unrealized: ${unrealized_pnl:.2f}, Total: ${total_pnl:.2f}. All positions closed."
         )
         halted = True
+        # Persist updated state
+        try:
+            with open(STATE_FILE, "w") as sf:
+                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+        except Exception as e:
+            log(f"[drawdown] Error persisting state after halt: {e}")
     return halted
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
@@ -430,6 +444,9 @@ def fetch_positions():
 
 def log_exit(symbol, side, qty, exit_price, pnl, ratio, status):
     """
+    Log an exit or hedge trade to CSV.
+    """
+    """
     Log an exit or hedge trade to CSV and update daily PnL accumulator.
     """
     with open(EXIT_LOG, "a", newline="") as f:
@@ -736,27 +753,27 @@ def trade(symbol, spot):
         log(f"[{symbol}] Error submitting order: {e}")
 
 # === MAIN LOOP ===
-    # === DAILY STATE RESET ===
-    def job_reset_drawdown():
-        """
-        Reset daily PnL accumulator and halted flag at midnight, persist state.
-        """
-        global daily_pnl_accumulated, halted
-        daily_pnl_accumulated = 0.0
-        halted = False
-        # Prepare today's directory and state file
-        today_str = date.today().isoformat()
-        new_log_dir = os.path.join(LOG_ROOT, today_str)
-        os.makedirs(new_log_dir, exist_ok=True)
-        state_file = os.path.join(new_log_dir, "state.json")
-        try:
-            with open(state_file, "w") as sf:
-                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
-        except Exception as e:
-            log(f"[reset] Error persisting state: {e}")
-        log(f"🔄 Reset daily drawdown state for {today_str}")
-    # Schedule midnight reset at 00:01 ET
-    schedule.every().day.at("00:01").do(job_reset_drawdown)
+# === DAILY STATE RESET ===
+def job_reset_drawdown():
+    """
+    Reset daily PnL accumulator and halted flag at midnight, persist state.
+    """
+    global daily_pnl_accumulated, halted
+    daily_pnl_accumulated = 0.0
+    halted = False
+    # Prepare today's directory and state file
+    today_str = date.today().isoformat()
+    new_log_dir = os.path.join(LOG_ROOT, today_str)
+    os.makedirs(new_log_dir, exist_ok=True)
+    state_file = os.path.join(new_log_dir, "state.json")
+    try:
+        with open(state_file, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+    except Exception as e:
+        log(f"[reset] Error persisting state: {e}")
+    log(f"🔄 Reset daily drawdown state for {today_str}")
+# Schedule midnight reset at 00:01 ET
+schedule.every().day.at("00:01").do(job_reset_drawdown)
 
 def main_loop():
     # Initialize daily PnL log file with header
