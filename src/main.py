@@ -58,7 +58,7 @@ class Settings(BaseSettings):
     scan_interval: int = Field(300, env="SCAN_INTERVAL")
     circuit_breaker_threshold: int = Field(5, env="CIRCUIT_BREAKER_THRESHOLD")
     risk_per_trade_percentage: float = Field(0.01, env="RISK_PER_TRADE_PERCENTAGE")
-    max_concurrent_trades: int = Field(5, env="MAX_CONCURRENT_TRADES")
+    max_concurrent_trades: int = Field(10, env="MAX_CONCURRENT_TRADES")
     max_total_delta_exposure: float = Field(200, env="MAX_TOTAL_DELTA_EXPOSURE")
     spy_min_credit_percentage: float = Field(0.10, env="SPY_MIN_CREDIT_PERCENTAGE")
     daily_max_loss: float = Field(500.0, env="DAILY_MAX_LOSS")  # Max loss per day before halting trades
@@ -93,6 +93,37 @@ API_SECRET = settings.alpaca_secret_key
 STOP_LOSS_PERCENTAGE = settings.stop_loss_percentage
 PROFIT_TAKE_PERCENTAGE = settings.profit_take_percentage
 DAILY_MAX_LOSS = settings.daily_max_loss
+
+# === DRAWOWN CAP CONTROL ===
+# Tracks cumulative P&L and halts new trades when the daily max loss threshold is hit
+# P&L is accumulated when positions are exited via log_exit()
+daily_pnl_accumulated = 0.0
+halted = False
+
+def add_to_daily_pnl(amount: float):
+    global daily_pnl_accumulated
+    daily_pnl_accumulated += amount
+    check_and_halt_on_drawdown()
+
+def check_and_halt_on_drawdown() -> bool:
+    """
+    Close all positions and halt new trades if cumulative P&L breaches -DAILY_MAX_LOSS.
+    Returns True if in halted state.
+    """
+    global halted
+    if not halted and daily_pnl_accumulated <= -DAILY_MAX_LOSS:
+        log(f"⛔ Daily drawdown cap hit (${daily_pnl_accumulated:.2f}) — closing all positions")
+        try:
+            trade_client.close_all_positions()
+            log("⚠️ Executed close_all_positions() due to drawdown cap")
+        except Exception as e:
+            log(f"[drawdown] Error closing all positions: {e}")
+        send_email(
+            "Daily Drawdown Halt",
+            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. P&L: ${daily_pnl_accumulated:.2f}. All positions closed."
+        )
+        halted = True
+    return halted
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
 OI_THRESHOLD = settings.oi_threshold
@@ -316,26 +347,35 @@ option_data_client = OptionHistoricalDataClient(API_KEY, API_SECRET)
 stock_data_client = StockHistoricalDataClient(API_KEY, API_SECRET)
 
 # === LOG FILES ===
-os.makedirs("logs", exist_ok=True)
-# === POSITION MANAGEMENT LOG FILES ===
-# Ensure exit log exists with header
-if not os.path.exists(EXIT_LOG := os.path.join('logs','exit_log.csv')):
-    with open(EXIT_LOG, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(["timestamp","symbol","side","qty","exit_price","pnl","ratio","status"])
-
-OPEN_POS_LOG = "logs/open_positions.csv"
-EXIT_LOG = "logs/exit_log.csv"
-# Ensure open positions log exists with header
-if not os.path.exists(OPEN_POS_LOG):
-    with open(OPEN_POS_LOG, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(["timestamp","symbol","side","qty","avg_entry_price","cost_basis","unrealized_pl","unrealized_plpc"])
-
-# PnL log directory; file rotates daily
-PNL_LOG_DIR = "logs"
-# Ensure daily PnL log file exists with header at startup
+# Ensure root logs directory exists
+LOG_ROOT = "logs"
+os.makedirs(LOG_ROOT, exist_ok=True)
+# Create today's log directory under the root
 today_str = date.today().isoformat()
+LOG_DIR_TODAY = os.path.join(LOG_ROOT, today_str)
+os.makedirs(LOG_DIR_TODAY, exist_ok=True)
+
+# === DAILY CSV LOG FILES ===
+EXIT_LOG = os.path.join(LOG_DIR_TODAY, "exit_log.csv")
+if not os.path.exists(EXIT_LOG):
+    with open(EXIT_LOG, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp", "symbol", "side", "qty", "exit_price", "pnl", "ratio", "status"])
+
+OPEN_POS_LOG = os.path.join(LOG_DIR_TODAY, "open_positions.csv")
+if not os.path.exists(OPEN_POS_LOG):
+    with open(OPEN_POS_LOG, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp", "symbol", "side", "qty", "avg_entry_price", "cost_basis", "unrealized_pl", "unrealized_plpc"])
+
+TRADE_LOG = os.path.join(LOG_DIR_TODAY, "trade_log.csv")
+if not os.path.exists(TRADE_LOG):
+    with open(TRADE_LOG, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp", "symbol", "short_strike", "long_strike", "credit", "width", "status"])
+
+# PnL log rotates daily under the same directory
+PNL_LOG_DIR = LOG_DIR_TODAY
 daily_pnl_file = os.path.join(PNL_LOG_DIR, f"pnl_log_{today_str}.csv")
 if not os.path.exists(daily_pnl_file):
     with open(daily_pnl_file, "w", newline="") as f:
@@ -372,7 +412,7 @@ def fetch_positions():
 
 def log_exit(symbol, side, qty, exit_price, pnl, ratio, status):
     """
-    Log an exit or hedge trade to CSV.
+    Log an exit or hedge trade to CSV and update daily PnL accumulator.
     """
     with open(EXIT_LOG, "a", newline="") as f:
         writer = csv.writer(f)
@@ -386,6 +426,11 @@ def log_exit(symbol, side, qty, exit_price, pnl, ratio, status):
             ratio,
             status,
         ])
+    # Update daily P&L and enforce drawdown cap
+    try:
+        add_to_daily_pnl(pnl)
+    except Exception as e:
+        log(f"[drawdown] Error updating daily PnL accumulator: {e}")
 
 TRADE_LOG = "logs/trade_log.csv"
 
@@ -565,6 +610,10 @@ def log_trade(symbol, short_strike, long_strike, credit, spread_width, status):
         writer.writerow([datetime.now().isoformat(), symbol, short_strike, long_strike, credit, spread_width, status])
 
 def trade(symbol, spot):
+    global halted
+    if halted:
+        log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap")
+        return
     # === Symbol-specific filter overrides ===
     static_overrides = SYMBOL_FILTER_OVERRIDES.get(symbol, {})
     live_overrides = get_market_regime() if symbol == "SPY" else {}
