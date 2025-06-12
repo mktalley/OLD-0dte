@@ -3,6 +3,10 @@
 import os
 import csv
 import time as time_module
+
+# Ensure scheduling uses Eastern Time for ET-based triggers
+os.environ.setdefault("TZ", "America/New_York")
+time_module.tzset()
 import pandas as pd
 import numpy as np
 from datetime import datetime, time as dt_time, date, timedelta
@@ -57,6 +61,7 @@ class Settings(BaseSettings):
     max_concurrent_trades: int = Field(5, env="MAX_CONCURRENT_TRADES")
     max_total_delta_exposure: float = Field(200, env="MAX_TOTAL_DELTA_EXPOSURE")
     spy_min_credit_percentage: float = Field(0.10, env="SPY_MIN_CREDIT_PERCENTAGE")
+    daily_max_loss: float = Field(500.0, env="DAILY_MAX_LOSS")  # Max loss per day before halting trades
 
     model_config = ConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
@@ -87,6 +92,7 @@ API_SECRET = settings.alpaca_secret_key
 
 STOP_LOSS_PERCENTAGE = settings.stop_loss_percentage
 PROFIT_TAKE_PERCENTAGE = settings.profit_take_percentage
+DAILY_MAX_LOSS = settings.daily_max_loss
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
 OI_THRESHOLD = settings.oi_threshold
@@ -295,8 +301,8 @@ SHORT_PUT_DELTA_RANGE = (-0.7, -0.5)  # deeper OTM for short leg
 LONG_PUT_DELTA_RANGE = (-0.5, -0.3)   # deeper OTM for long leg
 STRIKE_RANGE = settings.strike_range  # ±30% from spot for strike scan
 
-# Scan every 2 minutes (120s) instead of default to catch more delta swings
-SCAN_INTERVAL = 120
+# Scan every 1 minute (60s) instead of default to catch more delta swings
+SCAN_INTERVAL = 60
 risk_free_rate = 0.01
 
 
@@ -312,8 +318,20 @@ stock_data_client = StockHistoricalDataClient(API_KEY, API_SECRET)
 # === LOG FILES ===
 os.makedirs("logs", exist_ok=True)
 # === POSITION MANAGEMENT LOG FILES ===
+# Ensure exit log exists with header
+if not os.path.exists(EXIT_LOG := os.path.join('logs','exit_log.csv')):
+    with open(EXIT_LOG, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp","symbol","side","qty","exit_price","pnl","ratio","status"])
+
 OPEN_POS_LOG = "logs/open_positions.csv"
 EXIT_LOG = "logs/exit_log.csv"
+# Ensure open positions log exists with header
+if not os.path.exists(OPEN_POS_LOG):
+    with open(OPEN_POS_LOG, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp","symbol","side","qty","avg_entry_price","cost_basis","unrealized_pl","unrealized_plpc"])
+
 # PnL log directory; file rotates daily
 PNL_LOG_DIR = "logs"
 # Ensure daily PnL log file exists with header at startup
@@ -662,6 +680,48 @@ def main_loop():
             writer.writerow(["timestamp", "symbol", "side", "qty", "entry", "mid", "pnl_share", "pnl", "pnl_pct"])
 
     # Main loop entry point
+    # Schedule end-of-day flatten at 16:00 ET
+    def job_flatten():
+        log("⚠️ Auto-flattening all positions at EOD")
+        positions = fetch_positions()
+        for p in positions:
+            # Fetch mid price
+            try:
+                quote = option_data_client.get_option_latest_quote(
+                    OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
+                ).get(p.symbol)
+                mid = (quote.bid_price + quote.ask_price) / 2
+            except Exception:
+                mid = float(p.avg_entry_price)
+            qty = int(p.qty)
+            entry = float(p.avg_entry_price)
+            contract_size = 100
+            pnl_share = (entry - mid) if p.side == PositionSide.SHORT else (mid - entry)
+            pnl = pnl_share * qty * contract_size
+            pnl_pct = None
+            if p.usd and p.usd.unrealized_plpc is not None:
+                pnl_pct = p.usd.unrealized_plpc
+            try:
+                resp = trade_client.close_position(p.symbol)
+                status = getattr(resp, 'status', 'closed')
+            except Exception as e:
+                status = f"error: {e}"
+            log_exit(
+                p.symbol,
+                p.side.value if hasattr(p.side, 'value') else p.side,
+                qty,
+                mid,
+                pnl,
+                pnl_pct,
+                status,
+            )
+            log(f"⚠️ Flattened {p.symbol} EOD: PnL ${pnl:.2f}")
+        send_email(
+            f"EOD Flatten Report {date.today().isoformat()}",
+            f"Auto-flatten executed at EOD. {len(positions)} positions closed."
+        )
+    schedule.every().day.at("16:00").do(job_flatten)
+
     # Schedule end-of-day report at 16:05 ET
     def job_send_eod():
         log("📈 Triggering EOD report")
@@ -754,8 +814,8 @@ def main_loop():
             log(f"⏱ Waiting {SCAN_INTERVAL // 60} minutes for next scan...")
             time_module.sleep(SCAN_INTERVAL)
         else:
-            log("🔴 Market closed. Sleeping 15 minutes...")
-            time_module.sleep(900)
+            log("🔴 Market closed. Sleeping 5 minutes...")
+            time_module.sleep(300)
 
 if __name__ == "__main__":
     import argparse
@@ -788,5 +848,5 @@ if __name__ == "__main__":
         sys.exit(0)
     else:
         # Live put credit spread bot
-        log("✅ Starting live 0DTE put credit spread bot now; it will sleep every 15 minutes until market open at 09:30 ET if closed.")
+        log("✅ Starting live 0DTE put credit spread bot now; it will sleep every 5 minutes until market open at 09:30 ET if closed.")
         main_loop()
