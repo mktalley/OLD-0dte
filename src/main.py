@@ -355,6 +355,24 @@ today_str = date.today().isoformat()
 LOG_DIR_TODAY = os.path.join(LOG_ROOT, today_str)
 os.makedirs(LOG_DIR_TODAY, exist_ok=True)
 
+# === LOAD OR INITIALIZE DAILY STATE ===
+STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
+try:
+    if os.path.exists(STATE_FILE):
+        with open(STATE_FILE) as sf:
+            state = json.load(sf)
+            daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
+            halted = state.get("halted", False)
+            log(f"🗄️ Loaded daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}")
+    else:
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+            log(f"🗄️ Initialized daily state at {STATE_FILE}")
+except Exception as e:
+    log(f"[init] Error handling state file: {e}")
+
+# === DAILY CSV LOG FILES ===
+
 # === DAILY CSV LOG FILES ===
 EXIT_LOG = os.path.join(LOG_DIR_TODAY, "exit_log.csv")
 if not os.path.exists(EXIT_LOG):
@@ -718,6 +736,27 @@ def trade(symbol, spot):
         log(f"[{symbol}] Error submitting order: {e}")
 
 # === MAIN LOOP ===
+    # === DAILY STATE RESET ===
+    def job_reset_drawdown():
+        """
+        Reset daily PnL accumulator and halted flag at midnight, persist state.
+        """
+        global daily_pnl_accumulated, halted
+        daily_pnl_accumulated = 0.0
+        halted = False
+        # Prepare today's directory and state file
+        today_str = date.today().isoformat()
+        new_log_dir = os.path.join(LOG_ROOT, today_str)
+        os.makedirs(new_log_dir, exist_ok=True)
+        state_file = os.path.join(new_log_dir, "state.json")
+        try:
+            with open(state_file, "w") as sf:
+                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+        except Exception as e:
+            log(f"[reset] Error persisting state: {e}")
+        log(f"🔄 Reset daily drawdown state for {today_str}")
+    # Schedule midnight reset at 00:01 ET
+    schedule.every().day.at("00:01").do(job_reset_drawdown)
 
 def main_loop():
     # Initialize daily PnL log file with header
