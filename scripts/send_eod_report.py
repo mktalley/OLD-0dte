@@ -122,6 +122,21 @@ def main():
         print(f"Warning: unable to fetch Alpaca account: {e}")
         balance = 0.0
         realized_pnl = 0.0
+    # If exit_log.csv doesn't exist yet, fallback to Alpaca realized P&L only
+    exit_log_path = os.path.join('logs', 'exit_log.csv')
+    if not os.path.exists(exit_log_path):
+        subject = f"EOD 0DTE Report {df_date}: Bal Change ${realized_pnl:.2f}, Balance ${balance:.2f}"
+        body = (
+            f"End-of-Day Report for {df_date}\n"
+            "No closed trades logged.\n"
+            f"Realized P&L (Alpaca): ${realized_pnl:.2f}\n"
+            f"Account Balance: ${balance:.2f}"
+        )
+        print("Subject:", subject)
+        print(body)
+        send_email(subject, body)
+        return
+
 
     # load and filter closed trades
     exit_cols = ['timestamp','symbol','side','qty','exit_price','pnl','ratio','status']
@@ -163,8 +178,7 @@ def main():
         f"Account Balance Change: ${realized_pnl:.2f}",
         f"Account Balance: ${balance:.2f}",
     ]
-    body = "
-".join(lines)
+    body = "\n".join(lines)
     subject = f"EOD 0DTE Report {df_date}: Closed P&L ${m['total_pnl']:.2f}, Bal Change ${realized_pnl:.2f}, Balance ${balance:.2f}, Win {m['win_rate']:.1f}%"    # Display report
     print("Subject:", subject)
     print(body)
