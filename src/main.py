@@ -483,11 +483,15 @@ os.makedirs(LOG_DIR_TODAY, exist_ok=True)
 STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
 try:
     if os.path.exists(STATE_FILE):
+        # Load prior PnL but always clear halted on startup
         with open(STATE_FILE) as sf:
             state = json.load(sf)
             daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
-            halted = state.get("halted", False)
-            log(f"🗄️ Loaded daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}")
+        halted = False  # clear any stale halt flag on startup
+        # Persist reset state
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+        log(f"🗄️ Loaded and reset daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}")
     else:
         with open(STATE_FILE, "w") as sf:
             json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
