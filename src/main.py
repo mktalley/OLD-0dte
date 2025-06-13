@@ -659,8 +659,9 @@ def is_market_open():
     return now_et.weekday() < 5 and dt_time(9, 30) <= now_et.time() <= dt_time(16, 0)
 
 def get_fallback_tickers():
-    # Minimal core universe for liquidity and simplicity
-    return ["SPY", "QQQ", "IWM"]
+    # Full default universe
+    return ["SPY", "QQQ", "TSLA", "AAPL", "MSFT", "NVDA", "META", "AMZN", "AMD", "GOOG",
+            "BA", "XLF", "XLK", "DIA", "IWM", "XLE", "XBI", "TSM", "GDX", "ARKK"]
 
 def load_tickers():
     today_str = date.today().isoformat()
