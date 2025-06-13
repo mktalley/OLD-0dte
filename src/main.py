@@ -900,6 +900,17 @@ def job_reset_drawdown():
 # Schedule midnight reset at 00:01 ET
 schedule.every().day.at("00:01").do(job_reset_drawdown)
 
+# Fetch and log account equity every minute
+def fetch_and_log_equity():
+    try:
+        acct = trade_client.get_account()
+        equity = float(acct.equity)
+        log(f"💰 Account equity: ${equity:,.2f}")
+    except Exception as e:
+        log(f"[equity] Error fetching account equity: {e}")
+
+schedule.every().minute.do(fetch_and_log_equity)
+
 def main_loop():
     # Main loop entry point
     # Schedule end-of-day flatten at 16:00 ET
