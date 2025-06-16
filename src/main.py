@@ -31,6 +31,10 @@ import functools
 from typing import Any, Dict, List, Optional
 # Columns for daily PnL snapshot CSV
 
+# Track last fetched equity for manual daily-change fallback
+last_equity: float | None = None
+
+
 def sum_unrealized_pnl(positions: List[Any]) -> float:
     """
     Helper to sum unrealized PnL across positions safely.
@@ -883,9 +887,10 @@ def job_reset_drawdown():
     """
     Reset daily PnL accumulator and halted flag at midnight, persist state.
     """
-    global daily_pnl_accumulated, halted
+    global daily_pnl_accumulated, halted, last_equity
     daily_pnl_accumulated = 0.0
     halted = False
+    last_equity = None
     # Prepare today's directory and state file
     today_str = date.today().isoformat()
     new_log_dir = os.path.join(LOG_ROOT, today_str)
@@ -901,15 +906,35 @@ def job_reset_drawdown():
 schedule.every().day.at("00:01").do(job_reset_drawdown)
 
 # Fetch and log account equity every minute
+# Fetch and log account equity every minute
 def fetch_and_log_equity():
+    global last_equity
     try:
         acct = trade_client.get_account()
         equity = float(acct.equity)
-        log(f"💰 Account equity: ${equity:,.2f}")
+        entry = f"💰 Account equity: ${equity:,.2f}"
+        change = None
+        pct = None
+        # Try Alpaca-provided daily change fields
+                if hasattr(acct, 'equity_change') and acct.equity_change is not None and hasattr(acct, 'equity_change_percentage') and acct.equity_change_percentage is not None:
+            try:
+                change = float(acct.equity_change)
+                pct = float(acct.equity_change_percentage)
+            except Exception:
+                pass
+        # Fallback manual computation
+        if change is None and last_equity is not None:
+            change = equity - last_equity
+            pct = change / last_equity
+        if change is not None and pct is not None:
+            entry += f" (Δ ${change:,.2f}, {pct*100:.2f}% today)"
+        log(entry)
+        last_equity = equity
     except Exception as e:
         log(f"[equity] Error fetching account equity: {e}")
-
 schedule.every().minute.do(fetch_and_log_equity)
+# Initial equity snapshot
+fetch_and_log_equity()
 
 def main_loop():
     # Main loop entry point
