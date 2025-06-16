@@ -28,11 +28,100 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 
 import functools
+from typing import Any, Dict, List, Optional
+# Columns for daily PnL snapshot CSV
+
+# Track last fetched equity for manual daily-change fallback
+last_equity: float | None = None
+
+
+def sum_unrealized_pnl(positions: List[Any]) -> float:
+    """
+    Helper to sum unrealized PnL across positions safely.
+    """
+    return sum(
+        getattr(pos.usd, 'unrealized_pl', 0.0) or 0.0
+        for pos in positions
+        if getattr(pos, 'usd', None)
+    )
+
+# Columns for daily PnL snapshot CSV
+PNL_SNAPSHOT_COLUMNS = ["timestamp", "symbol", "side", "qty", "entry", "mid", "pnl_share", "pnl", "pnl_pct", "cumulative_pnl"]
+
+
+
+def write_pnl_snapshot_row(row: list):
+    """
+    Append a PnL snapshot row (with cumulative PnL) to the daily CSV file,
+    writing header if the file does not yet exist.
+    """
+    date_str = datetime.now().date().isoformat()
+    file_path = os.path.join(PNL_LOG_DIR, f"pnl_log_{date_str}.csv")
+    write_header = not os.path.exists(file_path)
+    with open(file_path, "a", newline="") as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(PNL_SNAPSHOT_COLUMNS)
+        writer.writerow(row)
+
+
+def snapshot_positions(positions: List[Any]) -> List[Dict[str, Any]]:
+    """
+    For a list of positions, fetch mid prices, compute PnL and PnL percent,
+    then append a PnL snapshot row per position to daily CSV.
+    Returns a list of dicts with snapshot info for each position.
+    """
+    # Compute total unrealized PnL
+    total_unrealized = sum_unrealized_pnl(positions)
+    cumulative_pnl = daily_pnl_accumulated + total_unrealized
+    timestamp = datetime.now().isoformat()
+    snapshots = []
+    for p in positions:
+        try:
+            quote = guarded_get_option_latest_quote(
+                OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
+            ).get(p.symbol)
+            mid = (quote.bid_price + quote.ask_price) / 2
+        except Exception:
+            mid = float(p.avg_entry_price)
+        qty = int(p.qty)
+        entry = float(p.avg_entry_price)
+        contract_size = 100
+        pnl_share = (entry - mid) if p.side == PositionSide.SHORT else (mid - entry)
+        pnl = pnl_share * qty * contract_size
+        pnl_pct = None
+        if p.usd and p.usd.unrealized_plpc is not None:
+            pnl_pct = p.usd.unrealized_plpc
+        side_val = p.side.value if hasattr(p.side, 'value') else p.side
+        # Write CSV row
+        write_pnl_snapshot_row([
+            timestamp,
+            p.symbol,
+            side_val,
+            qty,
+            entry,
+            mid,
+            pnl_share,
+            pnl,
+            pnl_pct,
+            cumulative_pnl,
+        ])
+        snapshots.append({
+            'position': p,
+            'symbol': p.symbol,
+            'side': side_val,
+            'qty': qty,
+            'mid': mid,
+            'pnl': pnl,
+            'pnl_pct': pnl_pct,
+        })
+    return snapshots
+
 from tenacity import retry, wait_exponential, stop_after_attempt
 # === CONFIGURATION VALIDATION ===
 from pydantic_settings import BaseSettings
 from pydantic import Field, ValidationError
-from typing import Optional
+from typing import Any, Dict, List, Optional
 import sys
 import schedule
 import subprocess
@@ -47,8 +136,8 @@ class Settings(BaseSettings):
     email_from: str = Field("alerts@example.com", env="EMAIL_FROM")
     email_to: Optional[str] = Field(None, env="EMAIL_TO")
 
-    alpaca_api_key: str = Field(..., env="ALPACA_API_KEY")
-    alpaca_secret_key: str = Field(..., env="ALPACA_SECRET_KEY")
+    alpaca_api_key: str = Field("", env="ALPACA_API_KEY")
+    alpaca_secret_key: str = Field("", env="ALPACA_SECRET_KEY")
 
     stop_loss_percentage: float = Field(0.5, env="STOP_LOSS_PERCENTAGE")
     profit_take_percentage: float = Field(0.5, env="PROFIT_TAKE_PERCENTAGE")
@@ -107,12 +196,20 @@ def add_to_daily_pnl(amount: float):
 
 def check_and_halt_on_drawdown() -> bool:
     """
-    Close all positions and halt new trades if cumulative P&L breaches -DAILY_MAX_LOSS.
+    Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
     Returns True if in halted state.
     """
     global halted
-    if not halted and daily_pnl_accumulated <= -DAILY_MAX_LOSS:
-        log(f"⛔ Daily drawdown cap hit (${daily_pnl_accumulated:.2f}) — closing all positions")
+    # Calculate unrealized P&L
+    unrealized_pnl = 0.0
+    try:
+        positions = trade_client.get_all_positions()
+        unrealized_pnl = sum(p.usd.unrealized_pl or 0.0 for p in positions if p.usd and p.usd.unrealized_pl is not None)
+    except Exception as e:
+        log(f"[drawdown] Error fetching unrealized PnL: {e}")
+    total_pnl = daily_pnl_accumulated + unrealized_pnl
+    if not halted and total_pnl <= -DAILY_MAX_LOSS:
+        log(f"⛔ Daily drawdown cap hit (realized ${daily_pnl_accumulated:.2f} + unrealized ${unrealized_pnl:.2f} = ${total_pnl:.2f}) — closing all positions")
         try:
             trade_client.close_all_positions()
             log("⚠️ Executed close_all_positions() due to drawdown cap")
@@ -120,9 +217,15 @@ def check_and_halt_on_drawdown() -> bool:
             log(f"[drawdown] Error closing all positions: {e}")
         send_email(
             "Daily Drawdown Halt",
-            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. P&L: ${daily_pnl_accumulated:.2f}. All positions closed."
+            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. Realized: ${daily_pnl_accumulated:.2f}, Unrealized: ${unrealized_pnl:.2f}, Total: ${total_pnl:.2f}. All positions closed."
         )
         halted = True
+        # Persist updated state
+        try:
+            with open(STATE_FILE, "w") as sf:
+                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+        except Exception as e:
+            log(f"[drawdown] Error persisting state after halt: {e}")
     return halted
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
@@ -341,10 +444,35 @@ risk_free_rate = 0.01
 PAPER = True
 # Override base URL for paper trading endpoint
 paper_api_base_url = os.getenv("ALPACA_API_BASE_URL", None) or "https://paper-api.alpaca.markets"
+# Stub clients for when Alpaca credentials not provided
+class _NoOpTradeClient:
+    """No-op trade client when Alpaca credentials are missing"""
+    def get_all_positions(self):
+        return []
+    def close_all_positions(self):
+        pass
+    def close_position(self, symbol):
+        # return dummy response
+        return type('Response', (), {'status': 'no-op'})
+
+class _NoOpOptionDataClient:
+    """No-op option data client when credentials are missing"""
+    def get_option_latest_quote(self, req):
+        raise Exception("NoOpOptionDataClient: no credentials")
+
+class _NoOpStockDataClient:
+    """No-op stock data client when credentials are missing"""
+    pass
+
 # === CLIENTS ===
-trade_client = TradingClient(API_KEY, API_SECRET, paper=PAPER, url_override=paper_api_base_url)
-option_data_client = OptionHistoricalDataClient(API_KEY, API_SECRET)
-stock_data_client = StockHistoricalDataClient(API_KEY, API_SECRET)
+if API_KEY and API_SECRET:
+    trade_client = TradingClient(API_KEY, API_SECRET, paper=PAPER, url_override=paper_api_base_url)
+    option_data_client = OptionHistoricalDataClient(API_KEY, API_SECRET)
+    stock_data_client = StockHistoricalDataClient(API_KEY, API_SECRET)
+else:
+    trade_client = _NoOpTradeClient()
+    option_data_client = _NoOpOptionDataClient()
+    stock_data_client = _NoOpStockDataClient()
 
 # === LOG FILES ===
 # Ensure root logs directory exists
@@ -354,6 +482,28 @@ os.makedirs(LOG_ROOT, exist_ok=True)
 today_str = date.today().isoformat()
 LOG_DIR_TODAY = os.path.join(LOG_ROOT, today_str)
 os.makedirs(LOG_DIR_TODAY, exist_ok=True)
+
+# === LOAD OR INITIALIZE DAILY STATE ===
+STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
+try:
+    if os.path.exists(STATE_FILE):
+        # Load prior PnL but always clear halted on startup
+        with open(STATE_FILE) as sf:
+            state = json.load(sf)
+            daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
+        halted = False  # clear any stale halt flag on startup
+        # Persist reset state
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+        log(f"🗄️ Loaded and reset daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}")
+    else:
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+            log(f"🗄️ Initialized daily state at {STATE_FILE}")
+except Exception as e:
+    log(f"[init] Error handling state file: {e}")
+
+# === DAILY CSV LOG FILES ===
 
 # === DAILY CSV LOG FILES ===
 EXIT_LOG = os.path.join(LOG_DIR_TODAY, "exit_log.csv")
@@ -380,7 +530,7 @@ daily_pnl_file = os.path.join(PNL_LOG_DIR, f"pnl_log_{today_str}.csv")
 if not os.path.exists(daily_pnl_file):
     with open(daily_pnl_file, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["timestamp", "symbol", "side", "qty", "entry", "mid", "pnl_share", "pnl", "pnl_pct"])
+        writer.writerow(PNL_SNAPSHOT_COLUMNS)
 # === POSITION MANAGEMENT ===
 
 # === POSITION MANAGEMENT ===
@@ -411,6 +561,12 @@ def fetch_positions():
     return positions
 
 def log_exit(symbol, side, qty, exit_price, pnl, ratio, status):
+    """
+    Log an exit or hedge trade to CSV (writes exit_log.csv).
+    """
+    """
+    Log an exit or hedge trade to CSV.
+    """
     """
     Log an exit or hedge trade to CSV and update daily PnL accumulator.
     """
@@ -507,6 +663,7 @@ def is_market_open():
     return now_et.weekday() < 5 and dt_time(9, 30) <= now_et.time() <= dt_time(16, 0)
 
 def get_fallback_tickers():
+    # Full default universe
     return ["SPY", "QQQ", "TSLA", "AAPL", "MSFT", "NVDA", "META", "AMZN", "AMD", "GOOG",
             "BA", "XLF", "XLK", "DIA", "IWM", "XLE", "XBI", "TSM", "GDX", "ARKK"]
 
@@ -630,8 +787,15 @@ def trade(symbol, spot):
     for opt in options:
         if not opt.open_interest or int(opt.open_interest) < threshold:
             continue
-        quote = option_data_client.get_option_latest_quote(OptionLatestQuoteRequest(symbol_or_symbols=opt.symbol)).get(opt.symbol)
-        if not quote or not quote.bid_price or not quote.ask_price:
+        try:
+            quote_data = guarded_get_option_latest_quote(
+                OptionLatestQuoteRequest(symbol_or_symbols=opt.symbol)
+            )
+            quote = quote_data.get(opt.symbol)
+        except Exception as e:
+            log(f"[{symbol}] Error fetching option latest quote for {opt.symbol}: {e}")
+            continue
+        if not quote or not getattr(quote, 'bid_price', None) or not getattr(quote, 'ask_price', None):
             continue
         price = (quote.bid_price + quote.ask_price) / 2
         expiry = datetime.combine(opt.expiration_date, dt_time(16, 0)).replace(tzinfo=timezone)
@@ -718,25 +882,73 @@ def trade(symbol, spot):
         log(f"[{symbol}] Error submitting order: {e}")
 
 # === MAIN LOOP ===
+# === DAILY STATE RESET ===
+def job_reset_drawdown():
+    """
+    Reset daily PnL accumulator and halted flag at midnight, persist state.
+    """
+    global daily_pnl_accumulated, halted, last_equity
+    daily_pnl_accumulated = 0.0
+    halted = False
+    last_equity = None
+    # Prepare today's directory and state file
+    today_str = date.today().isoformat()
+    new_log_dir = os.path.join(LOG_ROOT, today_str)
+    os.makedirs(new_log_dir, exist_ok=True)
+    state_file = os.path.join(new_log_dir, "state.json")
+    try:
+        with open(state_file, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+    except Exception as e:
+        log(f"[reset] Error persisting state: {e}")
+    log(f"🔄 Reset daily drawdown state for {today_str}")
+# Schedule midnight reset at 00:01 ET
+schedule.every().day.at("00:01").do(job_reset_drawdown)
+
+# Fetch and log account equity every minute
+# Fetch and log account equity every minute
+def fetch_and_log_equity():
+    global last_equity
+    try:
+        acct = trade_client.get_account()
+        equity = float(acct.equity)
+        entry = f"💰 Account equity: ${equity:,.2f}"
+        change = None
+        pct = None
+        # Try Alpaca-provided daily change fields
+                if hasattr(acct, 'equity_change') and acct.equity_change is not None and hasattr(acct, 'equity_change_percentage') and acct.equity_change_percentage is not None:
+            try:
+                change = float(acct.equity_change)
+                pct = float(acct.equity_change_percentage)
+            except Exception:
+                pass
+        # Fallback manual computation
+        if change is None and last_equity is not None:
+            change = equity - last_equity
+            pct = change / last_equity
+        if change is not None and pct is not None:
+            entry += f" (Δ ${change:,.2f}, {pct*100:.2f}% today)"
+        log(entry)
+        last_equity = equity
+    except Exception as e:
+        log(f"[equity] Error fetching account equity: {e}")
+schedule.every().minute.do(fetch_and_log_equity)
+# Initial equity snapshot
+fetch_and_log_equity()
 
 def main_loop():
-    # Initialize daily PnL log file with header
-    today_str = datetime.now().date().isoformat()
-    pnl_log_file = os.path.join(PNL_LOG_DIR, f"pnl_log_{today_str}.csv")
-    if not os.path.exists(pnl_log_file):
-        with open(pnl_log_file, "w", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(["timestamp", "symbol", "side", "qty", "entry", "mid", "pnl_share", "pnl", "pnl_pct"])
-
     # Main loop entry point
     # Schedule end-of-day flatten at 16:00 ET
-    def job_flatten():
+    def job_flatten() -> None:
+        """
+        EOD flatten: snapshot PnL for all positions and then close them out.
+        """
         log("⚠️ Auto-flattening all positions at EOD")
         positions = fetch_positions()
         for p in positions:
             # Fetch mid price
             try:
-                quote = option_data_client.get_option_latest_quote(
+                quote = guarded_get_option_latest_quote(
                     OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
                 ).get(p.symbol)
                 mid = (quote.bid_price + quote.ask_price) / 2
@@ -750,6 +962,22 @@ def main_loop():
             pnl_pct = None
             if p.usd and p.usd.unrealized_plpc is not None:
                 pnl_pct = p.usd.unrealized_plpc
+            # Log PnL snapshot for EOD flatten
+            total_unrealized = sum_unrealized_pnl(positions)
+            cumulative_pnl = daily_pnl_accumulated + total_unrealized
+            write_pnl_snapshot_row([
+                datetime.now().isoformat(),
+                p.symbol,
+                p.side.value if hasattr(p.side, 'value') else p.side,
+                qty,
+                entry,
+                mid,
+                pnl_share,
+                pnl,
+                pnl_pct,
+                cumulative_pnl,
+            ])
+
             try:
                 resp = trade_client.close_position(p.symbol)
                 status = getattr(resp, 'status', 'closed')
@@ -791,10 +1019,10 @@ def main_loop():
             positions = fetch_positions()
             for p in positions:
                 # Only manage option positions
-                if getattr(p, 'asset_class', None) != AssetClass.US_OPTION:
+                if getattr(p, 'asset_class', AssetClass.US_OPTION) != AssetClass.US_OPTION:
                     continue
                 try:
-                    quote = option_data_client.get_option_latest_quote(
+                    quote = guarded_get_option_latest_quote(
                         OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
                     ).get(p.symbol)
                 except Exception as e:
@@ -811,25 +1039,21 @@ def main_loop():
                 pnl_pct = None
                 if p.usd and p.usd.unrealized_plpc is not None:
                     pnl_pct = p.usd.unrealized_plpc
-                # Log PnL snapshot to daily rotated file
-                date_str = datetime.now().date().isoformat()
-                pnl_log_file = os.path.join(PNL_LOG_DIR, f"pnl_log_{date_str}.csv")
-                write_header = not os.path.exists(pnl_log_file)
-                with open(pnl_log_file, "a", newline="") as f:
-                    writer = csv.writer(f)
-                    if write_header:
-                        writer.writerow(["timestamp", "symbol", "side", "qty", "entry", "mid", "pnl_share", "pnl", "pnl_pct"])
-                    writer.writerow([
-                        datetime.now().isoformat(),
-                        p.symbol,
-                        p.side.value if hasattr(p.side, 'value') else p.side,
-                        qty,
-                        entry,
-                        mid,
-                        pnl_share,
-                        pnl,
-                        pnl_pct,
-                    ])
+                # Log PnL snapshot (including cumulative PnL)
+                total_unrealized = sum_unrealized_pnl(positions)
+                cumulative_pnl = daily_pnl_accumulated + total_unrealized
+                write_pnl_snapshot_row([
+                    datetime.now().isoformat(),
+                    p.symbol,
+                    p.side.value if hasattr(p.side, 'value') else p.side,
+                    qty,
+                    entry,
+                    mid,
+                    pnl_share,
+                    pnl,
+                    pnl_pct,
+                    cumulative_pnl,
+                ])
                 # Check stop-loss or profit-take
                 # Determine applicable profit-take threshold (SPY override)
                 if p.symbol.startswith("SPY"):
@@ -849,6 +1073,10 @@ def main_loop():
                             pnl_pct,
                             status,
                         )
+                        # enforce realized PnL update even if log_exit was stubbed
+                        add_to_daily_pnl(pnl)
+                        check_and_halt_on_drawdown()
+
                         action = 'stop loss' if pnl_pct <= -STOP_LOSS_PERCENTAGE else 'profit take'
                         msg = f"⚠️ Closed {p.symbol} due to {action}: PnL ${pnl:.2f}"
                         log(msg)
