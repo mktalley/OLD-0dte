@@ -125,6 +125,7 @@ from typing import Any, Dict, List, Optional
 import sys
 import schedule
 import subprocess
+from src.log_analyzer import analyze_logs_for_date
 
 from pydantic import ConfigDict
 
@@ -483,6 +484,20 @@ human_handler.setFormatter(human_formatter)
 logger.addHandler(human_handler)
 
 logger.info("🚀 Log handlers initialized: JSON and human-readable (PST)")
+
+# === DEBUG LOG HANDLER ===
+# Dedicated debug-level daily logs for full traceability
+debug_handler = DailyRotatingFileHandler(
+    orig_filename="debug.log",
+    when="midnight",
+    interval=1,
+    backupCount=30,
+    timezone=timezone,
+)
+debug_handler.setLevel(logging.DEBUG)
+debug_handler.setFormatter(JsonLogFormatter())
+logger.addHandler(debug_handler)
+logger.info("🔍 Debug log handler initialized: debug.log")
 
 # === AGGRESSIVE FILTERS FOR HIGHER P&L ===
 MIN_CREDIT_PERCENTAGE = 0.10          # allow credit ≥10% of width
