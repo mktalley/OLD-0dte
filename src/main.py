@@ -270,6 +270,62 @@ _circuit_open = False
 
 def api_guard(func):
     """
+    Decorator for retry/backoff and circuit breaker on API calls, with debug instrumentation.
+    """
+    @retry(wait=wait_exponential(min=1, max=30), stop=stop_after_attempt(3), reraise=True)
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        global _api_failure_count, _circuit_open
+        # Debug log: call start
+        try:
+            args_repr = [repr(a) for a in args]
+            kwargs_repr = {k: repr(v) for k, v in kwargs.items()}
+        except Exception:
+            args_repr = []
+            kwargs_repr = {}
+        logger.debug(f"API call start: {func.__name__}", extra={
+            "event": "api_call_start",
+            "func": func.__name__,
+            "args": args_repr,
+            "kwargs": kwargs_repr,
+            "failure_count": _api_failure_count,
+            "circuit_open": _circuit_open
+        })
+        if _circuit_open:
+            msg = f"Circuit breaker open: blocking call to {func.__name__}"
+            logger.debug(msg, extra={"event": "api_circuit_open", "func": func.__name__})
+            send_email("Circuit Breaker Open", msg)
+            raise Exception(msg)
+        try:
+            result = func(*args, **kwargs)
+            _api_failure_count = 0
+            logger.debug(f"API call success: {func.__name__}", extra={
+                "event": "api_call_success",
+                "func": func.__name__,
+                "result": repr(result)
+            })
+            return result
+        except Exception as e:
+            _api_failure_count += 1
+            logger.debug(f"API call error: {func.__name__}: {e}", extra={
+                "event": "api_call_error",
+                "func": func.__name__,
+                "error": str(e),
+                "failure_count": _api_failure_count
+            })
+            send_email(f"API Error: {func.__name__}", f"Error in {func.__name__}: {e}")
+            if _api_failure_count >= CIRCUIT_BREAKER_THRESHOLD:
+                _circuit_open = True
+                send_email("Circuit Breaker Tripped",
+                           f"{_api_failure_count} consecutive failures in {func.__name__}")
+                logger.debug(f"Circuit breaker tripped for: {func.__name__}", extra={
+                    "event": "api_circuit_tripped",
+                    "func": func.__name__,
+                    "failure_count": _api_failure_count
+                })
+            raise
+    return wrapper
+    """
     Decorator for retry/backoff and circuit breaker on API calls.
     """
     @retry(wait=wait_exponential(min=1, max=30), stop=stop_after_attempt(3), reraise=True)
@@ -340,7 +396,7 @@ class JsonLogFormatter(logging.Formatter):
 os.makedirs("logs", exist_ok=True)
 # Configure root logger
 logger = logging.getLogger("0dte")
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)  # Set to DEBUG for verbose logging
 # Convenience wrapper for simple logging calls
 def log(message: str, **kwargs):
     logger.info(message, **kwargs)
@@ -487,6 +543,21 @@ os.makedirs(LOG_DIR_TODAY, exist_ok=True)
 STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
 try:
     if os.path.exists(STATE_FILE):
+        # Load prior PnL, halted, and last_equity but clear halted on startup
+        with open(STATE_FILE) as sf:
+            state = json.load(sf)
+            daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
+            last_equity = state.get("last_equity", None)
+        halted = False  # clear any stale halt flag on startup
+        # Persist reset state (including last_equity)
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted, "last_equity": last_equity}, sf)
+        log(f"🗄️ Loaded and reset daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}, last_equity={last_equity}")
+    else:
+        # Initialize state for the day (including last_equity)
+        with open(STATE_FILE, "w") as sf:
+            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted, "last_equity": last_equity}, sf)
+        log(f"🗄️ Initialized daily state at {STATE_FILE} with last_equity={last_equity}")
         # Load prior PnL but always clear halted on startup
         with open(STATE_FILE) as sf:
             state = json.load(sf)
@@ -737,6 +808,18 @@ def get_market_regime():
 
 
 def get_0dte_options(symbol):
+    # Debug: start scanning options
+    logger.debug(f"Options scan start for {symbol}", extra={"event":"options_scan_start","symbol":symbol})
+    spot = get_all_underlying_prices([symbol]).get(symbol)
+    # Debug: spot price
+    logger.debug(f"Spot price for {symbol}: {spot}", extra={"event":"options_scan_spot","symbol":symbol,"spot":spot})
+    if not spot:
+        logger.debug(f"No spot price for {symbol}, returning empty list", extra={"event":"options_scan_no_spot","symbol":symbol})
+        return []
+    min_strike = str(spot * (1 - STRIKE_RANGE))
+    max_strike = str(spot * (1 + STRIKE_RANGE))
+    # Debug: scan parameters
+    logger.debug(f"Option scan parameters for {symbol}: min_strike={min_strike}, max_strike={max_strike}, oi_threshold={OI_THRESHOLD}", extra={"event":"options_scan_params","symbol":symbol,"min_strike":min_strike,"max_strike":max_strike,"oi_threshold":OI_THRESHOLD})
     spot = get_all_underlying_prices([symbol]).get(symbol)
     if not spot: return []
     min_strike = str(spot * (1 - STRIKE_RANGE))
@@ -816,7 +899,7 @@ def trade(symbol, spot):
             break
     # Emit full candidate list for SPY before selection
     if symbol == "SPY":
-        print(json.dumps(candidates))
+        logger.debug(f"Candidates for {symbol}: {candidates}", extra={"event":"candidates", "symbol": symbol, "candidates": candidates})
     if not short_put or not long_put:
         log(f"[{symbol}] No valid spread found.")
         return
