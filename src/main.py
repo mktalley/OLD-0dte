@@ -171,7 +171,18 @@ def check_and_halt_intraday() -> bool:
     Halt trading if equity has fallen more than intraday_max_loss_percentage
     over the past intraday_window_minutes.
     """
-    global halted
+    global halted, intraday_halt_time
+
+    """
+    Halt trading if equity has fallen more than intraday_max_loss_percentage
+    over the past intraday_window_minutes, with cooldown.
+    """
+    global halted, intraday_halt_time
+
+    """
+    Halt trading if equity has fallen more than intraday_max_loss_percentage
+    over the past intraday_window_minutes.
+    """
     # No intraday control if already halted
     if halted:
         return True
@@ -200,6 +211,15 @@ def check_and_halt_intraday() -> bool:
         halted = True
     return halted
 
+# Daily halt cooldown period (minutes) after hitting daily drawdown cap
+DAILY_HALT_COOLDOWN_MINUTES = 60
+# Timestamp when the daily drawdown cap was hit (for cooldown)
+daily_halt_time: datetime | None = None
+# Intraday halt cooldown period (minutes) after hitting intraday drawdown cap
+INTRADAY_HALT_COOLDOWN_MINUTES: int = DAILY_HALT_COOLDOWN_MINUTES
+# Timestamp when the intraday drawdown cap was hit (for cooldown)
+intraday_halt_time: datetime | None = None
+
 # Tracks cumulative P&L and halts new trades when the daily max loss threshold is hit
 # P&L is accumulated when positions are exited via log_exit()
 daily_pnl_accumulated = 0.0
@@ -213,9 +233,16 @@ def add_to_daily_pnl(amount: float):
 def check_and_halt_on_drawdown() -> bool:
     """
     Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
+    Returns True if in halted state, and records halt time for cooldown.
+    """
+    """
+    Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
+    Returns True if in halted state, and records halt time for cooldown.
+    """
+    """
+    Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
     Returns True if in halted state.
     """
-    global halted
     # Calculate unrealized P&L
     unrealized_pnl = 0.0
     try:
@@ -236,13 +263,33 @@ def check_and_halt_on_drawdown() -> bool:
             f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. Realized: ${daily_pnl_accumulated:.2f}, Unrealized: ${unrealized_pnl:.2f}, Total: ${total_pnl:.2f}. All positions closed."
         )
         halted = True
+        # Record halt timestamp for cooldown
+        daily_halt_time = datetime.now(tz=timezone)
         # Persist updated state
         try:
             with open(STATE_FILE, "w") as sf:
-                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+                json.dump({
+                    "daily_pnl_accumulated": daily_pnl_accumulated,
+                    "halted": halted,
+                    "last_equity": last_equity,
+                    "intraday_equity_history": intraday_equity_history,
+                    "daily_halt_time": daily_halt_time.isoformat()
+                }, sf)
         except Exception as e:
             log(f"[drawdown] Error persisting state after halt: {e}")
     return halted
+
+
+def can_resume_after_daily_halt() -> bool:
+    """
+    Returns True if the cooldown period since daily drawdown halt has passed.
+    """
+    if not halted:
+        return True
+    if daily_halt_time is None:
+        return False
+    now = datetime.now(tz=timezone)
+    return (now - daily_halt_time) >= timedelta(minutes=DAILY_HALT_COOLDOWN_MINUTES)
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
 OI_THRESHOLD = settings.oi_threshold
@@ -513,6 +560,7 @@ human_formatter = PacificFormatter(
     datefmt="%Y-%m-%d %H:%M:%S %Z",
 )
 human_handler.setFormatter(human_formatter)
+human_handler.setLevel(logging.INFO)
 logger.addHandler(human_handler)
 
 logger.info("🚀 Log handlers initialized: JSON and human-readable (PST)")
@@ -585,11 +633,12 @@ os.makedirs(LOG_ROOT, exist_ok=True)
 today_str = date.today().isoformat()
 LOG_DIR_TODAY = os.path.join(LOG_ROOT, today_str)
 os.makedirs(LOG_DIR_TODAY, exist_ok=True)
+STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
 
 # === LOAD OR INITIALIZE DAILY STATE ===
 from src.state import load_state
 # Load or initialize today's trading state
-daily_pnl_accumulated, halted, last_equity, intraday_equity_history = load_state(LOG_ROOT)
+daily_pnl_accumulated, halted, last_equity, intraday_equity_history, daily_halt_time = load_state(LOG_ROOT)  # Include daily_halt_time for cooldown
 
 # === DAILY CSV LOG FILES ===
 EXIT_LOG = os.path.join(LOG_DIR_TODAY, "exit_log.csv")
@@ -865,7 +914,46 @@ def log_trade(symbol, short_strike, long_strike, credit, spread_width, status):
         writer.writerow([datetime.now().isoformat(), symbol, short_strike, long_strike, credit, spread_width, status])
 
 def trade(symbol, spot):
-    global halted
+    global halted, daily_halt_time, intraday_halt_time
+    # If currently halted, attempt daily or intraday cooldown
+    if halted:
+        # Daily cooldown
+        if daily_halt_time is not None:
+            if can_resume_after_daily_halt():
+                halted = False
+                daily_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after daily drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap (cooldown)")
+                return
+        # Intraday cooldown
+        if halted and intraday_halt_time is not None:
+            if can_resume_after_intraday_halt():
+                halted = False
+                intraday_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after intraday drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to intraday drawdown cap (cooldown)")
+                return
+        # Still halted
+        if halted:
+            log(f"[{symbol}] Skipped trade: halted, awaiting reset")
+            return
+    # Pre-trade intraday drawdown check
+    check_and_halt_intraday()
+    # If currently halted, check for daily cooldown or skip
+    if halted:
+        if daily_halt_time is not None:
+            if can_resume_after_daily_halt():
+                halted = False
+                daily_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after daily drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap (cooldown)")
+                return
+        else:
+            log(f"[{symbol}] Skipped trade: halted, awaiting reset")
+            return
     if halted:
         log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap")
         return
