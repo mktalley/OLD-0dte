@@ -1,9 +1,11 @@
 import os
 import json
 import pandas as pd
+# Avoid circular dependencies; import send_email and logger inside function
+
 from collections import Counter
 from datetime import date
-from src.main import send_email, logger
+
 
 
 def analyze_logs_for_date(date_str: str) -> None:
@@ -81,6 +83,11 @@ def analyze_logs_for_date(date_str: str) -> None:
         summary_lines.append(f"  - {rec}")
 
     body = "\n".join(summary_lines)
+    # Retrieve send_email and logger from existing main module to avoid reinitializing logging
+    import sys
+    main = sys.modules.get("__main__") or sys.modules.get("src.main")
+    send_email = main.send_email
+    logger = main.logger
     subject = f"EOD Log Analysis: {date_str}"
     # Send via email
     try:

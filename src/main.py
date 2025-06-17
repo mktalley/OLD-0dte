@@ -25,6 +25,22 @@ from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 import json
 import logging
+
+# Monkey-patch Logger._log to filter out reserved keys in extra to avoid KeyError on 'args', 'message', etc.
+_orig_log_method = logging.Logger._log
+
+def _safe_log(self, level, msg, args, exc_info=None, extra=None, stack_info=False, stacklevel=1):
+    # filter out reserved names in LogRecord
+    if extra:
+        # reserved names defined on LogRecord
+        reserved = set(logging.LogRecord(self.name if hasattr(self, 'name') else '', level, '', 0, msg, args, exc_info).__dict__.keys()) | {"message", "asctime"}
+        # drop any keys in reserved
+        filtered = {k: v for k, v in extra.items() if k not in reserved}
+        extra = filtered or None
+    return _orig_log_method(self, level, msg, args, exc_info, extra, stack_info, stacklevel)
+
+# Apply the monkey patch
+logging.Logger._log = _safe_log
 from logging.handlers import TimedRotatingFileHandler
 
 import functools
