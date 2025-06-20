@@ -36,6 +36,12 @@ class Settings(BaseSettings):
 
     # Other settings
     symbols: str = Field('SPY,SPX,XSP', env="SYMBOLS")  # Allow custom SYMBOLS from .env
+    # Daily drawdown percentage cap (halt trading if equity drops ≥ this % from open)
+    daily_max_loss_percentage: float = Field(0.10, env="DAILY_MAX_LOSS_PERCENTAGE")
+    # Daily take-profit percentage cap (halt trading if equity gains ≥ this % from open)
+    daily_max_profit_percentage: float = Field(0.10, env="DAILY_MAX_PROFIT_PERCENTAGE")
+    # Daily absolute take-profit cap (halt trading if profit ≥ this $ amount)
+    daily_max_profit: float = Field(500.0, env="DAILY_MAX_PROFIT")
 
     model_config = ConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

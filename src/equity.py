@@ -1,48 +1,44 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def fetch_and_log_equity():
     """
-    Fetch account equity, log changes, update intraday history, and enforce intraday drawdown cap.
+    Fetch account equity using Alpaca, log equity and daily change based on open,
+    update intraday history, and enforce intraday drawdown cap.
     """
     import sys
     main = sys.modules.get("__main__") or sys.modules.get("src.main")
-    """
-    Fetch account equity, log changes, update intraday history, and enforce intraday drawdown cap.
-    """
-    # Use existing main module instance without re-importing to avoid double logging init
-    import sys
-    main = sys.modules.get("__main__")
-    # Fallback for test/import contexts
-    if main is None or not hasattr(main, "trade_client"):
+    if main is None or not hasattr(main, 'trade_client'):
         import src.main as main
-    """
-    Fetch account equity, log changes, update intraday history, and enforce intraday drawdown cap.
-    """
-    # Use existing main module instance without re-importing to avoid double logging init
-    main = sys.modules.get("src.main") or sys.modules.get("__main__")
     try:
         acct = main.trade_client.get_account()
         equity = float(acct.equity)
-        entry = f"💰 Account equity: ${equity:,.2f}"
-        change = None
-        pct = None
-        # Try Alpaca-provided daily change fields
-        if hasattr(acct, 'equity_change') and acct.equity_change is not None and hasattr(acct, 'equity_change_percentage') and acct.equity_change_percentage is not None:
+        # Set today's opening equity on first run
+        # and persist to state for cooldown calculations
+        # On first run, record opening equity and persist state
+        if main.equity_open is None:
+            main.equity_open = equity
             try:
-                change = float(acct.equity_change)
-                pct = float(acct.equity_change_percentage)
-            except Exception:
-                pass
-        # Fallback manual computation
-        if change is None and main.last_equity is not None:
-            change = equity - main.last_equity
-            pct = change / main.last_equity if main.last_equity else None
-        if change is not None and pct is not None:
-            entry += f" (Δ ${change:,.2f}, {pct*100:.2f}% today)"
-        main.log(entry)
-        # Update last_equity
+                main.save_state(
+                    main.LOG_ROOT,
+                    main.daily_pnl_accumulated,
+                    main.halted,
+                    main.last_equity,
+                    main.intraday_equity_history,
+                    main.daily_halt_time,
+                    main.intraday_halt_time,
+                    main.equity_open,
+                )
+            except Exception as e:
+                main.log(f"[equity] Error persisting equity_open: {e}")
+        # After initial recording, do not modify equity_open again
         main.last_equity = equity
-        # Record intraday equity history and enforce drawdown
+        # Compute change and percentage
+        change = equity - main.equity_open
+        pct = (change / main.equity_open) if main.equity_open else 0.0
+        # Log equity with change%
+        entry = f"💰 Account equity: ${equity:,.2f} (Δ ${change:,.2f}, {pct*100:.2f}% today)"
+        main.log(entry)
+        # Record intraday snapshot and enforce intraday drawdown
         now = datetime.now(tz=main.timezone)
         main.intraday_equity_history.append((now, equity))
         main.check_and_halt_intraday()
