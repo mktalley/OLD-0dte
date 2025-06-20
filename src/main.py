@@ -22,17 +22,32 @@ from alpaca.data.historical.option import OptionHistoricalDataClient
 from alpaca.data.historical.stock import StockHistoricalDataClient, StockLatestTradeRequest
 from alpaca.data.requests import OptionLatestQuoteRequest
 from alpaca.data.requests import StockBarsRequest
+from typing import List, Any, Dict
 from alpaca.data.timeframe import TimeFrame
 import json
 import logging
-from logging.handlers import TimedRotatingFileHandler
 
+import schedule
 import functools
-from typing import Any, Dict, List, Optional
-# Columns for daily PnL snapshot CSV
+# Monkey-patch Logger._log to filter out reserved keys in extra to avoid KeyError on 'args', 'message', etc.
+from logging.handlers import TimedRotatingFileHandler
+if not getattr(logging.Logger, '_openhands_log_patched', False):
+    _orig_log_method = logging.Logger._log
+
+    def _safe_log(self, level, msg, args, exc_info=None, extra=None, stack_info=False, stacklevel=1):
+        # filter out reserved names in LogRecord
+        if extra:
+            reserved = set(logging.LogRecord(self.name if hasattr(self, 'name') else '', level, '', 0, msg, args, exc_info).__dict__.keys()) | {"message", "asctime"}
+            extra = {k: v for k, v in extra.items() if k not in reserved} or None
+        return _orig_log_method(self, level, msg, args, exc_info, extra, stack_info, stacklevel)
+
+    # Apply the monkey patch
+    logging.Logger._log = _safe_log
+    logging.Logger._openhands_log_patched = True
 
 # Track last fetched equity for manual daily-change fallback
 last_equity: float | None = None
+equity_open: float | None = None
 
 
 def sum_unrealized_pnl(positions: List[Any]) -> float:
@@ -117,51 +132,8 @@ def snapshot_positions(positions: List[Any]) -> List[Dict[str, Any]]:
         })
     return snapshots
 
+from src.config import settings
 from tenacity import retry, wait_exponential, stop_after_attempt
-# === CONFIGURATION VALIDATION ===
-from pydantic_settings import BaseSettings
-from pydantic import Field, ValidationError
-from typing import Any, Dict, List, Optional
-import sys
-import schedule
-import subprocess
-
-from pydantic import ConfigDict
-
-class Settings(BaseSettings):
-    email_host: str = Field("localhost", env="EMAIL_HOST")
-    email_port: int = Field(25, env="EMAIL_PORT")
-    email_user: Optional[str] = Field(None, env="EMAIL_USER")
-    email_pass: Optional[str] = Field(None, env="EMAIL_PASS")
-    email_from: str = Field("alerts@example.com", env="EMAIL_FROM")
-    email_to: Optional[str] = Field(None, env="EMAIL_TO")
-
-    alpaca_api_key: str = Field("", env="ALPACA_API_KEY")
-    alpaca_secret_key: str = Field("", env="ALPACA_SECRET_KEY")
-
-    stop_loss_percentage: float = Field(0.5, env="STOP_LOSS_PERCENTAGE")
-    profit_take_percentage: float = Field(0.5, env="PROFIT_TAKE_PERCENTAGE")
-    min_credit_percentage: float = Field(0.15, env="MIN_CREDIT_PERCENTAGE")
-    oi_threshold: int = Field(100, env="OI_THRESHOLD")
-    strike_range: float = Field(0.1, env="STRIKE_RANGE")
-    scan_interval: int = Field(300, env="SCAN_INTERVAL")
-    circuit_breaker_threshold: int = Field(5, env="CIRCUIT_BREAKER_THRESHOLD")
-    risk_per_trade_percentage: float = Field(0.01, env="RISK_PER_TRADE_PERCENTAGE")
-    max_concurrent_trades: int = Field(10, env="MAX_CONCURRENT_TRADES")
-    max_total_delta_exposure: float = Field(200, env="MAX_TOTAL_DELTA_EXPOSURE")
-    spy_min_credit_percentage: float = Field(0.10, env="SPY_MIN_CREDIT_PERCENTAGE")
-    daily_max_loss: float = Field(500.0, env="DAILY_MAX_LOSS")  # Max loss per day before halting trades
-
-    model_config = ConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
-
-    symbols: str = Field('SPY,SPX,XSP', env="SYMBOLS")  # Allow custom SYMBOLS from .env
-try:
-    settings = Settings()
-except ValidationError as e:
-    print("Configuration error:")
-    print(e)
-    sys.exit(1)
-
 # Map settings to global variables
 # Risk and filter settings from config
 RISK_PER_TRADE_PERCENTAGE = settings.risk_per_trade_percentage
@@ -181,9 +153,92 @@ API_SECRET = settings.alpaca_secret_key
 
 STOP_LOSS_PERCENTAGE = settings.stop_loss_percentage
 PROFIT_TAKE_PERCENTAGE = settings.profit_take_percentage
+# Daily take-profit cap (percentage & absolute)
+DAILY_MAX_PROFIT_PERCENTAGE = settings.daily_max_profit_percentage
+DAILY_MAX_PROFIT = settings.daily_max_profit
 DAILY_MAX_LOSS = settings.daily_max_loss
+# Daily equity drawdown cap (percentage of opening equity)
+DAILY_MAX_LOSS_PERCENTAGE = settings.daily_max_loss_percentage
 
 # === DRAWOWN CAP CONTROL ===
+
+# === INTRADAY DRAWDOWN CONTROL ===
+# Tracks equity snapshots to halt if intraday drawdown exceeds threshold
+intraday_equity_history: list[tuple[datetime, float]] = []
+
+def check_and_halt_intraday() -> bool:
+    """
+    Halt trading if equity has fallen more than intraday_max_loss_percentage
+    over the past intraday_window_minutes.
+    """
+    global halted, intraday_halt_time
+
+    """
+    Halt trading if equity has fallen more than intraday_max_loss_percentage
+    over the past intraday_window_minutes, with cooldown.
+    """
+    global halted, intraday_halt_time
+
+    """
+    Halt trading if equity has fallen more than intraday_max_loss_percentage
+    over the past intraday_window_minutes.
+    """
+    # No intraday control if already halted
+    if halted:
+        return True
+    now = datetime.now(tz=timezone)
+    window_start = now - timedelta(minutes=settings.intraday_window_minutes)
+    # Filter history within window
+    recent = [(t, eq) for t, eq in intraday_equity_history if t >= window_start]
+    if not recent:
+        return False
+    # Current equity is last logged
+    curr_eq = recent[-1][1]
+    # Peak equity in window
+    peak_eq = max(eq for t, eq in recent)
+    drawdown = (peak_eq - curr_eq) / peak_eq
+    if drawdown >= settings.intraday_max_loss_percentage:
+        log(f"⏱️ Intraday drawdown cap hit ({drawdown*100:.2f}% over last {settings.intraday_window_minutes}m) — closing all positions")
+        # Attempt bulk close of all positions
+        try:
+            trade_client.close_all_positions()
+            log("⚠️ Executed close_all_positions() due to intraday drawdown cap")
+        except Exception as bulk_err:
+            log(f"[intraday] Error calling close_all_positions(): {bulk_err}")
+        # Fallback: individually close any remaining positions
+        try:
+            rem_positions = trade_client.get_all_positions()
+            for pos in rem_positions:
+                try:
+                    trade_client.close_position(pos.symbol)
+                    log(f"⚠️ Closed position {pos.symbol} due to intraday drawdown cap")
+                except Exception as single_err:
+                    log(f"[intraday] Error closing position {pos.symbol}: {single_err}")
+        except Exception as fetch_err:
+            log(f"[intraday] Error fetching positions after drawdown halt: {fetch_err}")
+        send_email(
+            "Intraday Drawdown Halt",
+            f"Equity dropped by {drawdown*100:.2f}% over the last {settings.intraday_window_minutes} minutes. All positions closed."
+        )
+        # Record intraday halt time for cooldown
+        intraday_halt_time = now
+        # Persist state after intraday halt
+        try:
+            save_state(LOG_ROOT, daily_pnl_accumulated, halted, last_equity, intraday_equity_history, daily_halt_time, intraday_halt_time, equity_open)
+        except Exception as persist_err:
+            log(f"[intraday] Error persisting state after intraday halt: {persist_err}")
+        halted = True
+    return halted
+
+# Daily halt cooldown period (minutes) after hitting daily drawdown cap
+DAILY_HALT_COOLDOWN_MINUTES = 60
+# Timestamp when the daily drawdown cap was hit (for cooldown)
+daily_halt_time: datetime | None = None
+# Intraday halt cooldown period (minutes) after hitting intraday drawdown cap
+INTRADAY_HALT_COOLDOWN_MINUTES: int = DAILY_HALT_COOLDOWN_MINUTES
+# Timestamp when the intraday drawdown cap was hit (for cooldown)
+intraday_halt_time: datetime | None = None
+
 # Tracks cumulative P&L and halts new trades when the daily max loss threshold is hit
 # P&L is accumulated when positions are exited via log_exit()
 daily_pnl_accumulated = 0.0
@@ -192,41 +247,121 @@ halted = False
 def add_to_daily_pnl(amount: float):
     global daily_pnl_accumulated
     daily_pnl_accumulated += amount
-    check_and_halt_on_drawdown()
+    # First enforce drawdown cap; if still active, check profit cap
+    if not check_and_halt_on_drawdown():
+        check_and_halt_on_profit()
 
 def check_and_halt_on_drawdown() -> bool:
-    """
-    Close all positions and halt new trades if cumulative P&L (realized + unrealized) breaches -DAILY_MAX_LOSS.
-    Returns True if in halted state.
-    """
-    global halted
-    # Calculate unrealized P&L
-    unrealized_pnl = 0.0
+    """Halt trading if equity drops more than daily_max_loss_percentage from opening equity.
+    Returns True if halted and records halt time for cooldown."""
+    global halted, daily_halt_time, equity_open, intraday_halt_time
+
+    # If already halted, do nothing
+    if halted:
+        return True
+
+    # Require opening equity
+    if equity_open is None:
+        return False
+
+    # Fetch current equity
     try:
-        positions = trade_client.get_all_positions()
-        unrealized_pnl = sum(p.usd.unrealized_pl or 0.0 for p in positions if p.usd and p.usd.unrealized_pl is not None)
+        curr_eq = float(trade_client.get_account().equity)
     except Exception as e:
-        log(f"[drawdown] Error fetching unrealized PnL: {e}")
-    total_pnl = daily_pnl_accumulated + unrealized_pnl
-    if not halted and total_pnl <= -DAILY_MAX_LOSS:
-        log(f"⛔ Daily drawdown cap hit (realized ${daily_pnl_accumulated:.2f} + unrealized ${unrealized_pnl:.2f} = ${total_pnl:.2f}) — closing all positions")
+        log(f"[drawdown] Error fetching account equity: {e}")
+        return False
+
+    # Compute drawdown since open
+    drawdown_pct = (equity_open - curr_eq) / equity_open
+
+    # Check threshold
+    if drawdown_pct >= DAILY_MAX_LOSS_PERCENTAGE:
+        log(f"⛔ Daily drawdown cap hit ({drawdown_pct*100:.2f}% ≥ {DAILY_MAX_LOSS_PERCENTAGE*100:.2f}%) — closing all positions")
         try:
             trade_client.close_all_positions()
-            log("⚠️ Executed close_all_positions() due to drawdown cap")
+            log("⚠️ Executed close_all_positions() due to daily drawdown cap")
         except Exception as e:
             log(f"[drawdown] Error closing all positions: {e}")
         send_email(
             "Daily Drawdown Halt",
-            f"Daily drawdown cap of ${DAILY_MAX_LOSS:.2f} exceeded. Realized: ${daily_pnl_accumulated:.2f}, Unrealized: ${unrealized_pnl:.2f}, Total: ${total_pnl:.2f}. All positions closed."
+            f"Daily equity drawdown of {drawdown_pct*100:.2f}% exceeded. All positions closed."
         )
         halted = True
-        # Persist updated state
+        daily_halt_time = globals()['datetime'].now(tz=globals()['timezone'])
+        # Persist state
         try:
-            with open(STATE_FILE, "w") as sf:
-                json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
+            save_state(LOG_ROOT, daily_pnl_accumulated, halted, last_equity, intraday_equity_history, daily_halt_time, intraday_halt_time, equity_open)
         except Exception as e:
             log(f"[drawdown] Error persisting state after halt: {e}")
+
     return halted
+
+
+def check_and_halt_on_profit() -> bool:
+    """Halt trading if cumulative P&L reaches daily profit cap."""
+    global halted, daily_halt_time, equity_open
+
+    # If already halted, do nothing
+    if halted:
+        return True
+    # Need opening equity to evaluate profit
+    if equity_open is None:
+        return False
+
+    # Cumulative profit (realized)
+    profit = daily_pnl_accumulated
+    profit_pct = profit / equity_open
+
+    # Check profit cap thresholds
+    if profit_pct >= DAILY_MAX_PROFIT_PERCENTAGE or profit >= DAILY_MAX_PROFIT:
+        log(f"🎯 Daily profit cap hit ({profit_pct*100:.2f}% ≥ {DAILY_MAX_PROFIT_PERCENTAGE*100:.2f}% or ${profit:.2f} ≥ ${DAILY_MAX_PROFIT:.2f}) — closing all positions")
+        try:
+            trade_client.close_all_positions()
+            log("⚠️ Executed close_all_positions() due to daily profit cap")
+        except Exception as e:
+            log(f"[profit] Error closing all positions: {e}")
+
+        send_email(
+            "Daily Profit Halt",
+            f"Profit of {profit_pct*100:.2f}% (=${profit:.2f}) exceeded daily profit target. All positions closed."
+        )
+
+        halted = True
+        daily_halt_time = globals()['datetime'].now(tz=globals()['timezone'])
+        # Persist state after profit halt
+        try:
+            save_state(LOG_ROOT, daily_pnl_accumulated, halted, last_equity, [], daily_halt_time, intraday_halt_time, equity_open)
+        except Exception as e:
+            log(f"[profit] Error persisting state after halt: {e}")
+        return True
+
+    return False
+
+
+
+def can_resume_after_daily_halt() -> bool:
+    """
+    Returns True if the cooldown period since daily drawdown halt has passed.
+    """
+    if not halted:
+        return True
+    if daily_halt_time is None:
+        return False
+    now = datetime.now(tz=timezone)
+    return (now - daily_halt_time) >= timedelta(minutes=DAILY_HALT_COOLDOWN_MINUTES)
+
+
+def can_resume_after_intraday_halt() -> bool:
+    """
+    Returns True if the cooldown period since intraday drawdown halt has passed.
+    """
+    if not halted:
+        return True
+    if intraday_halt_time is None:
+        return False
+    now = datetime.now(tz=timezone)
+    return (now - intraday_halt_time) >= timedelta(minutes=INTRADAY_HALT_COOLDOWN_MINUTES)
+
 
 MIN_CREDIT_PERCENTAGE = settings.min_credit_percentage
 OI_THRESHOLD = settings.oi_threshold
@@ -286,7 +421,7 @@ def api_guard(func):
         logger.debug(f"API call start: {func.__name__}", extra={
             "event": "api_call_start",
             "func": func.__name__,
-            "args": args_repr,
+            "api_args": args_repr,
             "kwargs": kwargs_repr,
             "failure_count": _api_failure_count,
             "circuit_open": _circuit_open
@@ -379,6 +514,27 @@ def guarded_get_option_latest_quote(req):
 # Ensure timezone and logger are available for dynamic config
 timezone = ZoneInfo("America/Los_Angeles")
 
+# Unified clock entrypoint for business logic; always call module-level datetime
+# now() returns current time with timezone, honoring monkey-patched datetime
+
+
+def now() -> datetime:
+    """Return current time with module timezone."""
+    return datetime.now(tz=timezone)
+
+
+
+
+def _halt_trade(intraday: bool = False) -> None:
+    """Set halted flag and record halt timestamp (daily or intraday)."""
+    global halted, daily_halt_time, intraday_halt_time
+    halted = True
+    ts = now()
+    if intraday:
+        intraday_halt_time = ts
+    else:
+        daily_halt_time = ts
+
 # === STRUCTURED LOGGING ===
 class JsonLogFormatter(logging.Formatter):
     def format(self, record):
@@ -396,7 +552,22 @@ class JsonLogFormatter(logging.Formatter):
 os.makedirs("logs", exist_ok=True)
 # Configure root logger
 logger = logging.getLogger("0dte")
+logger.handlers.clear()
+logger.propagate = False
 logger.setLevel(logging.DEBUG)  # Set to DEBUG for verbose logging
+# Deduplicate consecutive log records
+class DedupFilter(logging.Filter):
+    def __init__(self):
+        super().__init__()
+        self.last = None
+    def filter(self, record):
+        msg = record.getMessage()
+        if msg == self.last:
+            return False
+        self.last = msg
+        return True
+# Apply dedup filter at logger level
+logger.addFilter(DedupFilter())
 # Convenience wrapper for simple logging calls
 def log(message: str, **kwargs):
     logger.info(message, **kwargs)
@@ -448,6 +619,8 @@ class DailyRotatingFileHandler(TimedRotatingFileHandler):
         new_file_path = os.path.join(self.log_dir_today, self.orig_filename)
         self.baseFilename = new_file_path
         # Reopen the stream
+        # Open a new stream for the new log file
+        self.stream = self._open()
         self.stream = self._open()
 
 # JSON daily log handler
@@ -480,9 +653,24 @@ human_formatter = PacificFormatter(
     datefmt="%Y-%m-%d %H:%M:%S %Z",
 )
 human_handler.setFormatter(human_formatter)
+human_handler.setLevel(logging.INFO)
 logger.addHandler(human_handler)
 
 logger.info("🚀 Log handlers initialized: JSON and human-readable (PST)")
+
+# === DEBUG LOG HANDLER ===
+# Dedicated debug-level daily logs for full traceability
+debug_handler = DailyRotatingFileHandler(
+    orig_filename="debug.log",
+    when="midnight",
+    interval=1,
+    backupCount=30,
+    timezone=timezone,
+)
+debug_handler.setLevel(logging.DEBUG)
+debug_handler.setFormatter(JsonLogFormatter())
+logger.addHandler(debug_handler)
+logger.info("🔍 Debug log handler initialized: debug.log")
 
 # === AGGRESSIVE FILTERS FOR HIGHER P&L ===
 MIN_CREDIT_PERCENTAGE = 0.10          # allow credit ≥10% of width
@@ -538,43 +726,13 @@ os.makedirs(LOG_ROOT, exist_ok=True)
 today_str = date.today().isoformat()
 LOG_DIR_TODAY = os.path.join(LOG_ROOT, today_str)
 os.makedirs(LOG_DIR_TODAY, exist_ok=True)
+STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
 
 # === LOAD OR INITIALIZE DAILY STATE ===
-STATE_FILE = os.path.join(LOG_DIR_TODAY, "state.json")
-try:
-    if os.path.exists(STATE_FILE):
-        # Load prior PnL, halted, and last_equity but clear halted on startup
-        with open(STATE_FILE) as sf:
-            state = json.load(sf)
-            daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
-            last_equity = state.get("last_equity", None)
-        halted = False  # clear any stale halt flag on startup
-        # Persist reset state (including last_equity)
-        with open(STATE_FILE, "w") as sf:
-            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted, "last_equity": last_equity}, sf)
-        log(f"🗄️ Loaded and reset daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}, last_equity={last_equity}")
-    else:
-        # Initialize state for the day (including last_equity)
-        with open(STATE_FILE, "w") as sf:
-            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted, "last_equity": last_equity}, sf)
-        log(f"🗄️ Initialized daily state at {STATE_FILE} with last_equity={last_equity}")
-        # Load prior PnL but always clear halted on startup
-        with open(STATE_FILE) as sf:
-            state = json.load(sf)
-            daily_pnl_accumulated = state.get("daily_pnl_accumulated", 0.0)
-        halted = False  # clear any stale halt flag on startup
-        # Persist reset state
-        with open(STATE_FILE, "w") as sf:
-            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
-        log(f"🗄️ Loaded and reset daily state: pnl=${daily_pnl_accumulated:.2f}, halted={halted}")
-    else:
-        with open(STATE_FILE, "w") as sf:
-            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
-            log(f"🗄️ Initialized daily state at {STATE_FILE}")
-except Exception as e:
-    log(f"[init] Error handling state file: {e}")
+from src.state import load_state, save_state
+# Load or initialize today's trading state (includes intraday_halt_time & equity_open)
+daily_pnl_accumulated, halted, last_equity, intraday_equity_history, daily_halt_time, intraday_halt_time, equity_open = load_state(LOG_ROOT)
 
-# === DAILY CSV LOG FILES ===
 
 # === DAILY CSV LOG FILES ===
 EXIT_LOG = os.path.join(LOG_DIR_TODAY, "exit_log.csv")
@@ -850,9 +1008,61 @@ def log_trade(symbol, short_strike, long_strike, credit, spread_width, status):
         writer.writerow([datetime.now().isoformat(), symbol, short_strike, long_strike, credit, spread_width, status])
 
 def trade(symbol, spot):
-    global halted
+    global halted, daily_halt_time, intraday_halt_time, equity_open
+    # Record opening equity at first executed trade
+    if equity_open is None:
+        try:
+            acct = trade_client.get_account()
+            equity_open = float(acct.equity)
+            log(f"🎬 First trade – recorded opening equity ${equity_open:,.2f}")
+        except Exception as e:
+            log(f"[trade] Error fetching opening equity: {e}")
+    # If currently halted, attempt daily or intraday cooldown
+    if halted:
+        # Daily cooldown
+        if daily_halt_time is not None:
+            if can_resume_after_daily_halt():
+                halted = False
+                daily_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after daily drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap (cooldown)")
+                return
+        # Intraday cooldown
+        if halted and intraday_halt_time is not None:
+            if can_resume_after_intraday_halt():
+                halted = False
+                intraday_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after intraday drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to intraday drawdown cap (cooldown)")
+                return
+        # Still halted
+        if halted:
+            log(f"[{symbol}] Skipped trade: halted, awaiting reset")
+            return
+    # Pre-trade intraday drawdown check
+    check_and_halt_intraday()
+    # If currently halted, check for daily cooldown or skip
+    if halted:
+        if daily_halt_time is not None:
+            if can_resume_after_daily_halt():
+                halted = False
+                daily_halt_time = None
+                log("🔄 Cooldown complete—resuming trading after daily drawdown cap")
+            else:
+                log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap (cooldown)")
+                return
+        else:
+            log(f"[{symbol}] Skipped trade: halted, awaiting reset")
+            return
     if halted:
         log(f"[{symbol}] Skipped trade: halted due to daily drawdown cap")
+        return
+    # Pre-trade intraday drawdown check
+    check_and_halt_intraday()
+    if halted:
+        log(f"[{symbol}] Skipped trade: halted due to intraday drawdown cap")
         return
     # === Symbol-specific filter overrides ===
     static_overrides = SYMBOL_FILTER_OVERRIDES.get(symbol, {})
@@ -964,218 +1174,16 @@ def trade(symbol, spot):
         log_trade(symbol, short_put[0].strike_price, long_put[0].strike_price, credit, width, "submission_failed")
         log(f"[{symbol}] Error submitting order: {e}")
 
-# === MAIN LOOP ===
-# === DAILY STATE RESET ===
-def job_reset_drawdown():
-    """
-    Reset daily PnL accumulator and halted flag at midnight, persist state.
-    """
-    global daily_pnl_accumulated, halted, last_equity
-    daily_pnl_accumulated = 0.0
-    halted = False
-    last_equity = None
-    # Prepare today's directory and state file
-    today_str = date.today().isoformat()
-    new_log_dir = os.path.join(LOG_ROOT, today_str)
-    os.makedirs(new_log_dir, exist_ok=True)
-    state_file = os.path.join(new_log_dir, "state.json")
-    try:
-        with open(state_file, "w") as sf:
-            json.dump({"daily_pnl_accumulated": daily_pnl_accumulated, "halted": halted}, sf)
-    except Exception as e:
-        log(f"[reset] Error persisting state: {e}")
-    log(f"🔄 Reset daily drawdown state for {today_str}")
-# Schedule midnight reset at 00:01 ET
-schedule.every().day.at("00:01").do(job_reset_drawdown)
+
+# Equity snapshot scheduling
+from src.equity import fetch_and_log_equity
+
+
 
 # Fetch and log account equity every minute
-# Fetch and log account equity every minute
-def fetch_and_log_equity():
-    global last_equity
-    try:
-        acct = trade_client.get_account()
-        equity = float(acct.equity)
-        entry = f"💰 Account equity: ${equity:,.2f}"
-        change = None
-        pct = None
-        # Try Alpaca-provided daily change fields
-                if hasattr(acct, 'equity_change') and acct.equity_change is not None and hasattr(acct, 'equity_change_percentage') and acct.equity_change_percentage is not None:
-            try:
-                change = float(acct.equity_change)
-                pct = float(acct.equity_change_percentage)
-            except Exception:
-                pass
-        # Fallback manual computation
-        if change is None and last_equity is not None:
-            change = equity - last_equity
-            pct = change / last_equity
-        if change is not None and pct is not None:
-            entry += f" (Δ ${change:,.2f}, {pct*100:.2f}% today)"
-        log(entry)
-        last_equity = equity
-    except Exception as e:
-        log(f"[equity] Error fetching account equity: {e}")
 schedule.every().minute.do(fetch_and_log_equity)
-# Initial equity snapshot
-fetch_and_log_equity()
 
-def main_loop():
-    # Main loop entry point
-    # Schedule end-of-day flatten at 16:00 ET
-    def job_flatten() -> None:
-        """
-        EOD flatten: snapshot PnL for all positions and then close them out.
-        """
-        log("⚠️ Auto-flattening all positions at EOD")
-        positions = fetch_positions()
-        for p in positions:
-            # Fetch mid price
-            try:
-                quote = guarded_get_option_latest_quote(
-                    OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
-                ).get(p.symbol)
-                mid = (quote.bid_price + quote.ask_price) / 2
-            except Exception:
-                mid = float(p.avg_entry_price)
-            qty = int(p.qty)
-            entry = float(p.avg_entry_price)
-            contract_size = 100
-            pnl_share = (entry - mid) if p.side == PositionSide.SHORT else (mid - entry)
-            pnl = pnl_share * qty * contract_size
-            pnl_pct = None
-            if p.usd and p.usd.unrealized_plpc is not None:
-                pnl_pct = p.usd.unrealized_plpc
-            # Log PnL snapshot for EOD flatten
-            total_unrealized = sum_unrealized_pnl(positions)
-            cumulative_pnl = daily_pnl_accumulated + total_unrealized
-            write_pnl_snapshot_row([
-                datetime.now().isoformat(),
-                p.symbol,
-                p.side.value if hasattr(p.side, 'value') else p.side,
-                qty,
-                entry,
-                mid,
-                pnl_share,
-                pnl,
-                pnl_pct,
-                cumulative_pnl,
-            ])
 
-            try:
-                resp = trade_client.close_position(p.symbol)
-                status = getattr(resp, 'status', 'closed')
-            except Exception as e:
-                status = f"error: {e}"
-            log_exit(
-                p.symbol,
-                p.side.value if hasattr(p.side, 'value') else p.side,
-                qty,
-                mid,
-                pnl,
-                pnl_pct,
-                status,
-            )
-            log(f"⚠️ Flattened {p.symbol} EOD: PnL ${pnl:.2f}")
-        send_email(
-            f"EOD Flatten Report {date.today().isoformat()}",
-            f"Auto-flatten executed at EOD. {len(positions)} positions closed."
-        )
-    schedule.every().day.at("16:00").do(job_flatten)
-
-    # Schedule end-of-day report at 16:05 ET
-    def job_send_eod():
-        log("📈 Triggering EOD report")
-        try:
-            subprocess.run(["python3", "scripts/send_eod_report.py"], check=True)
-        except Exception as e:
-            log(f"Error running EOD report: {e}")
-
-    schedule.every().day.at("16:05").do(job_send_eod)
-
-    log("🟢 Bot started")
-    TICKERS = load_tickers()
-    while True:
-        schedule.run_pending()
-        if is_market_open():
-            prices = get_all_underlying_prices(TICKERS)
-            # === POSITION MANAGEMENT ===
-            positions = fetch_positions()
-            for p in positions:
-                # Only manage option positions
-                if getattr(p, 'asset_class', AssetClass.US_OPTION) != AssetClass.US_OPTION:
-                    continue
-                try:
-                    quote = guarded_get_option_latest_quote(
-                        OptionLatestQuoteRequest(symbol_or_symbols=p.symbol)
-                    ).get(p.symbol)
-                except Exception as e:
-                    log(f"[{p.symbol}] Error fetching quote: {e}")
-                    continue
-                mid = (quote.bid_price + quote.ask_price) / 2
-                qty = int(p.qty)
-                entry = float(p.avg_entry_price)
-                contract_size = 100
-                # Compute PnL per share and total
-                pnl_share = (entry - mid) if p.side == PositionSide.SHORT else (mid - entry)
-                pnl = pnl_share * qty * contract_size
-                # Percent change if available
-                pnl_pct = None
-                if p.usd and p.usd.unrealized_plpc is not None:
-                    pnl_pct = p.usd.unrealized_plpc
-                # Log PnL snapshot (including cumulative PnL)
-                total_unrealized = sum_unrealized_pnl(positions)
-                cumulative_pnl = daily_pnl_accumulated + total_unrealized
-                write_pnl_snapshot_row([
-                    datetime.now().isoformat(),
-                    p.symbol,
-                    p.side.value if hasattr(p.side, 'value') else p.side,
-                    qty,
-                    entry,
-                    mid,
-                    pnl_share,
-                    pnl,
-                    pnl_pct,
-                    cumulative_pnl,
-                ])
-                # Check stop-loss or profit-take
-                # Determine applicable profit-take threshold (SPY override)
-                if p.symbol.startswith("SPY"):
-                    profit_take_threshold = 0.75
-                else:
-                    profit_take_threshold = PROFIT_TAKE_PERCENTAGE
-                if pnl_pct is not None and (pnl_pct <= -STOP_LOSS_PERCENTAGE or pnl_pct >= profit_take_threshold):
-                    try:
-                        resp = trade_client.close_position(p.symbol)
-                        status = getattr(resp, 'status', 'closed')
-                        log_exit(
-                            p.symbol,
-                            p.side.value if hasattr(p.side, 'value') else p.side,
-                            qty,
-                            mid,
-                            pnl,
-                            pnl_pct,
-                            status,
-                        )
-                        # enforce realized PnL update even if log_exit was stubbed
-                        add_to_daily_pnl(pnl)
-                        check_and_halt_on_drawdown()
-
-                        action = 'stop loss' if pnl_pct <= -STOP_LOSS_PERCENTAGE else 'profit take'
-                        msg = f"⚠️ Closed {p.symbol} due to {action}: PnL ${pnl:.2f}"
-                        log(msg)
-                        send_email(f"Position Closed: {p.symbol}", msg)
-                    except Exception as e:
-                        log(f"[{p.symbol}] Error closing position: {e}")
-                        continue
-
-            for symbol in TICKERS:
-                if symbol in prices:
-                    trade(symbol, prices[symbol])
-            log(f"⏱ Waiting {SCAN_INTERVAL // 60} minutes for next scan...")
-            time_module.sleep(SCAN_INTERVAL)
-        else:
-            log("🔴 Market closed. Sleeping 5 minutes...")
-            time_module.sleep(300)
 
 if __name__ == "__main__":
     import argparse
@@ -1209,4 +1217,5 @@ if __name__ == "__main__":
     else:
         # Live put credit spread bot
         log("✅ Starting live 0DTE put credit spread bot now; it will sleep every 5 minutes until market open at 09:30 ET if closed.")
+        from src.trading_loop import main_loop
         main_loop()
